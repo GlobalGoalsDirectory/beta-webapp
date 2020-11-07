@@ -1,6 +1,9 @@
 # next.js build output
 .next
 
+# data
+data/organizations.json
+
 # dotenv environment variables
 .env
 .env.build

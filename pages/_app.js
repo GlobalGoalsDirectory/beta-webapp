@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { CssBaseline } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { ThemeProvider } from "styled-components";
+import NextNProgress from "nextjs-progressbar";
 import { theme } from "../helpers/getTheme";
 
 function MyApp({ Component, pageProps }) {
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps }) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
+      <NextNProgress />
       <MuiThemeProvider theme={theme}>
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

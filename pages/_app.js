@@ -2,6 +2,9 @@ import App from "next/app";
 import Head from "next/head";
 import { useEffect } from "react";
 import { CssBaseline } from "@material-ui/core";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider } from "styled-components";
+import { theme } from "../helpers/getTheme";
 
 function MyApp({ Component, pageProps }) {
   // Remove the server-side injected CSS.
@@ -21,9 +24,13 @@ function MyApp({ Component, pageProps }) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-      <CssBaseline />
-      <Component {...pageProps} />
+      <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </MuiThemeProvider>
     </>
   );
 }

@@ -23,16 +23,17 @@ const Logo = styled(Avatar).attrs((props) => ({
   },
 }))`
   && {
-    height: 64px;
-    width: 64px;
+    font-size: ${(props) => props.styled.size / 48}rem;
+    height: ${(props) => props.styled.size}px;
+    width: ${(props) => props.styled.size}px;
   }
 `;
 
-const OrganizationLogo = ({ children }) => {
+const OrganizationLogo = ({ size, children }) => {
   const name = children.toString();
 
   return (
-    <Logo styled={{ color: stringToColour(name) }}>
+    <Logo styled={{ size, color: stringToColour(name) }}>
       {name
         .split(" ")
         .map((w) => w[0])

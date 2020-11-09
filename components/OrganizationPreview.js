@@ -17,7 +17,7 @@ const OrganizationPreview = ({ organization }) => {
       <Link href={getLink(organization)} passHref>
         <CardActionArea component="a">
           <CardContent>
-            <OrganizationLogo>{name}</OrganizationLogo>
+            <OrganizationLogo size={64}>{name}</OrganizationLogo>
             <Box marginTop={1}>
               <Typography variant="h5" style={{ fontWeight: 500 }}>
                 {name}

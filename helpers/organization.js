@@ -1,1 +1,1 @@
-export const getLink = (organization) => `/directory/${organization.slug}`;
+export const getLink = (organization) => `/organizations/${organization.slug}`;

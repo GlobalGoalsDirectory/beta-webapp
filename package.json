@@ -26,6 +26,7 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.11.1",
     "fs-extra": "^9.0.1",
-    "sheetrock": "^1.1.4"
+    "sheetrock": "^1.1.4",
+    "slugify": "^1.4.6"
   }
 }

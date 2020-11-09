@@ -1,5 +1,5 @@
-import { readJsonSync } from "fs-extra";
-import path from "path";
+import getOrganizations from "helpers/getOrganizations";
+
 import Link from "next/link";
 import { Container, Grid, Typography } from "@material-ui/core";
 import OrganizationPreview from "components/OrganizationPreview";
@@ -12,7 +12,7 @@ const DirectoryPage = ({ organizations }) => (
       </Typography>
       <Grid container spacing={3}>
         {organizations.map((organization) => (
-          <Grid key={organization.name} xs={12} sm={4} md={3} item>
+          <Grid key={organization.slug} xs={12} sm={4} md={3} item>
             <OrganizationPreview organization={organization} />
           </Grid>
         ))}
@@ -22,12 +22,11 @@ const DirectoryPage = ({ organizations }) => (
 );
 
 export function getStaticProps() {
-  const dataPath = path.join(process.cwd(), "data", "organizations.json");
-  const data = readJsonSync(dataPath);
+  const organizations = getOrganizations();
 
   return {
     props: {
-      ...data,
+      organizations,
     },
   };
 }

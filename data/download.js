@@ -2,6 +2,7 @@
 const path = require("path");
 const { writeJsonSync } = require("fs-extra");
 const sheetrock = require("sheetrock");
+const slugify = require("slugify");
 
 const DATABASE_URL =
   "https://docs.google.com/spreadsheets/d/1kTPuzuE97nUL15_srlJhNuydSNBborNuLRObXXxkVsg/edit#gid=0";
@@ -22,6 +23,11 @@ const parseData = (error, options, response) => {
     const organizations = dataRows.map((row) =>
       keys.reduce((obj, key, index) => ((obj[key] = row[index]), obj), {})
     );
+
+    // Add slug (slugify title)
+    organizations.forEach((organization) => {
+      organization.slug = slugify(organization.name);
+    });
 
     // Write data to file
     writeJsonSync(OUTPUT_PATH, { organizations }, { spaces: 2 });

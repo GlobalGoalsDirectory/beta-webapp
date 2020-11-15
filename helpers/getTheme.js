@@ -3,11 +3,11 @@ import { createMuiTheme, responsiveFontSizes } from "@material-ui/core";
 const theme = responsiveFontSizes(
   createMuiTheme({
     // Set a color palette
-    // palette: {
-    //   primary: {
-    //     main: "#0a3d66",
-    //   },
-    // },
+    palette: {
+      primary: {
+        main: "#2197d4",
+      },
+    },
     typography: {
       h1: {
         fontSize: "3.7rem",

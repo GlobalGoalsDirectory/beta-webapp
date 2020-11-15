@@ -41,11 +41,20 @@ const Header = () => (
           </Typography>
         </Button>
       </Link>
-      <Button>
-        <Typography variant="h4" component="p">
-          About
-        </Typography>
-      </Button>
+      <Link href="/mission" passHref>
+        <Button>
+          <Typography variant="h4" component="p">
+            Mission
+          </Typography>
+        </Button>
+      </Link>
+      <Link href="/about" passHref>
+        <Button>
+          <Typography variant="h4" component="p">
+            About
+          </Typography>
+        </Button>
+      </Link>
     </Toolbar>
   </AppBar>
 );

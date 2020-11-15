@@ -1,11 +1,19 @@
 import getOrganizations from "helpers/getOrganizations";
 
-import { Box, Card, CardContent, Divider, Typography } from "@material-ui/core";
+import {
+  Box,
+  Card,
+  CardContent,
+  Divider,
+  Grid,
+  Typography,
+} from "@material-ui/core";
+import { Earth, Facebook, Linkedin, MapMarker, Twitter } from "mdi-material-ui";
 import Layout from "components/Layout";
 import OrganizationLogo from "components/OrganizationLogo";
 
 const OrganizationPage = ({ organization }) => {
-  const { name, url } = organization;
+  const { name, url, address } = organization;
 
   return (
     <Layout>
@@ -17,7 +25,22 @@ const OrganizationPage = ({ organization }) => {
           </Box>
           <Divider />
           <Box marginY={2}>
-            <Typography variant="body1">{url}</Typography>
+            <Box display="flex">
+              <Box marginRight={1}>
+                <Earth />
+              </Box>
+              <Typography variant="body1">
+                <a href={url} target="_blank">
+                  {url}
+                </a>
+              </Typography>
+            </Box>
+            <Box display="flex">
+              <Box marginRight={1}>
+                <MapMarker />
+              </Box>
+              <Typography variant="body1">{address}</Typography>
+            </Box>
           </Box>
           <Divider />
           <Box marginTop={2} marginBottom={3}>
@@ -41,12 +64,54 @@ const OrganizationPage = ({ organization }) => {
             <Typography variant="h2" gutterBottom>
               Focus SDGs
             </Typography>
+            <Grid container spacing={1}>
+              {[1, 2, 3].map((goal) => (
+                <Grid id={goal} item>
+                  <img
+                    src={`/static/sdgs/sdg${goal}.jpg`}
+                    style={{ height: 120 }}
+                  />
+                </Grid>
+              ))}
+            </Grid>
           </Box>
           <Divider />
           <Box marginTop={2} marginBottom={3}>
             <Typography variant="h2" gutterBottom>
               Social Media
             </Typography>
+            <Box marginY={2}>
+              <Box display="flex">
+                <Box marginRight={1}>
+                  <Facebook />
+                </Box>
+                <Typography variant="body1">
+                  <a href="https://www.facebook.com/TODO" target="_blank">
+                    @company
+                  </a>
+                </Typography>
+              </Box>
+              <Box display="flex">
+                <Box marginRight={1}>
+                  <Twitter />
+                </Box>
+                <Typography variant="body1">
+                  <a href="https://www.twitter.com/TODO" target="_blank">
+                    @company
+                  </a>
+                </Typography>
+              </Box>
+              <Box display="flex">
+                <Box marginRight={1}>
+                  <Linkedin />
+                </Box>
+                <Typography variant="body1">
+                  <a href="https://www.linkedin.com/TODO" target="_blank">
+                    @company
+                  </a>
+                </Typography>
+              </Box>
+            </Box>
           </Box>
         </CardContent>
       </Card>

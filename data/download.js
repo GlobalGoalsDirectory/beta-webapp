@@ -29,6 +29,11 @@ const parseData = (error, options, response) => {
       organization.slug = slugify(organization.name);
     });
 
+    // TEMP: Add address
+    organizations.forEach((organization) => {
+      organization.address = "Oranienburger Straße 54, 10117 Berlin";
+    });
+
     // Write data to file
     writeJsonSync(OUTPUT_PATH, { organizations }, { spaces: 2 });
   } catch (error) {

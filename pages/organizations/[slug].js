@@ -1,20 +1,14 @@
 import getOrganizations from "helpers/getOrganizations";
 
-import {
-  Box,
-  Card,
-  CardContent,
-  Container,
-  Divider,
-  Typography,
-} from "@material-ui/core";
+import { Box, Card, CardContent, Divider, Typography } from "@material-ui/core";
+import Layout from "components/Layout";
 import OrganizationLogo from "components/OrganizationLogo";
 
 const OrganizationPage = ({ organization }) => {
   const { name, url } = organization;
 
   return (
-    <Container>
+    <Layout>
       <Card>
         <CardContent>
           <OrganizationLogo size={128}>{name}</OrganizationLogo>
@@ -56,7 +50,7 @@ const OrganizationPage = ({ organization }) => {
           </Box>
         </CardContent>
       </Card>
-    </Container>
+    </Layout>
   );
 };
 

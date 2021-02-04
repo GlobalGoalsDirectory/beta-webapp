@@ -11,9 +11,11 @@ import {
 import { Earth, Facebook, Linkedin, MapMarker, Twitter } from "mdi-material-ui";
 import Layout from "components/Layout";
 import OrganizationLogo from "components/OrganizationLogo";
+import getFocusSdgs from "helpers/getFocusSdgs";
 
 const OrganizationPage = ({ organization }) => {
   const { name, summary, url, address, twitter_handle } = organization;
+  const focusSdgs = getFocusSdgs(organization);
 
   return (
     <Layout>
@@ -59,11 +61,17 @@ const OrganizationPage = ({ organization }) => {
               Focus SDGs
             </Typography>
             <Grid container spacing={1}>
-              {[1, 2, 3].map((goal) => (
-                <Grid id={goal} item>
+              {Array.from({ length: 17 }).map((_e, index) => (
+                <Grid id={index + 1} item style={{}}>
                   <img
-                    src={`/static/sdgs/sdg${goal}.jpg`}
-                    style={{ height: 120 }}
+                    src={`/static/sdgs/sdg${index + 1}.jpg`}
+                    style={{
+                      height: 80,
+                      filter: focusSdgs.includes(index + 1)
+                        ? null
+                        : "grayscale(1)",
+                      opacity: focusSdgs.includes(index + 1) ? 1 : 0.5,
+                    }}
                   />
                 </Grid>
               ))}

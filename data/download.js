@@ -20,19 +20,34 @@ const parseData = (error, options, response) => {
     keys = headerRow.filter((key) => key.length);
 
     // Convert data row array into an array of objects
-    const organizations = dataRows.map((row) =>
+    let organizations = dataRows.map((row) =>
       keys.reduce((obj, key, index) => ((obj[key] = row[index]), obj), {})
     );
 
     // Add slug (slugify title)
     organizations.forEach((organization) => {
-      organization.slug = slugify(organization.name);
+      organization.slug = slugify(organization.name, { lower: true });
     });
+
+    // Convert score to numeric
+    organizations.forEach((organization) => {
+      Object.keys(organization)
+        .filter((key) => key.endsWith("_score"))
+        .map((key) => (organization[key] = parseFloat(organization[key])));
+    });
+
+    // Sort organizations by total score
+    organizations.sort((a, b) => b.total_score - a.total_score);
 
     // TEMP: Add address
     organizations.forEach((organization) => {
       organization.address = "Oranienburger Straße 54, 10117 Berlin";
     });
+
+    // Remove organizations with a score of 0 (no SDG matches)
+    organizations = organizations.filter(
+      (organization) => organization.total_score > 0
+    );
 
     // Write data to file
     writeJsonSync(OUTPUT_PATH, { organizations }, { spaces: 2 });

@@ -13,7 +13,7 @@ import Layout from "components/Layout";
 import OrganizationLogo from "components/OrganizationLogo";
 
 const OrganizationPage = ({ organization }) => {
-  const { name, url, address } = organization;
+  const { name, summary, url, address, twitter_handle } = organization;
 
   return (
     <Layout>
@@ -42,23 +42,17 @@ const OrganizationPage = ({ organization }) => {
               <Typography variant="body1">{address}</Typography>
             </Box>
           </Box>
-          <Divider />
-          <Box marginTop={2} marginBottom={3}>
-            <Typography variant="h2" gutterBottom>
-              About
-            </Typography>
-            <Typography variant="body1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              rutrum eros vitae nisi consectetur rhoncus. Mauris ultrices magna
-              sit amet neque tincidunt maximus. Pellentesque velit lectus,
-              interdum sed velit eu, elementum tincidunt nisi. Praesent quis
-              interdum urna. Proin facilisis placerat massa, vel consequat leo
-              suscipit quis. Curabitur convallis est erat, ac posuere lectus
-              pellentesque sit amet. Praesent bibendum dignissim ex id porta. Ut
-              non condimentum sapien. Praesent in neque ut odio pulvinar
-              vehicula.
-            </Typography>
-          </Box>
+          {summary && (
+            <>
+              <Divider />
+              <Box marginTop={2} marginBottom={3}>
+                <Typography variant="h2" gutterBottom>
+                  About
+                </Typography>
+                <Typography variant="body1">{summary}</Typography>
+              </Box>
+            </>
+          )}
           <Divider />
           <Box marginTop={2} marginBottom={3}>
             <Typography variant="h2" gutterBottom>
@@ -75,13 +69,15 @@ const OrganizationPage = ({ organization }) => {
               ))}
             </Grid>
           </Box>
-          <Divider />
-          <Box marginTop={2} marginBottom={3}>
-            <Typography variant="h2" gutterBottom>
-              Social Media
-            </Typography>
-            <Box marginY={2}>
-              <Box display="flex">
+          {twitter_handle && (
+            <>
+              <Divider />
+              <Box marginTop={2} marginBottom={3}>
+                <Typography variant="h2" gutterBottom>
+                  Social Media
+                </Typography>
+                <Box marginY={2}>
+                  {/* <Box display="flex">
                 <Box marginRight={1}>
                   <Facebook />
                 </Box>
@@ -90,18 +86,23 @@ const OrganizationPage = ({ organization }) => {
                     @company
                   </a>
                 </Typography>
-              </Box>
-              <Box display="flex">
-                <Box marginRight={1}>
-                  <Twitter />
-                </Box>
-                <Typography variant="body1">
-                  <a href="https://www.twitter.com/TODO" target="_blank">
-                    @company
-                  </a>
-                </Typography>
-              </Box>
-              <Box display="flex">
+              </Box> */}
+                  {twitter_handle && (
+                    <Box display="flex">
+                      <Box marginRight={1}>
+                        <Twitter />
+                      </Box>
+                      <Typography variant="body1">
+                        <a
+                          href={`https://twitter.com/${twitter_handle}`}
+                          target="_blank"
+                        >
+                          @{twitter_handle}
+                        </a>
+                      </Typography>
+                    </Box>
+                  )}
+                  {/* <Box display="flex">
                 <Box marginRight={1}>
                   <Linkedin />
                 </Box>
@@ -110,9 +111,11 @@ const OrganizationPage = ({ organization }) => {
                     @company
                   </a>
                 </Typography>
+              </Box> */}
+                </Box>
               </Box>
-            </Box>
-          </Box>
+            </>
+          )}
         </CardContent>
       </Card>
     </Layout>

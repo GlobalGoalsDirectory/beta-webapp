@@ -9,13 +9,19 @@ import {
 import OrganizationLogo from "components/OrganizationLogo";
 import { getLink } from "helpers/organization";
 
+const trim = (text, length) => {
+  if (!text || text.length <= length) return text;
+
+  return text.substr(0, text.lastIndexOf(" ", length)) + "...";
+};
+
 const OrganizationPreview = ({ organization }) => {
-  const { name } = organization;
+  const { name, summary } = organization;
 
   return (
-    <Card>
+    <Card style={{ height: "100%" }}>
       <Link href={getLink(organization)} passHref>
-        <CardActionArea component="a">
+        <CardActionArea component="a" style={{ height: "100%" }}>
           <CardContent>
             <OrganizationLogo size={64}>{name}</OrganizationLogo>
             <Box marginTop={1}>
@@ -24,10 +30,9 @@ const OrganizationPreview = ({ organization }) => {
               </Typography>
             </Box>
             <Typography variant="body2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              rutrum eros vitae nisi consectetur rhoncus. Mauris ultrices magna
-              sit amet neque tincidunt maximus. Pellentesque velit lectus,
-              interdum sed velit eu, elementum tincidunt nisi.
+              {trim(summary, 200) || (
+                <Box fontStyle="italic">No description.</Box>
+              )}
             </Typography>
           </CardContent>
         </CardActionArea>

@@ -39,7 +39,9 @@ const OrganizationPreview = ({ organization }) => {
               </Box>
               <Typography variant="body2">
                 {trim(summary, 200) || (
-                  <Box fontStyle="italic">No description.</Box>
+                  <Box fontStyle="italic" component="span">
+                    No description.
+                  </Box>
                 )}
               </Typography>
             </Box>

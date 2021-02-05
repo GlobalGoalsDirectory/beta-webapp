@@ -14,6 +14,7 @@ import {
 } from "@material-ui/core";
 import Layout from "components/Layout";
 import OrganizationPreview from "components/OrganizationPreview";
+import InfiniteScroll from "components/InfiniteScroll";
 
 const filterBySdg = (organizations, sdg) => {
   let key = "total_score";
@@ -74,11 +75,13 @@ const DirectoryPage = ({ organizations }) => {
         </FormControl>
       </Box>
       <Grid container spacing={3}>
-        {filterBySdg(organizations, filter).map((organization) => (
-          <Grid key={organization.slug} xs={12} sm={4} md={3} item>
-            <OrganizationPreview organization={organization} />
-          </Grid>
-        ))}
+        <InfiniteScroll filter={filter}>
+          {filterBySdg(organizations, filter).map((organization) => (
+            <Grid key={organization.slug} xs={12} sm={4} md={3} item>
+              <OrganizationPreview organization={organization} />
+            </Grid>
+          ))}
+        </InfiniteScroll>
       </Grid>
     </Layout>
   );

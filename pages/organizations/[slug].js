@@ -41,7 +41,7 @@ const OrganizationPage = ({ organization }) => {
               <Box marginRight={1}>
                 <MapMarker />
               </Box>
-              <Typography variant="body1">{address}</Typography>
+              <Typography variant="body1">Berlin</Typography>
             </Box>
           </Box>
           {summary && (

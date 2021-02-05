@@ -48,6 +48,7 @@ const OrganizationPreview = ({ organization }) => {
             <Box display="flex" marginTop={1}>
               {focusSdgs.map((goal) => (
                 <img
+                  key={goal}
                   src={`/static/sdgs/sdg${goal}.jpg`}
                   style={{ height: 40, marginRight: 4 }}
                 />

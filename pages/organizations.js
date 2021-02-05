@@ -64,7 +64,7 @@ const DirectoryPage = ({ organizations }) => {
           >
             <MenuItem value={"all"}>All SDGs</MenuItem>
             {Array.from({ length: 17 }).map((_e, index) => (
-              <MenuItem value={index + 1}>
+              <MenuItem key={index} value={index + 1}>
                 SDG {index + 1}: {GOALS[index]}
               </MenuItem>
             ))}

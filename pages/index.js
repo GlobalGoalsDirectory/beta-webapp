@@ -34,7 +34,7 @@ const HomePage = ({ organizationsCount }) => (
             organizations working on the SDGs in Berlin
           </Typography>
         </Grid>
-        <Grid item xs={0} lg={4} />
+        <Grid item xs="auto" lg={4} />
         <Grid item xs={12} lg={4}>
           <Link href="/organizations" passHref>
             <LargeButton component="a" variant="contained" color="primary">

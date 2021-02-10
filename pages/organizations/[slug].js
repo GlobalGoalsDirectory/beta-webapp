@@ -62,7 +62,7 @@ const OrganizationPage = ({ organization }) => {
             </Typography>
             <Grid container spacing={1}>
               {Array.from({ length: 17 }).map((_e, index) => (
-                <Grid id={index + 1} item style={{}}>
+                <Grid key={index + 1} item>
                   <img
                     src={`/static/sdgs/sdg${index + 1}.jpg`}
                     style={{

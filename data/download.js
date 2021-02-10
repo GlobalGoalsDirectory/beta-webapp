@@ -3,6 +3,7 @@ const path = require("path");
 const { writeJsonSync } = require("fs-extra");
 const sheetrock = require("sheetrock");
 const slugify = require("slugify");
+const pick = require("lodash.pick");
 
 const DATABASE_URL =
   "https://docs.google.com/spreadsheets/d/1kTPuzuE97nUL15_srlJhNuydSNBborNuLRObXXxkVsg/edit#gid=0";
@@ -13,16 +14,25 @@ const parseData = (error, options, response) => {
   if (error) throw error;
 
   try {
-    // Collect header row and data rows
-    const [headerRow, ...dataRows] = response.rows.map((row) => row.cellsArray);
-
-    // Identify data keys/variables
-    keys = headerRow.filter((key) => key.length);
-
     // Convert data row array into an array of objects
-    let organizations = dataRows.map((row) =>
-      keys.reduce((obj, key, index) => ((obj[key] = row[index]), obj), {})
-    );
+    let organizations = response.rows.map((row) => row.cells);
+
+    // Keep only properties that we use in the app
+    organizations = organizations.map((organization) => {
+      const keys = Object.keys(organization);
+
+      const keysToKeep = keys.filter((key) => {
+        if (["domain", "url", "name", "summary"].includes(key)) return true;
+
+        if (key.endsWith("_handle")) return true;
+
+        if (key.endsWith("_score")) return true;
+
+        return false;
+      });
+
+      return pick(organization, keysToKeep);
+    });
 
     // Add slug (slugify title)
     organizations.forEach((organization) => {

@@ -18,7 +18,7 @@ import InfiniteScroll from "components/InfiniteScroll";
 
 const filterBySdg = (organizations, sdg) => {
   let key = "total_score";
-  if (sdg != "all") key = `sdg${sdg}_matches_score`;
+  if (sdg != "all") key = `sdg${sdg}_score`;
 
   return [...organizations]
     .filter((organization) => organization[key] > 0)

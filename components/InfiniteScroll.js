@@ -11,7 +11,6 @@ const InfiniteScroll = ({ children, itemsPerPage = 16, filter }) => {
 
   // Reset everything
   useEffect(() => {
-    console.log("reset");
     setPage(1);
 
     let observer = null;
@@ -26,7 +25,6 @@ const InfiniteScroll = ({ children, itemsPerPage = 16, filter }) => {
       // here we handle what happens when user scrolls to Load More div
       // in this case we just update page variable
       const handleObserver = (entities) => {
-        console.log("hit");
         const target = entities[0];
         if (target.isIntersecting) {
           setPage((page) => Math.min(page + 1, maxPage));

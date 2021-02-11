@@ -22,7 +22,8 @@ const parseData = (error, options, response) => {
       const keys = Object.keys(organization);
 
       const keysToKeep = keys.filter((key) => {
-        if (["domain", "url", "name", "summary"].includes(key)) return true;
+        if (["domain", "url", "logo", "name", "summary"].includes(key))
+          return true;
 
         if (key.endsWith("_handle")) return true;
 
@@ -37,6 +38,13 @@ const parseData = (error, options, response) => {
     // Add slug (slugify title)
     organizations.forEach((organization) => {
       organization.slug = slugify(organization.name, { lower: true });
+    });
+
+    // Convert value to null, if empty string
+    organizations.forEach((organization) => {
+      if (!organization.hasOwnProperty("logo")) return;
+
+      if (organization.logo === "") organization.logo = null;
     });
 
     // Convert score to numeric

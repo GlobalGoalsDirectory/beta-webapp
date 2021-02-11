@@ -31,7 +31,7 @@ const OrganizationPreview = ({ organization }) => {
             style={{ display: "flex", flexDirection: "column", height: "100%" }}
           >
             <Box flexGrow={1}>
-              <OrganizationLogo size={64}>{name}</OrganizationLogo>
+              <OrganizationLogo organization={organization} size={64} />
               <Box marginTop={1}>
                 <Typography variant="h5" style={{ fontWeight: 500 }}>
                   {name}

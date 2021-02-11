@@ -21,7 +21,7 @@ const OrganizationPage = ({ organization }) => {
     <Layout>
       <Card>
         <CardContent>
-          <OrganizationLogo size={128}>{name}</OrganizationLogo>
+          <OrganizationLogo size={128} organization={organization} />
           <Box marginY={2}>
             <Typography variant="h1">{name}</Typography>
           </Box>

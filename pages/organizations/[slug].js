@@ -122,6 +122,23 @@ const OrganizationPage = ({ organization }) => {
               </Box> */}
                 </Box>
               </Box>
+              <Divider />
+              <Box marginTop={2} marginBottom={2}>
+                <a
+                  className="twitter-timeline"
+                  href={`https://twitter.com/${twitter_handle}`}
+                  data-chrome="noheader nofooter noborders"
+                  data-tweet-limit="4"
+                  data-width="400"
+                >
+                  Latest tweets by {twitter_handle}
+                </a>{" "}
+                <script
+                  async
+                  src="https://platform.twitter.com/widgets.js"
+                  charSet="utf-8"
+                ></script>
+              </Box>
             </>
           )}
         </CardContent>

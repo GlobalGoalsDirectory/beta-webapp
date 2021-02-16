@@ -14,7 +14,15 @@ import OrganizationLogo from "components/OrganizationLogo";
 import getFocusSdgs from "helpers/getFocusSdgs";
 
 const OrganizationPage = ({ organization }) => {
-  const { name, summary, url, address, twitter_handle } = organization;
+  const {
+    name,
+    summary,
+    url,
+    address,
+    twitter_handle,
+    facebook_handle,
+    linkedin_handle,
+  } = organization;
   const focusSdgs = getFocusSdgs(organization);
 
   return (
@@ -77,7 +85,7 @@ const OrganizationPage = ({ organization }) => {
               ))}
             </Grid>
           </Box>
-          {twitter_handle && (
+          {(twitter_handle || facebook_handle || linkedin_handle) && (
             <>
               <Divider />
               <Box marginTop={2} marginBottom={3}>
@@ -85,16 +93,21 @@ const OrganizationPage = ({ organization }) => {
                   Social Media
                 </Typography>
                 <Box marginY={2}>
-                  {/* <Box display="flex">
-                <Box marginRight={1}>
-                  <Facebook />
-                </Box>
-                <Typography variant="body1">
-                  <a href="https://www.facebook.com/TODO" target="_blank">
-                    @company
-                  </a>
-                </Typography>
-              </Box> */}
+                  {facebook_handle && (
+                    <Box display="flex">
+                      <Box marginRight={1}>
+                        <Facebook />
+                      </Box>
+                      <Typography variant="body1">
+                        <a
+                          href={`https://www.facebook.com/${facebook_handle}/`}
+                          target="_blank"
+                        >
+                          @{facebook_handle}
+                        </a>
+                      </Typography>
+                    </Box>
+                  )}
                   {twitter_handle && (
                     <Box display="flex">
                       <Box marginRight={1}>
@@ -110,18 +123,27 @@ const OrganizationPage = ({ organization }) => {
                       </Typography>
                     </Box>
                   )}
-                  {/* <Box display="flex">
-                <Box marginRight={1}>
-                  <Linkedin />
-                </Box>
-                <Typography variant="body1">
-                  <a href="https://www.linkedin.com/TODO" target="_blank">
-                    @company
-                  </a>
-                </Typography>
-              </Box> */}
+                  {linkedin_handle && (
+                    <Box display="flex">
+                      <Box marginRight={1}>
+                        <Linkedin />
+                      </Box>
+                      <Typography variant="body1">
+                        <a
+                          href={`https://www.linkedin.com/company/${linkedin_handle}/`}
+                          target="_blank"
+                        >
+                          @{linkedin_handle}
+                        </a>
+                      </Typography>
+                    </Box>
+                  )}
                 </Box>
               </Box>
+            </>
+          )}
+          {twitter_handle && (
+            <>
               <Divider />
               <Box marginTop={2} marginBottom={2}>
                 <a

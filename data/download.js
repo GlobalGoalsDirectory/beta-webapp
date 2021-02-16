@@ -42,9 +42,12 @@ const parseData = (error, options, response) => {
 
     // Convert value to null, if empty string
     organizations.forEach((organization) => {
-      if (!organization.hasOwnProperty("logo")) return;
+      const keys = Object.keys(organization);
 
-      if (organization.logo === "") organization.logo = null;
+      Object.entries(organization).forEach(([key, value]) => {
+        if ((key === "logo" || key.endsWith("_handle")) && value == "")
+          organization[key] = null;
+      });
     });
 
     // Convert score to numeric

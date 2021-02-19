@@ -1,12 +1,143 @@
-import { Typography } from "@material-ui/core";
+import { Avatar, Box, Grid, Typography } from "@material-ui/core";
+import styled from "styled-components";
 import Layout from "components/Layout";
+import Section from "components/Section";
+import Bold from "components/Bold";
+
+const Person = ({
+  image,
+  name,
+  title,
+  children,
+  ImageComponent = Avatar,
+  imageStyle = null,
+}) => (
+  <Grid item sm={12} md={4} lg={4}>
+    <Box align="center">
+      <ImageComponent
+        src={`/static/about/${image}`}
+        style={
+          imageStyle || {
+            width: 160,
+            height: 160,
+          }
+        }
+      />
+      <Box marginTop={1}>
+        <Typography variant="h6" component="p">
+          <Bold>{name}</Bold>
+        </Typography>
+        {title && (
+          <Typography variant="body1">
+            <Bold color="primary.dark">{title}</Bold>
+          </Typography>
+        )}
+        <Box marginTop={1}>
+          <Typography variant="body1">{children}</Typography>
+        </Box>
+      </Box>
+    </Box>
+  </Grid>
+);
+
+const Partner = styled(Person).attrs({
+  ImageComponent: "img",
+  imageStyle: { maxWidth: "100%", maxHeight: 100 },
+  title: null,
+})``;
 
 const AboutPage = () => (
   <Layout>
     <Typography variant="h1" gutterBottom>
       About
     </Typography>
-    <Typography variant="body1">Coming soon...</Typography>
+    <Section>
+      <Typography variant="body1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae
+        erat at enim ultricies dapibus nec consectetur mi. Etiam tempus mi
+        iaculis efficitur consequat. Nulla ac faucibus mi, euismod faucibus
+        tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        Etiam sed urna consequat, venenatis libero non, eleifend quam. Nulla
+        blandit interdum mi, id interdum sapien euismod a. In hac habitasse
+        platea dictumst. Duis in lorem tincidunt, vulputate est ac, bibendum
+        odio. Mauris eget commodo arcu. Morbi sodales lectus nibh, quis iaculis
+        urna hendrerit sed. Nunc scelerisque lorem arcu, vitae cursus ante
+        auctor vitae. Pellentesque rutrum venenatis ipsum et tempus. Curabitur
+        fermentum vitae neque ac vehicula. Nulla feugiat dictum dolor non
+        scelerisque. Aenean vehicula nisl a tortor venenatis ullamcorper.
+      </Typography>
+    </Section>
+    <Section>
+      <Typography variant="h2" gutterBottom>
+        Team
+      </Typography>
+      <Grid container spacing={3}>
+        <Person
+          name="Nadim Choucair"
+          image="nadim-choucair.jpeg"
+          title="Founder at 2030 Cabinet"
+        >
+          Nadim convenes people &amp; ideas to build partnerships for achieving
+          the UN Sustainable Development Goals. His background is in mechanical
+          engineering, business, and diplomacy.
+        </Person>
+        <Person
+          name="Christian Walter"
+          image="christian-walter.jpeg"
+          title="Founding Partner at SDGx"
+        >
+          Christian's expertise is in digital business model development and
+          applications for social impact. He focuses on building organizations
+          that are financially sustainable, return a profit to their
+          shareholders, and achieve social responsibility.
+        </Person>
+        <Person
+          name="Finn Woelm"
+          image="finn-woelm.jpeg"
+          title="Data Scientist and Analyst, UN Sustainable Development Solutions Network"
+        >
+          Finn is a software developer working at the intersection of technology
+          and the UN Sustainable Development Goals. His focus is web
+          development, web scraping, and text mining.
+        </Person>
+      </Grid>
+    </Section>
+    <Section>
+      <Typography variant="h2" gutterBottom>
+        Advisors
+      </Typography>
+      <Grid container spacing={3}>
+        <Person name="Lorem Ipsum">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae
+          erat at enim ultricies dapibus nec consectetur mi. Etiam tempus mi
+          iaculis efficitur consequat. Nulla ac faucibus mi, euismod faucibus
+          tortor.
+        </Person>
+        <Person name="Lorem Ipsum">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae
+          erat at enim ultricies dapibus nec consectetur mi. Etiam tempus mi
+          iaculis efficitur consequat. Nulla ac faucibus mi, euismod faucibus
+          tortor.
+        </Person>
+      </Grid>
+    </Section>
+    <Section>
+      <Typography variant="h2" gutterBottom>
+        Partners
+      </Typography>
+      <Grid container spacing={3}>
+        <Partner name="2030 Cabinet" image="2030-cabinet.jpeg">
+          2030 Cabinet is an impact oriented ecosystem builder and partnership
+          architect to enable sustainable innovation, using the UN's Sustainable
+          Development Goals.
+        </Partner>
+        <Partner name="SDGx" image="sdgx.png">
+          SDGx is a private UN Sustainable Development Goals technology funds
+          management and advisory group, headquartered in Singapore with offices
+          in Sydney, Bangkok, and Berlin.
+        </Partner>
+      </Grid>
+    </Section>
   </Layout>
 );
 

@@ -1,5 +1,5 @@
 import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
-import Emphasis from "components/Emphasis";
+import Bold from "components/Bold";
 
 const Objective = ({ label, image, children }) => (
   <Card>
@@ -15,7 +15,7 @@ const Objective = ({ label, image, children }) => (
     />
     <CardContent>
       <Typography variant="h6" component="p" gutterBottom>
-        <Emphasis>{label}</Emphasis>
+        <Bold>{label}</Bold>
       </Typography>
       <Typography variant="body1">{children}</Typography>
     </CardContent>

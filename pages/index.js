@@ -14,7 +14,7 @@ const LargeButton = styled(Button).attrs({
   }
 `;
 
-const Emphasis = styled.span`
+const Bold = styled.span`
   font-weight: 700;
   font-size: 1.5em;
   line-height: 1em;
@@ -30,8 +30,8 @@ const HomePage = ({ organizationsCount }) => (
       <Grid container alignItems="center" spacing={2}>
         <Grid item xs={12} lg={8}>
           <Typography variant="h1" gutterBottom>
-            Find <Emphasis>{organizationsCount}</Emphasis> startups and
-            organizations working on the SDGs in Berlin
+            Find <Bold>{organizationsCount}</Bold> startups and organizations
+            working on the SDGs in Berlin
           </Typography>
         </Grid>
         <Grid item xs="auto" lg={4} />

@@ -2,7 +2,7 @@ import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
 import Bold from "components/Bold";
 
 const Objective = ({ label, image, children }) => (
-  <Card>
+  <Card style={{ height: "100%" }}>
     <CardMedia
       style={{
         height: 140,

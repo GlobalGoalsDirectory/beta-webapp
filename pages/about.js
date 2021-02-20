@@ -53,18 +53,20 @@ const AboutPage = () => (
     </Typography>
     <Section>
       <Typography variant="body1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae
-        erat at enim ultricies dapibus nec consectetur mi. Etiam tempus mi
-        iaculis efficitur consequat. Nulla ac faucibus mi, euismod faucibus
-        tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Etiam sed urna consequat, venenatis libero non, eleifend quam. Nulla
-        blandit interdum mi, id interdum sapien euismod a. In hac habitasse
-        platea dictumst. Duis in lorem tincidunt, vulputate est ac, bibendum
-        odio. Mauris eget commodo arcu. Morbi sodales lectus nibh, quis iaculis
-        urna hendrerit sed. Nunc scelerisque lorem arcu, vitae cursus ante
-        auctor vitae. Pellentesque rutrum venenatis ipsum et tempus. Curabitur
-        fermentum vitae neque ac vehicula. Nulla feugiat dictum dolor non
-        scelerisque. Aenean vehicula nisl a tortor venenatis ullamcorper.
+        The idea for the Global Goals Directory was born in 2019, out of many
+        conversations with thought leaders and innovators from the SDG
+        community. Throughout these conversations, we observed one theme
+        re-emerging over and over again: The importance of partnerships and
+        their critical role for tackling the UN Sustainable Development Goals.
+        While many partnerships exist in the SDG community today, a large share
+        of them are formed from serendipitous connections — people and
+        organizations we meet at a workshop, an event, or a webinar. But in a
+        network as big as the SDG community, there are thousands of potential
+        partners that we have not yet met. The Global Goals Directory exists to
+        put the entire SDG community at your fingertips and to make it easy to
+        find new collaborators and build new partnerships, so that we as an
+        ecosystem can become more connected, more collaborative, and accelerate
+        our progress on the 2030 Agenda.
       </Typography>
     </Section>
     <Section>

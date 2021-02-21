@@ -17,7 +17,6 @@ var stringToColour = function (str) {
 };
 
 const Logo = styled(Avatar).attrs((props) => ({
-  variant: "square",
   style: {
     color: props.theme.palette.getContrastText(props.styled.color),
     backgroundColor: props.styled.color,
@@ -30,11 +29,12 @@ const Logo = styled(Avatar).attrs((props) => ({
   }
 `;
 
-const OrganizationLogo = ({ size, organization }) => {
+const OrganizationLogo = ({ size, organization, variant = "square" }) => {
   const { name } = organization;
 
   return (
     <Logo
+      variant={variant}
       src={getLogo(organization)}
       styled={{ size, color: stringToColour(name) }}
     >

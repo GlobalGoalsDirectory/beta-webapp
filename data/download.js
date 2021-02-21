@@ -25,6 +25,8 @@ const parseData = (error, options, response) => {
         if (["domain", "url", "logo", "name", "summary"].includes(key))
           return true;
 
+        if (["address", "latitude", "longitude"].includes(key)) return true;
+
         if (key.endsWith("_handle")) return true;
 
         if (key.endsWith("_score")) return true;
@@ -42,13 +44,11 @@ const parseData = (error, options, response) => {
 
     // Convert value to null, if empty string
     organizations.forEach((organization) => {
-      const keys = Object.keys(organization);
-
       Object.entries(organization).forEach(([key, value]) => {
-        if ((key === "logo" || key.endsWith("_handle")) && value == "")
-          organization[key] = null;
+        if (value == "") organization[key] = null;
       });
     });
+    // TODO: Test that every slug is unique
 
     // Convert score to numeric
     organizations.forEach((organization) => {
@@ -59,11 +59,6 @@ const parseData = (error, options, response) => {
 
     // Sort organizations by total score
     organizations.sort((a, b) => b.total_score - a.total_score);
-
-    // TEMP: Add address
-    organizations.forEach((organization) => {
-      organization.address = "Oranienburger Straße 54, 10117 Berlin";
-    });
 
     // Remove organizations with a score of 0 (no SDG matches)
     organizations = organizations.filter(

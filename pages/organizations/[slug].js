@@ -45,12 +45,14 @@ const OrganizationPage = ({ organization }) => {
                 </a>
               </Typography>
             </Box>
-            <Box display="flex">
-              <Box marginRight={1}>
-                <MapMarker />
+            {address && (
+              <Box display="flex">
+                <Box marginRight={1}>
+                  <MapMarker />
+                </Box>
+                <Typography variant="body1">{address}</Typography>
               </Box>
-              <Typography variant="body1">Berlin</Typography>
-            </Box>
+            )}
           </Box>
           {summary && (
             <>

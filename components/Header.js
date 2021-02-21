@@ -41,6 +41,13 @@ const Header = () => (
           </Typography>
         </Button>
       </Link>
+      <Link href="/map" passHref>
+        <Button>
+          <Typography variant="h4" component="p">
+            Map
+          </Typography>
+        </Button>
+      </Link>
       <Link href="/mission" passHref>
         <Button>
           <Typography variant="h4" component="p">

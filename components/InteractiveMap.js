@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import Leaflet from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -51,7 +52,7 @@ const getIcon = (organization) => {
   });
 };
 
-const InteractiveMap = ({ organizations }) => (
+const InteractiveMap = memo(({ organizations, showOrganization }) => (
   <MapContainer
     bounds={organizations.map((org) => [org.latitude, org.longitude])}
     style={{ height: "100%" }}
@@ -65,11 +66,17 @@ const InteractiveMap = ({ organizations }) => (
         key={organization.slug}
         icon={getIcon(organization)}
         position={[organization.latitude, organization.longitude]}
+        eventHandlers={{
+          click: () => {
+            console.log("click");
+            showOrganization(organization);
+          },
+        }}
       >
         <Popup>{organization.name}</Popup>
       </Marker>
     ))}
   </MapContainer>
-);
+));
 
 export default InteractiveMap;

@@ -52,7 +52,10 @@ const getIcon = (organization) => {
 };
 
 const InteractiveMap = ({ organizations }) => (
-  <MapContainer center={[52.5, 13.4]} zoom={10} style={{ height: "100%" }}>
+  <MapContainer
+    bounds={organizations.map((org) => [org.latitude, org.longitude])}
+    style={{ height: "100%" }}
+  >
     <TileLayer
       attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

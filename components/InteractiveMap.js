@@ -1,7 +1,13 @@
 import { memo } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import Leaflet from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  ZoomControl,
+} from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import "leaflet/dist/leaflet.css";
 import "react-leaflet-markercluster/dist/styles.min.css";
@@ -123,6 +129,8 @@ const getClusterIcon = (cluster, organizations) => {
 const InteractiveMap = memo(({ organizations, showOrganization }) => (
   <MapContainer
     bounds={organizations.map((org) => [org.latitude, org.longitude])}
+    // We manually add zoom controls in the bottom-right corner
+    zoomControl={false}
     style={{ height: "100%" }}
   >
     <TileLayer
@@ -148,6 +156,7 @@ const InteractiveMap = memo(({ organizations, showOrganization }) => (
         </Marker>
       ))}
     </MarkerClusterGroup>
+    <ZoomControl position="bottomright" />
   </MapContainer>
 ));
 

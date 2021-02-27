@@ -1,9 +1,25 @@
 import { readJsonSync } from "fs-extra";
 import path from "path";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Box, Button, Grid, Typography } from "@material-ui/core";
 import styled from "styled-components";
 import Layout from "components/Layout";
+
+const DEFAULT_CITY = "Berlin";
+const CITIES = [
+  "Hamburg",
+  "Bremen",
+  "Cologne",
+  "Munich",
+  "Frankfurt",
+  "Stuttgart",
+];
+
+const Typed = dynamic(() => import("react-typed"), {
+  ssr: false,
+  loading: ({ children }) => <>{DEFAULT_CITY}</>,
+});
 
 const LargeButton = styled(Button).attrs({
   size: "large",
@@ -83,6 +99,14 @@ const ResponsiveGridContainer = styled(Grid).attrs({
   }
 `;
 
+const shuffle = (a) => {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+
 const HomePage = ({ organizationsCount }) => (
   <Layout
     containerProps={{
@@ -105,7 +129,16 @@ const HomePage = ({ organizationsCount }) => (
             <Bold>
               <SdgsText>Sustainable Development Goals</SdgsText>
             </Bold>{" "}
-            in Berlin
+            in{" "}
+            <Typed
+              strings={[DEFAULT_CITY, ...shuffle(CITIES)]}
+              typeSpeed={40}
+              backSpeed={50}
+              backDelay={3000}
+              smartBackspace={false}
+              loop
+              attribute="textContent"
+            />
           </Typography>
           <Grid container spacing={2}>
             <Grid item xs={12} sm="auto">

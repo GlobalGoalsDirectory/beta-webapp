@@ -105,7 +105,7 @@ const OrganizationPage = ({ organization }) => {
                           href={`https://www.facebook.com/${facebook_handle}/`}
                           target="_blank"
                         >
-                          @{facebook_handle}
+                          @{decodeURI(facebook_handle)}
                         </a>
                       </Typography>
                     </Box>

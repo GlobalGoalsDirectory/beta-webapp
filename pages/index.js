@@ -94,7 +94,7 @@ const Bigger = styled(Box).attrs({
 const ResponsiveGridContainer = styled(Grid).attrs({
   container: true,
 })`
-  ${(props) => props.theme.breakpoints.down("xs")} {
+  ${(props) => props.theme.breakpoints.down("md")} {
     flex-direction: column-reverse;
   }
 `;
@@ -117,8 +117,8 @@ const HomePage = ({ organizationsCount }) => (
       },
     }}
   >
-    <Box marginY={6} paddingY={2} paddingX={2}>
-      <ResponsiveGridContainer alignItems="center" spacing={5}>
+    <Box marginY={8}>
+      <ResponsiveGridContainer spacing={5}>
         <Grid item xs={12} lg={8}>
           <Typography variant="h1" gutterBottom style={{ fontWeight: 400 }}>
             Discover{" "}
@@ -174,7 +174,7 @@ const HomePage = ({ organizationsCount }) => (
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12} lg={4}>
+        <Grid item xs={12} md={6} lg={4}>
           <img
             src="/static/home/championing-the-sdgs.svg"
             style={{ maxWidth: "100%" }}

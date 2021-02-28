@@ -1,10 +1,11 @@
-import { Box, Divider, Grid, Typography } from "@material-ui/core";
+import { Box, Button, Divider, Grid, Typography } from "@material-ui/core";
 import { Earth, Facebook, Linkedin, MapMarker, Twitter } from "mdi-material-ui";
+import SideViewHeading from "components/SideViewHeading";
 import OrganizationLogo from "components/OrganizationLogo";
 import Bold from "components/Bold";
 import getFocusSdgs from "helpers/getFocusSdgs";
 
-const OrganizationSideView = ({ organization }) => {
+const OrganizationSideView = ({ organization, onClose }) => {
   const {
     name,
     summary,
@@ -18,16 +19,11 @@ const OrganizationSideView = ({ organization }) => {
 
   return (
     <>
-      <Box padding={2} bgcolor="#202029" color="white">
-        <OrganizationLogo size={100} organization={organization} />
-        <Box marginTop={2}>
-          <Typography variant="body1">
-            <Bold fontSize="h3.fontSize">{name}</Bold>
-          </Typography>
-        </Box>
-      </Box>
-
-      <Divider />
+      <SideViewHeading
+        image={<OrganizationLogo size={100} organization={organization} />}
+        title={name}
+        onClose={onClose}
+      />
       <Box padding={2}>
         <Box display="flex">
           <Box marginRight={1}>

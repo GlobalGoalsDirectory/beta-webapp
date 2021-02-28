@@ -1,4 +1,4 @@
-import { Box, Container } from "@material-ui/core";
+import { Box, Container, Hidden } from "@material-ui/core";
 import NavBar from "components/NavBar";
 import Footer from "components/Footer";
 
@@ -20,7 +20,9 @@ const FullScreenLayout = ({ children }) => (
     >
       {children}
     </Box>
-    <Footer />
+    <Hidden implementation="css" smDown>
+      <Footer />
+    </Hidden>
   </Box>
 );
 

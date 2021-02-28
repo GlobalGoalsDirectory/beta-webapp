@@ -126,7 +126,7 @@ const getClusterIcon = (cluster, organizations) => {
     // popupAnchor: [0, -47],
   });
 };
-const InteractiveMap = memo(({ organizations, showOrganization }) => (
+const InteractiveMap = memo(({ organizations, onClick }) => (
   <MapContainer
     bounds={organizations.map((org) => [org.latitude, org.longitude])}
     // We manually add zoom controls in the bottom-right corner
@@ -147,7 +147,7 @@ const InteractiveMap = memo(({ organizations, showOrganization }) => (
           position={[organization.latitude, organization.longitude]}
           eventHandlers={{
             click: () => {
-              showOrganization(organization);
+              onClick(organization);
             },
           }}
           dataSlug={organization.slug}

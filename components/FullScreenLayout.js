@@ -1,5 +1,5 @@
 import { Box, Container } from "@material-ui/core";
-import Header from "components/Header";
+import NavBar from "components/NavBar";
 import Footer from "components/Footer";
 
 const FullScreenLayout = ({ children }) => (
@@ -10,7 +10,7 @@ const FullScreenLayout = ({ children }) => (
     flexDirection="column"
     overflow="hidden"
   >
-    <Header />
+    <NavBar />
     <Box
       display="flex"
       flexDirection="column"

@@ -122,6 +122,10 @@ const pages = [
     href: "/mission",
   },
   {
+    label: "How it works",
+    href: "/how-it-works",
+  },
+  {
     label: "About",
     href: "/about",
   },

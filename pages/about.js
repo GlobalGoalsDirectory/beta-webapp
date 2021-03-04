@@ -53,6 +53,12 @@ const AboutPage = () => (
     </Typography>
     <Section>
       <Typography variant="body1">
+        <Bold>
+          The Global Goals Directory is a public list of startups,
+          organizations, and companies working on the 17 UN Sustainable
+          Development Goals. The directory is a public good and is completely
+          free.
+        </Bold>{" "}
         The idea for the Global Goals Directory was born in 2019, out of many
         conversations with thought leaders and innovators from the SDG
         community. Throughout these conversations, we observed one theme

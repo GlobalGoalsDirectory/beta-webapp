@@ -115,17 +115,14 @@ const AboutPage = () => (
         Advisors
       </Typography>
       <Grid container spacing={3}>
-        <Person name="Lorem Ipsum">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae
-          erat at enim ultricies dapibus nec consectetur mi. Etiam tempus mi
-          iaculis efficitur consequat. Nulla ac faucibus mi, euismod faucibus
-          tortor.
-        </Person>
-        <Person name="Lorem Ipsum">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae
-          erat at enim ultricies dapibus nec consectetur mi. Etiam tempus mi
-          iaculis efficitur consequat. Nulla ac faucibus mi, euismod faucibus
-          tortor.
+        <Person
+          name="Antonia Schiller"
+          image="antonia-schiller.jpeg"
+          title="Expert in SDG Mapping"
+        >
+          Antonia previously worked with Movement Map, a Canadian initiative
+          that mapped 10,000+ non-profits by SDG. Antiona also played a key role
+          in adapting their methodology to Germany.
         </Person>
       </Grid>
     </Section>

@@ -39,7 +39,26 @@ const parseData = (error, options, response) => {
 
     // Add slug (slugify title)
     organizations.forEach((organization) => {
-      organization.slug = slugify(organization.name, { lower: true });
+      const slug = slugify(organization.name, { lower: true });
+
+      // If slug is already assigned, try slug-2, slug-3, etc...
+      let attempt = 1;
+      let proposedSlug = slug;
+      while (organizations.some((org) => org.slug === proposedSlug)) {
+        attempt += 1;
+        proposedSlug = `${slug}-${attempt}`;
+      }
+
+      organization.slug = proposedSlug;
+    });
+
+    // Assert that slug is unique
+    organizations.forEach(({ slug }) => {
+      const orgsWithSlug = organizations.filter((org) => org.slug === slug);
+      if (orgsWithSlug.length != 1)
+        throw `Duplicate slug found: ${orgsWithSlug
+          .map((org) => org.domain)
+          .join(", ")}`;
     });
 
     // Convert value to null, if empty string

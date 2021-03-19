@@ -1,42 +1,60 @@
-import { Avatar, Box, Grid, Typography } from "@material-ui/core";
+import { Avatar, Box, Button, Grid, Typography } from "@material-ui/core";
 import styled from "styled-components";
 import Layout from "components/Layout";
 import Section from "components/Section";
 import Bold from "components/Bold";
 
+const LinkWrapper = ({ href, children }) => {
+  if (!href) return <>{children}</>;
+
+  return (
+    <Button
+      href={href}
+      target="_blank"
+      disableFocusRipple
+      style={{ textTransform: "none", padding: 0 }}
+    >
+      {children}
+    </Button>
+  );
+};
+
 const Person = ({
   image,
   name,
   title,
+  href = null,
   children,
   ImageComponent = Avatar,
   imageStyle = null,
 }) => (
   <Grid item sm={12} md={4} lg={4}>
-    <Box align="center">
-      <ImageComponent
-        src={`/static/about/${image}`}
-        style={
-          imageStyle || {
-            width: 160,
-            height: 160,
+    <LinkWrapper href={href}>
+      <Box align="center" padding={1}>
+        <ImageComponent
+          src={`/static/about/${image}`}
+          style={
+            imageStyle || {
+              width: 160,
+              height: 160,
+            }
           }
-        }
-      />
-      <Box marginTop={1}>
-        <Typography variant="h6" component="p">
-          <Bold>{name}</Bold>
-        </Typography>
-        {title && (
-          <Typography variant="body1">
-            <Bold color="primary.dark">{title}</Bold>
-          </Typography>
-        )}
+        />
         <Box marginTop={1}>
-          <Typography variant="body1">{children}</Typography>
+          <Typography variant="h6" component="p">
+            <Bold>{name}</Bold>
+          </Typography>
+          {title && (
+            <Typography variant="body1">
+              <Bold color="primary.dark">{title}</Bold>
+            </Typography>
+          )}
+          <Box marginTop={1}>
+            <Typography variant="body1">{children}</Typography>
+          </Box>
         </Box>
       </Box>
-    </Box>
+    </LinkWrapper>
   </Grid>
 );
 
@@ -84,6 +102,7 @@ const AboutPage = () => (
           name="Nadim Choucair"
           image="nadim-choucair.jpeg"
           title="Founder at 2030 Cabinet"
+          href="https://www.linkedin.com/in/nadimchoucair/"
         >
           Nadim convenes people &amp; ideas to build partnerships for achieving
           the UN Sustainable Development Goals. His background is in mechanical
@@ -93,6 +112,7 @@ const AboutPage = () => (
           name="Christian Walter"
           image="christian-walter.jpeg"
           title="Founding Partner at SDGx"
+          href="https://www.linkedin.com/in/chrwalter/"
         >
           Christian's expertise is in digital business model development and
           applications for social impact. He focuses on building organizations
@@ -103,6 +123,7 @@ const AboutPage = () => (
           name="Finn Woelm"
           image="finn-woelm.jpeg"
           title="Data Scientist and Analyst, UN Sustainable Development Solutions Network"
+          href="https://www.linkedin.com/in/finnwoelm/"
         >
           Finn is a software developer working at the intersection of technology
           and the UN Sustainable Development Goals. His focus is web
@@ -119,6 +140,7 @@ const AboutPage = () => (
           name="Antonia Schiller"
           image="antonia-schiller.jpeg"
           title="Expert in SDG Mapping"
+          href="https://www.linkedin.com/in/antonia-schiller-36578b208/"
         >
           Antonia previously worked with Movement Map, a Canadian initiative
           that mapped 10,000+ non-profits by SDG. Antiona also played a key role
@@ -131,17 +153,25 @@ const AboutPage = () => (
         Partners
       </Typography>
       <Grid container spacing={3}>
-        <Partner name="2030 Cabinet" image="2030-cabinet.jpeg">
+        <Partner
+          name="2030 Cabinet"
+          image="2030-cabinet.jpeg"
+          href="https://www.2030cabinet.com/"
+        >
           2030 Cabinet is an impact oriented ecosystem builder and partnership
           architect to enable sustainable innovation, using the UN's Sustainable
           Development Goals.
         </Partner>
-        <Partner name="SDGx" image="sdgx.png">
+        <Partner name="SDGx" image="sdgx.png" href="https://sdgx.org/">
           SDGx is a private UN Sustainable Development Goals technology funds
           management and advisory group, headquartered in Singapore with offices
           in Sydney, Bangkok, and Berlin.
         </Partner>
-        <Partner name="Lightwave" image="lightwave.png">
+        <Partner
+          name="Lightwave"
+          image="lightwave.png"
+          href="https://lightwave.ch/"
+        >
           Lightwave promotes regenerative social change by connecting
           organizations & people with an IT platform, content & events.
           Lightwave has mapped more than 1,500 SDG organizations in Switzerland.

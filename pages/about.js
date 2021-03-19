@@ -141,6 +141,11 @@ const AboutPage = () => (
           management and advisory group, headquartered in Singapore with offices
           in Sydney, Bangkok, and Berlin.
         </Partner>
+        <Partner name="Lightwave" image="lightwave.png">
+          Lightwave promotes regenerative social change by connecting
+          organizations & people with an IT platform, content & events.
+          Lightwave has mapped more than 1,500 SDG organizations in Switzerland.
+        </Partner>
       </Grid>
     </Section>
   </Layout>

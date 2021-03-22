@@ -6,7 +6,7 @@ const slugify = require("slugify");
 const pick = require("lodash.pick");
 
 const DATABASE_URL =
-  "https://docs.google.com/spreadsheets/d/1kTPuzuE97nUL15_srlJhNuydSNBborNuLRObXXxkVsg/edit#gid=0";
+  "https://docs.google.com/spreadsheets/d/1kTPuzuE97nUL15_srlJhNuydSNBborNuLRObXXxkVsg/edit#gid=73049635";
 const OUTPUT_PATH = path.join(__dirname, "organizations.json");
 
 // Parse the data after downloading it from the Google spreadsheet

@@ -42,7 +42,17 @@ const Footer = () => (
           </ImageLink>
         </Link>
       </Grid>
-      <Grid item xs lg style={{ padding: 0 }} />
+      <Grid item xs lg style={{ padding: 0 }}>
+        <Box display="flex" justifyContent="flex-start">
+          <Link href="/privacy-policy" passHref>
+            <Box color="white" clone>
+              <Typography variant="body2" component="a">
+                Privacy Policy
+              </Typography>
+            </Box>
+          </Link>
+        </Box>
+      </Grid>
       <Grid item xs={12} lg="auto">
         <Typography variant="body1">An initiative of</Typography>
       </Grid>

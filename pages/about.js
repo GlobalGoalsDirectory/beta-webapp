@@ -176,6 +176,16 @@ const AboutPage = () => (
           organizations & people with an IT platform, content & events.
           Lightwave has mapped more than 1,500 SDG organizations in Switzerland.
         </Partner>
+        <Partner
+          name="British Columbia Council for International Cooperation (BCCIC)"
+          image="bccic.png"
+          href="https://www.bccic.ca/"
+        >
+          The BCCIC is a network engaged in the SDGs, sustainable development,
+          and social justice issues. As part of its Movement Map initiative, the
+          BCCIC has mapped over 12,000 organizations working on the SDGs in
+          Canada and around the globe.
+        </Partner>
       </Grid>
     </Section>
   </Layout>

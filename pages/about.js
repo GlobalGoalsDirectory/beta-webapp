@@ -146,6 +146,16 @@ const AboutPage = () => (
           that mapped 10,000+ non-profits by SDG. Antiona also played a key role
           in adapting their methodology to Germany.
         </Person>
+        <Person
+          name="Steve Borchardt"
+          image="steve-borchardt.jpeg"
+          title="Consultant to the Joint Research Centre of the European Commission"
+          href="https://www.linkedin.com/in/steve-borchardt-430807144/"
+        >
+          Steve develops tech-based solutions for analyzing data and policies
+          for the European Commission. His tools include machine learning,
+          natural language processing, and text mining.
+        </Person>
       </Grid>
     </Section>
     <Section>

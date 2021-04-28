@@ -96,7 +96,16 @@ const DirectoryPage = ({ organizations }) => {
               >
                 <MenuItem value={"all"}>All SDGs</MenuItem>
                 {Array.from({ length: 17 }).map((_e, index) => (
-                  <MenuItem key={index} value={index + 1}>
+                  <MenuItem
+                    key={index}
+                    value={index + 1}
+                    disabled={
+                      applyFilters(organizations, {
+                        sdgFilter: index + 1,
+                        stateFilter,
+                      }).length == 0
+                    }
+                  >
                     SDG {index + 1}: {GOALS[index]}
                   </MenuItem>
                 ))}
@@ -117,7 +126,16 @@ const DirectoryPage = ({ organizations }) => {
               >
                 <MenuItem value={"all"}>All states</MenuItem>
                 {STATES.map((state) => (
-                  <MenuItem key={state} value={state}>
+                  <MenuItem
+                    key={state}
+                    value={state}
+                    disabled={
+                      applyFilters(organizations, {
+                        sdgFilter,
+                        stateFilter: state,
+                      }).length == 0
+                    }
+                  >
                     {state}
                   </MenuItem>
                 ))}

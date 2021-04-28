@@ -1,6 +1,5 @@
 import { Avatar } from "@material-ui/core";
 import styled from "styled-components";
-import { getLogo } from "helpers/organization";
 
 // From: https://stackoverflow.com/a/16348977/6451879
 var stringToColour = function (str) {
@@ -35,7 +34,7 @@ const OrganizationLogo = ({ size, organization, variant = "square" }) => {
   return (
     <Logo
       variant={variant}
-      src={getLogo(organization)}
+      src={organization.logo}
       styled={{ size, color: stringToColour(name) }}
     >
       {name

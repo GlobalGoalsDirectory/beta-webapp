@@ -118,9 +118,9 @@ const DirectoryPage = ({ organizations }) => {
         Directory
       </Typography>
       <Box marginBottom={2}>
-        <Box display="flex">
-          <Box marginRight={2}>
-            <FormControl variant="filled">
+        <Box display={{ md: "flex" }}>
+          <Box marginRight={{ md: 2 }} marginBottom={{ xs: 2, md: 0 }}>
+            <FormControl variant="filled" style={{ maxWidth: "100%" }}>
               <InputLabel id="sdgFilter">Focus</InputLabel>
               <Select
                 labelId="sdgFilter"
@@ -150,7 +150,7 @@ const DirectoryPage = ({ organizations }) => {
             </FormControl>
           </Box>
           <Box>
-            <FormControl variant="filled">
+            <FormControl variant="filled" style={{ maxWidth: "100%" }}>
               <InputLabel id="stateFilter">Location</InputLabel>
               <Select
                 labelId="stateFilter"

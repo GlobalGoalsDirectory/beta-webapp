@@ -1,7 +1,8 @@
 import getOrganizations from "helpers/getOrganizations";
 
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import {
   Box,
   FormControl,
@@ -77,6 +78,39 @@ const STATES = [
 const DirectoryPage = ({ organizations }) => {
   const [sdgFilter, setSdgFilter] = useState("all");
   const [stateFilter, setStateFilter] = useState("all");
+  const [isInitialized, setIsInitialized] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isInitialized) return;
+    const queryParams = new URLSearchParams(window.location.search);
+    setSdgFilter(queryParams.get("sdg") || "all");
+    setStateFilter(queryParams.get("state") || "all");
+    setIsInitialized(true);
+  }, []);
+
+  // Run this effect only after we have parsed the initial URL params
+  // (see above)
+  useEffect(() => {
+    if (!isInitialized) return;
+
+    // Construct query params
+    const queryParams = {};
+
+    // Set new or modify existing parameter value.
+    if (sdgFilter != "all") queryParams.sdg = sdgFilter;
+    if (stateFilter != "all") queryParams.state = stateFilter;
+
+    // Replace current querystring with the new one
+    router.replace(
+      { pathname: "/organizations" },
+      {
+        pathname: "/organizations",
+        query: queryParams,
+      },
+      { scroll: false, shallow: true }
+    );
+  }, [sdgFilter, stateFilter]);
 
   return (
     <Layout>

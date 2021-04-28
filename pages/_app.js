@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { CssBaseline } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { ThemeProvider } from "styled-components";
-import NextNProgress from "nextjs-progressbar";
+import NextNProgress from "components/NextNProgress";
 import { theme } from "../helpers/getTheme";
 
 function MyApp({ Component, pageProps }) {

@@ -17,6 +17,9 @@ const parseData = (error, options, response) => {
     // Convert data row array into an array of objects
     let organizations = response.rows.map((row) => row.cells);
 
+    // Keep only organizations based in Germany
+    organizations = organizations.filter((org) => org.country === "Germany");
+
     // Keep only properties that we use in the app
     organizations = organizations.map((organization) => {
       const keys = Object.keys(organization);
@@ -25,7 +28,8 @@ const parseData = (error, options, response) => {
         if (["domain", "url", "logo", "name", "summary"].includes(key))
           return true;
 
-        if (["address", "latitude", "longitude"].includes(key)) return true;
+        if (["address", "state", "latitude", "longitude"].includes(key))
+          return true;
 
         if (key.endsWith("_handle")) return true;
 

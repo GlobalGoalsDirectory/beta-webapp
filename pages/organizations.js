@@ -6,6 +6,9 @@ import { useRouter } from "next/router";
 import {
   Box,
   Button,
+  Card,
+  CardActionArea,
+  CardContent,
   FormControl,
   FormHelperText,
   Grid,
@@ -14,7 +17,7 @@ import {
   Select,
   Typography,
 } from "@material-ui/core";
-import { Plus } from "mdi-material-ui";
+import { Plus, ShapePlus } from "mdi-material-ui";
 import Layout from "components/Layout";
 import OrganizationPreview from "components/OrganizationPreview";
 import InfiniteScroll from "components/InfiniteScroll";
@@ -208,6 +211,33 @@ const DirectoryPage = ({ organizations }) => {
               </Grid>
             )
           )}
+          <Grid xs={12} sm={4} md={3} item>
+            <Box bgcolor="black" color="white" clone>
+              <Card style={{ height: "100%" }}>
+                <CardActionArea
+                  component="a"
+                  target="_blank"
+                  style={{ height: "100%" }}
+                  href={addOrganizationUrl()}
+                >
+                  <CardContent>
+                    <Box width={64} height={64} display="block" clone>
+                      <ShapePlus />
+                    </Box>
+                    <Box marginTop={1}>
+                      <Typography variant="h5" style={{ fontWeight: 500 }}>
+                        Know another organization, startup, or company?
+                      </Typography>
+                    </Box>
+                    <Typography variant="body2">
+                      We would love to feature them in the Global Goals
+                      Directory. Click here to add an organization.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Box>
+          </Grid>
         </InfiniteScroll>
       </Grid>
     </Layout>

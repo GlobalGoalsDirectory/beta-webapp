@@ -8,6 +8,7 @@ import {
   ListItemText,
   Typography,
 } from "@material-ui/core";
+import { addOrganizationUrl } from "helpers/organization";
 
 const NavBarDrawer = ({
   pages,
@@ -48,6 +49,15 @@ const NavBarDrawer = ({
           </Link>
         </Fragment>
       ))}
+      <ListItem
+        button
+        component="a"
+        target="_blank"
+        href={addOrganizationUrl()}
+        divider
+      >
+        <ListItemText primary="Add organization or startup" />
+      </ListItem>
     </List>
   </Drawer>
 );

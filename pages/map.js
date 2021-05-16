@@ -2,16 +2,19 @@ import { useCallback, useState } from "react";
 import dynamic from "next/dynamic";
 import {
   Box,
+  Button,
   Drawer,
   Grid,
   Paper,
   Hidden,
   Typography,
 } from "@material-ui/core";
+import { Plus } from "mdi-material-ui";
 import FullScreenLayout from "components/FullScreenLayout";
 import OrganizationSideView from "components/OrganizationSideView";
 import SideViewHeading from "components/SideViewHeading";
 import getOrganizations from "helpers/getOrganizations";
+import { addOrganizationUrl } from "helpers/organization";
 
 const InteractiveMap = dynamic(() => import("components/InteractiveMap"), {
   ssr: false,
@@ -44,6 +47,8 @@ const Map = ({ organizations }) => {
                 position="relative"
                 zIndex={1000}
                 overflow="auto"
+                display="flex"
+                flexDirection="column"
                 clone
               >
                 <Paper elevation={3} square>
@@ -58,13 +63,31 @@ const Map = ({ organizations }) => {
                         image="/static/map/map.svg"
                         title="Global Goals Map"
                       />
-                      <Box padding={2}>
+                      <Box
+                        padding={2}
+                        display="flex"
+                        flexGrow={1}
+                        flexDirection="column"
+                      >
                         <Typography variant="body1">
                           Explore startups, organizations, and companies in
                           Germany that are working on one of the 17 UN
                           Sustainable Development Goals. Click on a pin for
                           details.
                         </Typography>
+                        <Box flexGrow={1} />
+                        <Box>
+                          <Button
+                            component="a"
+                            target="_blank"
+                            href={addOrganizationUrl()}
+                            startIcon={<Plus />}
+                            variant="outlined"
+                            fullWidth
+                          >
+                            Add Organization or Startup
+                          </Button>
+                        </Box>
                       </Box>
                     </>
                   )}

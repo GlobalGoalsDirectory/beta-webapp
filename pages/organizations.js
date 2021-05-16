@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   Box,
+  Button,
   FormControl,
   FormHelperText,
   Grid,
@@ -13,9 +14,11 @@ import {
   Select,
   Typography,
 } from "@material-ui/core";
+import { Plus } from "mdi-material-ui";
 import Layout from "components/Layout";
 import OrganizationPreview from "components/OrganizationPreview";
 import InfiniteScroll from "components/InfiniteScroll";
+import { addOrganizationUrl } from "helpers/organization";
 
 const applyFilters = (organizations, { sdgFilter, stateFilter }) => {
   return filterByState(filterBySdg(organizations, sdgFilter), stateFilter);
@@ -114,9 +117,24 @@ const DirectoryPage = ({ organizations }) => {
 
   return (
     <Layout>
-      <Typography variant="h1" gutterBottom>
-        Directory
-      </Typography>
+      <Box display="flex">
+        <Box flexGrow={1}>
+          <Typography variant="h1" gutterBottom>
+            Directory
+          </Typography>
+        </Box>
+        <Box display={{ xs: "none", md: "block" }}>
+          <Button
+            component="a"
+            target="_blank"
+            href={addOrganizationUrl()}
+            startIcon={<Plus />}
+            variant="outlined"
+          >
+            Add Organization or Startup
+          </Button>
+        </Box>
+      </Box>
       <Box marginBottom={2}>
         <Box display={{ md: "flex" }}>
           <Box marginRight={{ md: 2 }} marginBottom={{ xs: 2, md: 0 }}>

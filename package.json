@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next",
     "download": "node data/download.js",
+    "setup": "node ./scripts/setUpRoutes.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
-    "netlify": "npm run download && next build && next export"
+    "netlify": "npm run download && npm run setup && next build && next export"
   },
   "keywords": [],
   "author": "",

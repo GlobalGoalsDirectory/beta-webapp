@@ -49,3 +49,11 @@ ROUTES.forEach((route) =>
     );
   })
 );
+
+console.log(
+  "Successfully set up",
+  ROUTES.length,
+  "routes each for",
+  LOCALES.length,
+  "locales."
+);

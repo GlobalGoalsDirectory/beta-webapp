@@ -1,5 +1,3 @@
-import { readJsonSync } from "fs-extra";
-import path from "path";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Box, Button, Grid, Typography } from "@material-ui/core";
@@ -184,16 +182,5 @@ const HomePage = ({ organizationsCount }) => (
     </Box>
   </Layout>
 );
-
-export function getStaticProps() {
-  const dataPath = path.join(process.cwd(), "data", "organizations.json");
-  const { organizations } = readJsonSync(dataPath);
-
-  return {
-    props: {
-      organizationsCount: organizations.length,
-    },
-  };
-}
 
 export default HomePage;

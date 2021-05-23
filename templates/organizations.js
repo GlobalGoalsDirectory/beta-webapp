@@ -1,5 +1,3 @@
-import getOrganizations from "helpers/getOrganizations";
-
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -243,15 +241,5 @@ const DirectoryPage = ({ organizations }) => {
     </Layout>
   );
 };
-
-export function getStaticProps() {
-  const organizations = getOrganizations();
-
-  return {
-    props: {
-      organizations,
-    },
-  };
-}
 
 export default DirectoryPage;

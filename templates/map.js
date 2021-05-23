@@ -13,7 +13,6 @@ import { Plus } from "mdi-material-ui";
 import FullScreenLayout from "components/FullScreenLayout";
 import OrganizationSideView from "components/OrganizationSideView";
 import SideViewHeading from "components/SideViewHeading";
-import getOrganizations from "helpers/getOrganizations";
 import { addOrganizationUrl } from "helpers/organization";
 
 const InteractiveMap = dynamic(() => import("components/InteractiveMap"), {
@@ -123,20 +122,5 @@ const Map = ({ organizations }) => {
     </FullScreenLayout>
   );
 };
-
-export function getStaticProps() {
-  let organizations = getOrganizations();
-
-  // Keep only organizations with defined latitude and longitude
-  organizations = organizations.filter(
-    (org) => (org.latitude != null) & (org.longitude != null)
-  );
-
-  return {
-    props: {
-      organizations,
-    },
-  };
-}
 
 export default Map;

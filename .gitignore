@@ -1,3 +1,7 @@
+# Pages directory -- Note: Pages are defined in /templates and copied over to
+# /pages via /scripts/setUpRoutes.js
+pages/
+
 # next.js build output
 .next
 out/

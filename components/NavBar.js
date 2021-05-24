@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Link from "next/link";
 import {
   AppBar,
   Box,
@@ -14,6 +13,7 @@ import {
 import { Menu } from "mdi-material-ui";
 import styled from "styled-components";
 import NavBarDrawer from "components/NavBarDrawer";
+import LocaleLink from "components/LocaleLink";
 
 const Button = styled(ButtonBase).attrs({
   component: "a",
@@ -176,11 +176,11 @@ const NavBar = ({ fluid = true }) => {
                     </IconButton>
                   </Box>
                 </Hidden>
-                <Link href="/" passHref>
+                <LocaleLink href="/" passHref>
                   <Button style={{ padding: 0 }}>
                     <img src="/static/logo.png" />
                   </Button>
-                </Link>
+                </LocaleLink>
                 <Hidden implementation="js" mdUp>
                   <NavBarDrawer
                     open={showNavDrawer}
@@ -191,13 +191,13 @@ const NavBar = ({ fluid = true }) => {
                 <DesktopOnlyBox>
                   <Box display="flex" flexGrow={1} />
                   {pages.map(({ label, href }) => (
-                    <Link key={href} href={href} passHref>
+                    <LocaleLink key={href} href={href} passHref>
                       <Button>
                         <Typography variant="h4" component="p">
                           {label}
                         </Typography>
                       </Button>
-                    </Link>
+                    </LocaleLink>
                   ))}
                 </DesktopOnlyBox>
               </Container>

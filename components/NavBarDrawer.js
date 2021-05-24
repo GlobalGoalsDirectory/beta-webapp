@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import Link from "next/link";
 import {
   Box,
   Drawer,
@@ -8,6 +7,7 @@ import {
   ListItemText,
   Typography,
 } from "@material-ui/core";
+import LocaleLink from "components/LocaleLink";
 import { addOrganizationUrl } from "helpers/organization";
 
 const NavBarDrawer = ({
@@ -21,7 +21,7 @@ const NavBarDrawer = ({
     PaperProps={{ style: { minWidth: "60%", maxWidth: "80%" } }}
   >
     <List disablePadding>
-      <Link href="/" passHref>
+      <LocaleLink href="/" passHref>
         <Box background="primary.main" clone>
           <ListItem
             button
@@ -34,19 +34,19 @@ const NavBarDrawer = ({
             <img src="/static/logo.png" style={{ maxWidth: "100%" }} />
           </ListItem>
         </Box>
-      </Link>
-      <Link href="/" passHref>
+      </LocaleLink>
+      <LocaleLink href="/" passHref>
         <ListItem button component="a" divider>
           <ListItemText primary="Home" />
         </ListItem>
-      </Link>
+      </LocaleLink>
       {pages.map(({ href, label }) => (
         <Fragment key={href}>
-          <Link href={href} passHref>
+          <LocaleLink href={href} passHref>
             <ListItem button component="a" divider>
               <ListItemText primary={label} />
             </ListItem>
-          </Link>
+          </LocaleLink>
         </Fragment>
       ))}
       <ListItem

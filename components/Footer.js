@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { Box, Grid, Typography } from "@material-ui/core";
 import styled from "styled-components";
+import LocaleLink from "components/LocaleLink";
 
 const FooterBox = styled(Box)`
   background: #000;
@@ -36,21 +36,21 @@ const Footer = () => (
       style={{ textAlign: "center" }}
     >
       <Grid item style={{ padding: 0 }} xs={12} lg="auto">
-        <Link href="/" passHref>
+        <LocaleLink href="/" passHref>
           <ImageLink>
             <Image src="/static/logo-white.png" />
           </ImageLink>
-        </Link>
+        </LocaleLink>
       </Grid>
       <Grid item xs lg style={{ padding: 0 }}>
         <Box display="flex" justifyContent="flex-start">
-          <Link href="/privacy-policy" passHref>
+          <LocaleLink href="/privacy-policy" passHref>
             <Box color="white" clone>
               <Typography variant="body2" component="a">
                 Privacy Policy
               </Typography>
             </Box>
-          </Link>
+          </LocaleLink>
         </Box>
       </Grid>
       <Grid item xs={12} lg="auto">

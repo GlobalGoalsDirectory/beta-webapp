@@ -1,8 +1,8 @@
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Box, Button, Grid, Typography } from "@material-ui/core";
 import styled from "styled-components";
 import Layout from "components/Layout";
+import LocaleLink from "components/LocaleLink";
 
 const DEFAULT_CITY = "Berlin";
 const CITIES = [
@@ -140,7 +140,7 @@ const HomePage = ({ organizationsCount }) => (
           </Typography>
           <Grid container spacing={2}>
             <Grid item xs={12} sm="auto">
-              <Link href="/map" passHref>
+              <LocaleLink href="/map" passHref>
                 <LargeButton component="a" variant="contained" color="primary">
                   <Typography
                     variant="h4"
@@ -150,10 +150,10 @@ const HomePage = ({ organizationsCount }) => (
                     Explore Map
                   </Typography>
                 </LargeButton>
-              </Link>
+              </LocaleLink>
             </Grid>
             <Grid item xs={12} sm="auto">
-              <Link href="/organizations" passHref>
+              <LocaleLink href="/organizations" passHref>
                 <LargeButton
                   component="a"
                   variant="contained"
@@ -168,7 +168,7 @@ const HomePage = ({ organizationsCount }) => (
                     View Directory
                   </Typography>
                 </LargeButton>
-              </Link>
+              </LocaleLink>
             </Grid>
           </Grid>
         </Grid>

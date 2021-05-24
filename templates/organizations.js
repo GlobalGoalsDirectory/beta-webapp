@@ -84,36 +84,37 @@ const DirectoryPage = ({ organizations }) => {
   const [isInitialized, setIsInitialized] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    if (isInitialized) return;
-    const queryParams = new URLSearchParams(window.location.search);
-    setSdgFilter(queryParams.get("sdg") || "all");
-    setStateFilter(queryParams.get("state") || "all");
-    setIsInitialized(true);
-  }, []);
-
-  // Run this effect only after we have parsed the initial URL params
-  // (see above)
-  useEffect(() => {
-    if (!isInitialized) return;
-
-    // Construct query params
-    const queryParams = {};
-
-    // Set new or modify existing parameter value.
-    if (sdgFilter != "all") queryParams.sdg = sdgFilter;
-    if (stateFilter != "all") queryParams.state = stateFilter;
-
-    // Replace current querystring with the new one
-    router.replace(
-      { pathname: "/organizations" },
-      {
-        pathname: "/organizations",
-        query: queryParams,
-      },
-      { scroll: false, shallow: true }
-    );
-  }, [sdgFilter, stateFilter]);
+  // TODO: Reenable after making compatible with multiple locales
+  // useEffect(() => {
+  //   if (isInitialized) return;
+  //   const queryParams = new URLSearchParams(window.location.search);
+  //   setSdgFilter(queryParams.get("sdg") || "all");
+  //   setStateFilter(queryParams.get("state") || "all");
+  //   setIsInitialized(true);
+  // }, []);
+  //
+  // // Run this effect only after we have parsed the initial URL params
+  // // (see above)
+  // useEffect(() => {
+  //   if (!isInitialized) return;
+  //
+  //   // Construct query params
+  //   const queryParams = {};
+  //
+  //   // Set new or modify existing parameter value.
+  //   if (sdgFilter != "all") queryParams.sdg = sdgFilter;
+  //   if (stateFilter != "all") queryParams.state = stateFilter;
+  //
+  //   // Replace current querystring with the new one
+  //   router.replace(
+  //     { pathname: "/organizations" },
+  //     {
+  //       pathname: "/organizations",
+  //       query: queryParams,
+  //     },
+  //     { scroll: false, shallow: true }
+  //   );
+  // }, [sdgFilter, stateFilter]);
 
   return (
     <Layout>

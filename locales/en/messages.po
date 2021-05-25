@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: components/InteractiveMap.js:130
+msgid "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
+msgstr ""
+
 #: templates/about.js:184
 msgid "2030 Cabinet is an impact oriented ecosystem builder and partnership architect to enable sustainable innovation, using the UN's Sustainable Development Goals."
 msgstr ""
@@ -21,8 +25,16 @@ msgstr ""
 msgid "<0>The Global Goals Directory is a public list of startups, organizations, and companies working on the 17 UN Sustainable Development Goals. The directory is a public good and is completely free.</0> The idea for the Global Goals Directory was born in 2019, out of many conversations with thought leaders and innovators from the SDG community. Throughout these conversations, we observed one theme re-emerging over and over again: The importance of partnerships and their critical role for tackling the UN Sustainable Development Goals. While many partnerships exist in the SDG community today, a large share of them are formed from serendipitous connections — people and organizations we meet at a workshop, an event, or a webinar. But in a network as big as the SDG community, there are hundreds of potential partners that we have not yet met. The Global Goals Directory exists to put the entire SDG community at your fingertips and to make it easy to find new collaborators and build new partnerships, so that we as an ecosystem can become more connected, more collaborative, and accelerate our progress on the 2030 Agenda."
 msgstr ""
 
-#: templates/about.js:71
+#: components/OrganizationSideView.js:54
 msgid "About"
+msgstr ""
+
+#: templates/about.js:71
+msgid "About us"
+msgstr "About"
+
+#: templates/map.js:90
+msgid "Add Organization or Startup"
 msgstr ""
 
 #: templates/about.js:145
@@ -43,6 +55,10 @@ msgstr ""
 
 #: templates/about.js:122
 msgid "Christian's expertise is in digital business model development and applications for social impact. He focuses on building organizations that are financially sustainable, return a profit to their shareholders, and achieve social responsibility."
+msgstr ""
+
+#: components/SideViewHeading.js:11
+msgid "Close"
 msgstr ""
 
 #: templates/index.js:12
@@ -69,8 +85,16 @@ msgstr ""
 msgid "Explore Map"
 msgstr ""
 
+#: templates/map.js:73
+msgid "Explore startups, organizations, and companies in Germany that are working on one of the 17 UN Sustainable Development Goals. Click on a pin for details."
+msgstr ""
+
 #: templates/about.js:135
 msgid "Finn is a software developer working at the intersection of technology and the UN Sustainable Development Goals. His focus is web development, web scraping, and text mining."
+msgstr ""
+
+#: components/OrganizationSideView.js:65
+msgid "Focus SDGs"
 msgstr ""
 
 #: templates/about.js:107
@@ -107,6 +131,10 @@ msgstr ""
 
 #: templates/about.js:191
 msgid "SDGx is a private UN Sustainable Development Goals technology funds management and advisory group, headquartered in Singapore with offices in Sydney, Bangkok, and Berlin."
+msgstr ""
+
+#: components/OrganizationSideView.js:89
+msgid "Social Media"
 msgstr ""
 
 #: templates/about.js:166

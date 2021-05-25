@@ -68,7 +68,7 @@ const Partner = styled(Person).attrs({
 const AboutPage = () => (
   <Layout>
     <Typography variant="h1" gutterBottom>
-      <Trans>About</Trans>
+      <Trans id="About us">About</Trans>
     </Typography>
     <Section>
       <Typography variant="body1">

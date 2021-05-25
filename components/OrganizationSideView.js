@@ -1,3 +1,4 @@
+import { Trans } from "@lingui/macro";
 import { Box, Button, Divider, Grid, Typography } from "@material-ui/core";
 import { Earth, Facebook, Linkedin, MapMarker, Twitter } from "mdi-material-ui";
 import SideViewHeading from "components/SideViewHeading";
@@ -49,7 +50,9 @@ const OrganizationSideView = ({ organization, onClose }) => {
           <Divider />
           <Box padding={2} paddingBottom={3}>
             <Typography variant="h4" gutterBottom>
-              <Bold>About</Bold>
+              <Bold>
+                <Trans>About</Trans>
+              </Bold>
             </Typography>
             <Typography variant="body1">{summary}</Typography>
           </Box>
@@ -58,7 +61,9 @@ const OrganizationSideView = ({ organization, onClose }) => {
       <Divider />
       <Box padding={2} paddingBottom={3}>
         <Typography variant="h4" gutterBottom>
-          <Bold>Focus SDGs</Bold>
+          <Bold>
+            <Trans>Focus SDGs</Trans>
+          </Bold>
         </Typography>
         <Grid container spacing={1}>
           {Array.from({ length: 17 }).map((_e, index) => (
@@ -80,7 +85,9 @@ const OrganizationSideView = ({ organization, onClose }) => {
           <Divider />
           <Box padding={2} paddingBottom={3}>
             <Typography variant="h4" gutterBottom>
-              <Bold>Social Media</Bold>
+              <Bold>
+                <Trans>Social Media</Trans>
+              </Bold>
             </Typography>
             <Box marginY={1}>
               {facebook_handle && (

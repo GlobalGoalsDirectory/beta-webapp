@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import { t } from "@lingui/macro";
 import Leaflet from "leaflet";
 import {
   MapContainer,
@@ -126,7 +127,7 @@ const InteractiveMap = memo(({ organizations, onClick }) => (
     style={{ height: "100%" }}
   >
     <TileLayer
-      attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      attribution={t`&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors`}
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
     <MarkerClusterGroup

@@ -1,3 +1,4 @@
+import { Trans } from "@lingui/macro";
 import { Box, Button, Divider, Typography } from "@material-ui/core";
 import Bold from "components/Bold";
 
@@ -7,7 +8,7 @@ const SideViewHeading = ({ image, title, onClose }) => (
       {onClose && (
         <Box style={{ float: "right" }}>
           <Button onClick={onClose} style={{ color: "#ffffff9c" }}>
-            Close
+            <Trans>Close</Trans>
           </Button>
         </Box>
       )}

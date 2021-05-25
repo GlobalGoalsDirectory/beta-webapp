@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import dynamic from "next/dynamic";
+import { Trans } from "@lingui/macro";
 import {
   Box,
   Button,
@@ -69,10 +70,12 @@ const Map = ({ organizations }) => {
                         flexDirection="column"
                       >
                         <Typography variant="body1">
-                          Explore startups, organizations, and companies in
-                          Germany that are working on one of the 17 UN
-                          Sustainable Development Goals. Click on a pin for
-                          details.
+                          <Trans>
+                            Explore startups, organizations, and companies in
+                            Germany that are working on one of the 17 UN
+                            Sustainable Development Goals. Click on a pin for
+                            details.
+                          </Trans>
                         </Typography>
                         <Box flexGrow={1} />
                         <Box>
@@ -84,7 +87,7 @@ const Map = ({ organizations }) => {
                             variant="outlined"
                             fullWidth
                           >
-                            Add Organization or Startup
+                            <Trans>Add Organization or Startup</Trans>
                           </Button>
                         </Box>
                       </Box>

@@ -12,3 +12,79 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Plural-Forms: \n"
+
+#: templates/about.js:184
+msgid "2030 Cabinet is an impact oriented ecosystem builder and partnership architect to enable sustainable innovation, using the UN's Sustainable Development Goals."
+msgstr "2030 Cabinet unterstützt und fördert Partnerschaften für nachhaltige Innovation entlang der Nachhaltigkeitsziele der Vereinten Nationen."
+
+#: templates/about.js:75
+msgid "<0>The Global Goals Directory is a public list of startups, organizations, and companies working on the 17 UN Sustainable Development Goals. The directory is a public good and is completely free.</0> The idea for the Global Goals Directory was born in 2019, out of many conversations with thought leaders and innovators from the SDG community. Throughout these conversations, we observed one theme re-emerging over and over again: The importance of partnerships and their critical role for tackling the UN Sustainable Development Goals. While many partnerships exist in the SDG community today, a large share of them are formed from serendipitous connections — people and organizations we meet at a workshop, an event, or a webinar. But in a network as big as the SDG community, there are hundreds of potential partners that we have not yet met. The Global Goals Directory exists to put the entire SDG community at your fingertips and to make it easy to find new collaborators and build new partnerships, so that we as an ecosystem can become more connected, more collaborative, and accelerate our progress on the 2030 Agenda."
+msgstr "<0>Das Global Goals Directory ist eine öffentliche Liste von Startups, Organisationen und Unternehmen, die an den 17 UN-Zielen für nachhaltige Entwicklung arbeiten. Das Verzeichnis ist ein öffentliches Gut und komplett kostenlos.</0> Die Idee für das Global Goals Directory entstand 2019 nach vielen Gesprächen mit Akteur*innen und Vordenker*innen der SDG-Community. Ein Thema hat sich in diesen Gesprächen regelmäßig wiederholt: Die Bedeutung von Partnerschaften und ihre entscheidende Rolle für die Erreichung der UN-Ziele für nachhaltige Entwicklung. Obwohl es heutzutage viele Partnerschaften in der SDG-Community gibt, entsteht ein großer Teil davon durch zufälligen Verbindungen - Menschen und Organisationen, die sich bei einem Workshop, auf einer Veranstaltung oder in einem Webinar treffen. In einem so großen Netzwerk wie der SDG-Community gibt es jedoch Hunderte potenzielle Partner, die sich noch nicht kennen. Das Global Goals Directory dient dazu, die SDG-Community zu vernetzen und die Suche nach neuen Kollaborator*innen und Partnerschaften zu unterstützen — damit wir als Ökosystem vernetzter und kooperativer werden und die Umsetzung der Agenda 2030 beschleunigen."
+
+#: templates/about.js:71
+msgid "About"
+msgstr "Über uns"
+
+#: templates/about.js:145
+msgid "Advisors"
+msgstr "Berater*innen"
+
+#: templates/about.js:154
+msgid "Antonia previously worked with Movement Map, a Canadian initiative that mapped 10,000+ non-profits by SDG. Antonia also played a key role in adapting their methodology to Germany."
+msgstr "Antonia hat an der kanadischen Movement Map mitgearbeitet und geholfen mehr als 10.000 Organisationen nach den SDGs zu klassifizieren. Unter anderem hat sie dazu beigetragen, die Methodik für die Anwendung in Deutschland anzupassen."
+
+#: templates/about.js:122
+msgid "Christian's expertise is in digital business model development and applications for social impact. He focuses on building organizations that are financially sustainable, return a profit to their shareholders, and achieve social responsibility."
+msgstr "Christians Expertise liegt in der Entwicklung digitaler Geschäftsmodelle mit social impact. Er konzentriert sich auf den Aufbau von Organisationen, die finanziell nachhaltig sind und gesellschaftliche Verantwortung übernehmen."
+
+#: templates/about.js:163
+msgid "Consultant to the Joint Research Centre of the European Commission"
+msgstr "Berater der Gemeinsamen Forschungsstelle (JRC) der Europäischen Kommission"
+
+#: templates/about.js:132
+msgid "Data Scientist and Analyst, UN Sustainable Development Solutions Network"
+msgstr "Datenwissenschaftler und Analyst, UN Sustainable Development Solutions Network "
+
+#: templates/about.js:151
+msgid "Expert in SDG Mapping"
+msgstr "Expertin in SDG Mapping"
+
+#: templates/about.js:135
+msgid "Finn is a software developer working at the intersection of technology and the UN Sustainable Development Goals. His focus is web development, web scraping, and text mining."
+msgstr "Finn arbeitet als Software-Developer an der Schnittstelle zwischen Technologie und den Sustainable Development Goals. Sein Fokus liegt auf Webentwicklung, Web Scraping und Text Mining."
+
+#: templates/about.js:107
+msgid "Founder at 2030 Cabinet"
+msgstr "Gründer von 2030 Cabinet"
+
+#: templates/about.js:119
+msgid "Founding Partner at SDGx"
+msgstr "Gründungspartner von SDGx"
+
+#: templates/about.js:202
+msgid "Lightwave promotes regenerative social change by connecting organizations & people with an IT platform, content & events. Lightwave has mapped more than 1,500 SDG organizations in Switzerland."
+msgstr "Lightwave fördert den regenerativen sozialen Wandel, indem es Organisationen und Menschen mit einer Webplattform, Inhalten und Veranstaltungen verbindet. Lightwave hat mehr als 1.500 SDG-Organisationen in der Schweiz kartiert."
+
+#: templates/about.js:110
+msgid "Nadim convenes people & ideas to build partnerships for achieving the UN Sustainable Development Goals. His background is in mechanical engineering, business, and diplomacy."
+msgstr "Nadim bringt Menschen und Ideen zusammen, um Partnerschaften zum Erreichen der Ziele für nachhaltige Entwicklung aufzubauen. Sein beruflicher Hintergrund liegt im Maschinenbau, Wirtschaft und Diplomatie."
+
+#: templates/about.js:176
+msgid "Partners"
+msgstr "Partner"
+
+#: templates/about.js:191
+msgid "SDGx is a private UN Sustainable Development Goals technology funds management and advisory group, headquartered in Singapore with offices in Sydney, Bangkok, and Berlin."
+msgstr "SDGx ist eine private Management- und Beratungsgruppe für Technologiefonds für die UN Sustainable Development Goals mit Hauptsitz in Singapur und Niederlassungen in Sydney, Bangkok und Berlin."
+
+#: templates/about.js:166
+msgid "Steve develops tech-based solutions for analyzing data and policies for the European Commission. His tools include machine learning, natural language processing, and text mining."
+msgstr "Steve entwickelt technologiebasierte Lösungen zur Analyse von Daten und Richtlinien für die Europäische Kommission. Zu seinen Werkzeugen gehören maschinelles Lernen, Natural Language Processing und Text Mining."
+
+#: templates/about.js:101
+msgid "Team"
+msgstr "Team"
+
+#: templates/about.js:214
+msgid "The BCCIC is a network engaged in the SDGs, sustainable development, and social justice issues. As part of its Movement Map initiative, the BCCIC has mapped over 12,000 organizations working on the SDGs in Canada and around the globe."
+msgstr "Der BCCIC ist ein Netzwerk, das sich mit den SDGs, nachhaltiger Entwicklung und sozialer Gerechtigkeit befasst. Im Rahmen der Movement Map-Initiative hat der BCCIC über 12.000 Organisationen kartiert, die in Kanada und weltweit an den SDGs arbeiten."

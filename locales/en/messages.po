@@ -12,3 +12,79 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Plural-Forms: \n"
+
+#: templates/about.js:184
+msgid "2030 Cabinet is an impact oriented ecosystem builder and partnership architect to enable sustainable innovation, using the UN's Sustainable Development Goals."
+msgstr ""
+
+#: templates/about.js:75
+msgid "<0>The Global Goals Directory is a public list of startups, organizations, and companies working on the 17 UN Sustainable Development Goals. The directory is a public good and is completely free.</0> The idea for the Global Goals Directory was born in 2019, out of many conversations with thought leaders and innovators from the SDG community. Throughout these conversations, we observed one theme re-emerging over and over again: The importance of partnerships and their critical role for tackling the UN Sustainable Development Goals. While many partnerships exist in the SDG community today, a large share of them are formed from serendipitous connections — people and organizations we meet at a workshop, an event, or a webinar. But in a network as big as the SDG community, there are hundreds of potential partners that we have not yet met. The Global Goals Directory exists to put the entire SDG community at your fingertips and to make it easy to find new collaborators and build new partnerships, so that we as an ecosystem can become more connected, more collaborative, and accelerate our progress on the 2030 Agenda."
+msgstr ""
+
+#: templates/about.js:71
+msgid "About"
+msgstr ""
+
+#: templates/about.js:145
+msgid "Advisors"
+msgstr ""
+
+#: templates/about.js:154
+msgid "Antonia previously worked with Movement Map, a Canadian initiative that mapped 10,000+ non-profits by SDG. Antonia also played a key role in adapting their methodology to Germany."
+msgstr ""
+
+#: templates/about.js:122
+msgid "Christian's expertise is in digital business model development and applications for social impact. He focuses on building organizations that are financially sustainable, return a profit to their shareholders, and achieve social responsibility."
+msgstr ""
+
+#: templates/about.js:163
+msgid "Consultant to the Joint Research Centre of the European Commission"
+msgstr ""
+
+#: templates/about.js:132
+msgid "Data Scientist and Analyst, UN Sustainable Development Solutions Network"
+msgstr ""
+
+#: templates/about.js:151
+msgid "Expert in SDG Mapping"
+msgstr ""
+
+#: templates/about.js:135
+msgid "Finn is a software developer working at the intersection of technology and the UN Sustainable Development Goals. His focus is web development, web scraping, and text mining."
+msgstr ""
+
+#: templates/about.js:107
+msgid "Founder at 2030 Cabinet"
+msgstr ""
+
+#: templates/about.js:119
+msgid "Founding Partner at SDGx"
+msgstr ""
+
+#: templates/about.js:202
+msgid "Lightwave promotes regenerative social change by connecting organizations & people with an IT platform, content & events. Lightwave has mapped more than 1,500 SDG organizations in Switzerland."
+msgstr ""
+
+#: templates/about.js:110
+msgid "Nadim convenes people & ideas to build partnerships for achieving the UN Sustainable Development Goals. His background is in mechanical engineering, business, and diplomacy."
+msgstr ""
+
+#: templates/about.js:176
+msgid "Partners"
+msgstr ""
+
+#: templates/about.js:191
+msgid "SDGx is a private UN Sustainable Development Goals technology funds management and advisory group, headquartered in Singapore with offices in Sydney, Bangkok, and Berlin."
+msgstr ""
+
+#: templates/about.js:166
+msgid "Steve develops tech-based solutions for analyzing data and policies for the European Commission. His tools include machine learning, natural language processing, and text mining."
+msgstr ""
+
+#: templates/about.js:101
+msgid "Team"
+msgstr ""
+
+#: templates/about.js:214
+msgid "The BCCIC is a network engaged in the SDGs, sustainable development, and social justice issues. As part of its Movement Map initiative, the BCCIC has mapped over 12,000 organizations working on the SDGs in Canada and around the globe."
+msgstr ""

@@ -10,10 +10,12 @@
           "data": "./data",
           "helpers": "./helpers",
           "layouts": "./layouts",
+          "locales": "./locales",
           "pages": "./pages",
           "templates": "./templates"
         }
       }
-    ]
+    ],
+    ["macros"]
   ]
 }

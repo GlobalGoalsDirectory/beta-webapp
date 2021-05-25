@@ -63,6 +63,12 @@ const compileUrl = (route, params) =>
 const expressifyRoute = (route) =>
   route.replace(/\/\[([^/]+?)\](\/|$)/, "/:$1$2");
 
+const getLocaleForPathname = (pathname) => {
+  return LOCALES.find((locale) =>
+    ROUTES.some((route) => route[locale] === pathname)
+  );
+};
+
 // Attempts to find a match for the url in the array of routes
 // Returns route and params if found.
 // Returns null if none.
@@ -134,4 +140,5 @@ module.exports = {
   parseUrl,
   parseTemplateUrl,
   compileLocalizedUrl,
+  getLocaleForPathname,
 };

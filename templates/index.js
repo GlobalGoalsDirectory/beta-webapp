@@ -1,17 +1,18 @@
+import { Trans, t } from "@lingui/macro";
 import dynamic from "next/dynamic";
 import { Box, Button, Grid, Typography } from "@material-ui/core";
 import styled from "styled-components";
 import Layout from "components/Layout";
 import LocaleLink from "components/LocaleLink";
 
-const DEFAULT_CITY = "Berlin";
+const DEFAULT_CITY = t`Berlin`;
 const CITIES = [
-  "Hamburg",
-  "Bremen",
-  "Cologne",
-  "Munich",
-  "Frankfurt",
-  "Stuttgart",
+  t`Hamburg`,
+  t`Bremen`,
+  t`Cologne`,
+  t`Munich`,
+  t`Frankfurt`,
+  t`Stuttgart`,
 ];
 
 const Typed = dynamic(() => import("react-typed"), {
@@ -119,24 +120,27 @@ const HomePage = ({ organizationsCount }) => (
       <ResponsiveGridContainer spacing={5}>
         <Grid item xs={12} lg={8}>
           <Typography variant="h1" gutterBottom style={{ fontWeight: 400 }}>
-            Discover{" "}
-            <Bold>
-              <Bigger>{organizationsCount}</Bigger>
-            </Bold>{" "}
-            <Bold>startups</Bold> and <Bold>organizations</Bold> working on the{" "}
-            <Bold>
-              <SdgsText>Sustainable Development Goals</SdgsText>
-            </Bold>{" "}
-            in{" "}
-            <Typed
-              strings={[DEFAULT_CITY, ...shuffle(CITIES)]}
-              typeSpeed={40}
-              backSpeed={50}
-              backDelay={3000}
-              smartBackspace={false}
-              loop
-              attribute="textContent"
-            />
+            <Trans>
+              Discover{" "}
+              <Bold>
+                <Bigger>{organizationsCount}</Bigger>
+              </Bold>{" "}
+              <Bold>startups</Bold> and <Bold>organizations</Bold> working on
+              the{" "}
+              <Bold>
+                <SdgsText>Sustainable Development Goals</SdgsText>
+              </Bold>{" "}
+              in{" "}
+              <Typed
+                strings={[DEFAULT_CITY, ...shuffle(CITIES)]}
+                typeSpeed={40}
+                backSpeed={50}
+                backDelay={3000}
+                smartBackspace={false}
+                loop
+                attribute="textContent"
+              />
+            </Trans>
           </Typography>
           <Grid container spacing={2}>
             <Grid item xs={12} sm="auto">
@@ -147,7 +151,7 @@ const HomePage = ({ organizationsCount }) => (
                     component="span"
                     style={{ fontWeight: 500 }}
                   >
-                    Explore Map
+                    <Trans>Explore Map</Trans>
                   </Typography>
                 </LargeButton>
               </LocaleLink>
@@ -165,7 +169,7 @@ const HomePage = ({ organizationsCount }) => (
                     color="primary"
                     style={{ fontWeight: 500 }}
                   >
-                    View Directory
+                    <Trans>View Directory</Trans>
                   </Typography>
                 </LargeButton>
               </LocaleLink>

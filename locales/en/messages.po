@@ -33,8 +33,20 @@ msgstr ""
 msgid "Antonia previously worked with Movement Map, a Canadian initiative that mapped 10,000+ non-profits by SDG. Antonia also played a key role in adapting their methodology to Germany."
 msgstr ""
 
+#: templates/index.js:8
+msgid "Berlin"
+msgstr ""
+
+#: templates/index.js:11
+msgid "Bremen"
+msgstr ""
+
 #: templates/about.js:122
 msgid "Christian's expertise is in digital business model development and applications for social impact. He focuses on building organizations that are financially sustainable, return a profit to their shareholders, and achieve social responsibility."
+msgstr ""
+
+#: templates/index.js:12
+msgid "Cologne"
 msgstr ""
 
 #: templates/about.js:163
@@ -45,8 +57,16 @@ msgstr ""
 msgid "Data Scientist and Analyst, UN Sustainable Development Solutions Network"
 msgstr ""
 
+#: templates/index.js:123
+msgid "Discover <0><1>{organizationsCount}</1></0> <2>startups</2> and <3>organizations</3> working on the <4><5>Sustainable Development Goals</5></4> in <6/>"
+msgstr ""
+
 #: templates/about.js:151
 msgid "Expert in SDG Mapping"
+msgstr ""
+
+#: templates/index.js:154
+msgid "Explore Map"
 msgstr ""
 
 #: templates/about.js:135
@@ -61,8 +81,20 @@ msgstr ""
 msgid "Founding Partner at SDGx"
 msgstr ""
 
+#: templates/index.js:14
+msgid "Frankfurt"
+msgstr ""
+
+#: templates/index.js:10
+msgid "Hamburg"
+msgstr ""
+
 #: templates/about.js:202
 msgid "Lightwave promotes regenerative social change by connecting organizations & people with an IT platform, content & events. Lightwave has mapped more than 1,500 SDG organizations in Switzerland."
+msgstr ""
+
+#: templates/index.js:13
+msgid "Munich"
 msgstr ""
 
 #: templates/about.js:110
@@ -81,10 +113,18 @@ msgstr ""
 msgid "Steve develops tech-based solutions for analyzing data and policies for the European Commission. His tools include machine learning, natural language processing, and text mining."
 msgstr ""
 
+#: templates/index.js:15
+msgid "Stuttgart"
+msgstr ""
+
 #: templates/about.js:101
 msgid "Team"
 msgstr ""
 
 #: templates/about.js:214
 msgid "The BCCIC is a network engaged in the SDGs, sustainable development, and social justice issues. As part of its Movement Map initiative, the BCCIC has mapped over 12,000 organizations working on the SDGs in Canada and around the globe."
+msgstr ""
+
+#: templates/index.js:172
+msgid "View Directory"
 msgstr ""

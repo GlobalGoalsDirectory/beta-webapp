@@ -44,7 +44,7 @@ const Footer = () => (
         </LocaleLink>
       </Grid>
       <Grid item xs lg style={{ padding: 0 }}>
-        <Box display="flex" justifyContent="flex-start">
+        <Box display="flex" justifyContent={{ xs: "center", lg: "flex-start" }}>
           <LocaleLink href="/privacy-policy" passHref>
             <Box color="white" clone>
               <Typography variant="body2" component="a">

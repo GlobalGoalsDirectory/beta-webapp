@@ -494,7 +494,7 @@ msgstr "Thüringen"
 
 #: templates/index.js:172
 msgid "View Directory"
-msgstr "Verzeichnis anzeigen"
+msgstr "Verzeichnis ansehen"
 
 #: templates/how-it-works.js:19
 msgid "We have developed a novel approach for the automatic identification and classification of startups and organization working on the SDGs, based on artificial intelligence, natural language processing, and text analysis. Our AI-based approach yields two key advantages over manual analysis and classification of organizations: First, artificial intelligence requires a fraction of the time that a human needs to both find and assess organizations (about 2 minutes per organization), while simultaneously ensuring a greater degree of consistency and comparability. Second, our program can continuously run in the background, automatically re-analyzing organizations at least every 90 days to ensure that results are always up to date. While our specific approach and its application are novel, our methodology builds upon similar methods for classifying content by SDG that have been tried and proven by the <0>TU Berlin and MIT</0> and the <1>European Commission's Joint Research Center</1>."

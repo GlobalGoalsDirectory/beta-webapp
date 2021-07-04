@@ -126,6 +126,10 @@ msgstr ""
 msgid "Championing the SDGs"
 msgstr ""
 
+#: templates/privacy-policy.js:123
+msgid "Changes to our privacy policy"
+msgstr ""
+
 #: templates/about.js:122
 msgid "Christian's expertise is in digital business model development and applications for social impact. He focuses on building organizations that are financially sustainable, return a profit to their shareholders, and achieve social responsibility."
 msgstr ""
@@ -173,6 +177,10 @@ msgstr ""
 
 #: templates/index.js:123
 msgid "Discover <0><1>{organizationsCount}</1></0> <2>startups</2> and <3>organizations</3> working on the <4><5>Sustainable Development Goals</5></4> in <6/>"
+msgstr ""
+
+#: templates/privacy-policy.js:145
+msgid "Email us at finn.woelm/at/gmail.com"
 msgstr ""
 
 #: templates/about.js:151
@@ -228,6 +236,22 @@ msgstr ""
 msgid "Gender equality"
 msgstr ""
 
+#: templates/privacy-policy.js:32
+msgid "Global Goals Directory collects public information about organizations from their websites, such as keywords, focus SDGs, a short blurb, and social media handles for Facebook, Twitter, and LinkedIn. Global Goals Directory also collects public information about organizations from Twitter and Google Maps, including name, logo, and street address."
+msgstr ""
+
+#: templates/privacy-policy.js:18
+msgid "Global Goals Directory does not collect any data from the visitors of its website."
+msgstr ""
+
+#: templates/privacy-policy.js:104
+msgid "Global Goals Directory does not use any cookies on its website."
+msgstr ""
+
+#: templates/privacy-policy.js:126
+msgid "Global Goals Directory keeps its privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 1 March 2021."
+msgstr ""
+
 #: templates/organizations.js:46
 msgid "Good health and well-being"
 msgstr ""
@@ -251,6 +275,18 @@ msgstr ""
 
 #: components/NavBar.js:128
 msgid "How it works"
+msgstr ""
+
+#: templates/privacy-policy.js:135
+msgid "How to contact Global Goals Directory"
+msgstr ""
+
+#: templates/privacy-policy.js:138
+msgid "If you have any questions about our privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us."
+msgstr ""
+
+#: templates/privacy-policy.js:92
+msgid "If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email: finn.woelm/at/gmail.com"
 msgstr ""
 
 #: templates/organizations.js:52
@@ -339,7 +375,12 @@ msgid "Peace, justice and strong institutions"
 msgstr ""
 
 #: components/Footer.js:51
+#: templates/privacy-policy.js:9
 msgid "Privacy Policy"
+msgstr ""
+
+#: templates/privacy-policy.js:111
+msgid "Privacy policies of other websites"
 msgstr ""
 
 #: templates/organizations.js:47
@@ -411,12 +452,40 @@ msgstr ""
 msgid "The BCCIC is a network engaged in the SDGs, sustainable development, and social justice issues. As part of its Movement Map initiative, the BCCIC has mapped over 12,000 organizations working on the SDGs in Canada and around the globe."
 msgstr ""
 
+#: templates/privacy-policy.js:114
+msgid "The Global Goals Directory contains links to other websites. Our privacy policy applies only to our website, so if you click on a link to another website, you should read their privacy policy."
+msgstr ""
+
 #: templates/mission.js:39
 msgid "The Global Goals Directory exists to accelerate our progress on the UN Sustainable Development Goals by supporting and facilitating collaboration and partnerships between non-profit organizations, private companies, think tanks, universities, and governments. We pursue this mission in three ways: 1) Championing the UN Sustainable Development Goals by highlighting the countless number of organizations and companies working on this global agenda, 2) facilitating the creation of new partnerships by helping organizations find suitable collaborators through our public directory, and 3) supporting cities and communities with analyses of their local ecosystem of SDG actors and identifying gaps and opportunities."
 msgstr ""
 
 #: templates/how-it-works.js:163
 msgid "The Global Goals Directory is completely free. Our directory is a non-commercial project and we consider it a public good. Our objective is to inspire more partnerships for tackling the Agenda 2030. It's as simple as that.<0/><1/>The content on this website is licensed under the Creative Commons license <2>CC BY 4.0</2> — a permissive license, that provides a lot of freedom under the sole condition that appropriate credit is given and a link back to the Global Goals Directory website is provided. Our software code for the analysis as well as for this website are open source and licensed under the <3>GNU General Public License 3.0</3>, meaning that reuse and adaptation of our code is permitted (and encouraged!) as long as any copies and derivatives are made available under the same GNU GPLv3 open source license. You can find our GitHub repositories at <4>https://github.com/GlobalGoalsDirectory</4>. Contributions welcome!"
+msgstr ""
+
+#: templates/privacy-policy.js:52
+msgid "The right to access: You have the right to request copies of your personal data. We may charge you a small fee for this service."
+msgstr ""
+
+#: templates/privacy-policy.js:85
+msgid "The right to data portability: You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions."
+msgstr ""
+
+#: templates/privacy-policy.js:66
+msgid "The right to erasure: You have the right to request that we erase your personal data, under certain conditions."
+msgstr ""
+
+#: templates/privacy-policy.js:79
+msgid "The right to object to processing: You have the right to object to our processing of your personal data, under certain conditions."
+msgstr ""
+
+#: templates/privacy-policy.js:58
+msgid "The right to rectification: You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete."
+msgstr ""
+
+#: templates/privacy-policy.js:72
+msgid "The right to restrict processing: You have the right to request that we restrict the processing of your personal data, under certain conditions."
 msgstr ""
 
 #: templates/organizations.js:83
@@ -443,8 +512,28 @@ msgstr ""
 msgid "We ❤️ Open Source"
 msgstr ""
 
+#: templates/privacy-policy.js:43
+msgid "What are your data protection rights?"
+msgstr ""
+
+#: templates/privacy-policy.js:101
+msgid "What cookies does Global Goals Directory use?"
+msgstr ""
+
+#: templates/privacy-policy.js:26
+msgid "What data does Global Goals Directory collect for the organizations listed in the directory?"
+msgstr ""
+
+#: templates/privacy-policy.js:13
+msgid "What data does Global Goals Directory collect from visitors?"
+msgstr ""
+
 #: templates/mission.js:25
 msgid "With less than a decade to go until 2030, we are still facing many major challenges when it comes to the achievement of the UN Sustainable Development Goals: from climate change and pollution to extreme poverty and widening inequalities. What these challenges have in common is that they are global, interconnected, and systemic. Issues like these cannot be solved by a single organization, company, or government alone. Collaboration and partnerships are critical for advancing the 2030 Agenda on our world's toughest problems during this Decade of Action."
+msgstr ""
+
+#: templates/privacy-policy.js:46
+msgid "You — whether you are a user or an organization listed in the directory — are entitled to the following:"
 msgstr ""
 
 #: templates/organizations.js:45

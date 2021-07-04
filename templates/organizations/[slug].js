@@ -1,3 +1,4 @@
+import { Trans } from "@lingui/macro";
 import {
   Box,
   Card,
@@ -57,7 +58,7 @@ const OrganizationPage = ({ organization }) => {
               <Divider />
               <Box marginTop={2} marginBottom={3}>
                 <Typography variant="h2" gutterBottom>
-                  About
+                  <Trans>About</Trans>
                 </Typography>
                 <Typography variant="body1">{summary}</Typography>
               </Box>
@@ -66,7 +67,7 @@ const OrganizationPage = ({ organization }) => {
           <Divider />
           <Box marginTop={2} marginBottom={3}>
             <Typography variant="h2" gutterBottom>
-              Focus SDGs
+              <Trans>Focus SDGs</Trans>
             </Typography>
             <Grid container spacing={1}>
               {Array.from({ length: 17 }).map((_e, index) => (
@@ -90,7 +91,7 @@ const OrganizationPage = ({ organization }) => {
               <Divider />
               <Box marginTop={2} marginBottom={3}>
                 <Typography variant="h2" gutterBottom>
-                  Social Media
+                  <Trans>Social Media</Trans>
                 </Typography>
                 <Box marginY={2}>
                   {facebook_handle && (
@@ -153,7 +154,7 @@ const OrganizationPage = ({ organization }) => {
                   data-tweet-limit="4"
                   data-width="400"
                 >
-                  Latest tweets by {twitter_handle}
+                  <Trans>Latest tweets by {twitter_handle}</Trans>
                 </a>{" "}
                 <script
                   async

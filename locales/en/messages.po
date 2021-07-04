@@ -17,12 +17,32 @@ msgstr ""
 msgid "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
 msgstr ""
 
+#: templates/how-it-works.js:72
+msgid "1. Organization Discovery"
+msgstr ""
+
+#: templates/how-it-works.js:90
+msgid "2. Content Analysis"
+msgstr ""
+
 #: templates/about.js:184
 msgid "2030 Cabinet is an impact oriented ecosystem builder and partnership architect to enable sustainable innovation, using the UN's Sustainable Development Goals."
 msgstr ""
 
+#: templates/how-it-works.js:109
+msgid "3. Metadata Collection"
+msgstr ""
+
+#: templates/how-it-works.js:128
+msgid "4. Human Review"
+msgstr ""
+
 #: templates/about.js:75
 msgid "<0>The Global Goals Directory is a public list of startups, organizations, and companies working on the 17 UN Sustainable Development Goals. The directory is a public good and is completely free.</0> The idea for the Global Goals Directory was born in 2019, out of many conversations with thought leaders and innovators from the SDG community. Throughout these conversations, we observed one theme re-emerging over and over again: The importance of partnerships and their critical role for tackling the UN Sustainable Development Goals. While many partnerships exist in the SDG community today, a large share of them are formed from serendipitous connections — people and organizations we meet at a workshop, an event, or a webinar. But in a network as big as the SDG community, there are hundreds of potential partners that we have not yet met. The Global Goals Directory exists to put the entire SDG community at your fingertips and to make it easy to find new collaborators and build new partnerships, so that we as an ecosystem can become more connected, more collaborative, and accelerate our progress on the 2030 Agenda."
+msgstr ""
+
+#: templates/how-it-works.js:130
+msgid "A team of SDG experts carefully reviews all profiles before they appear on the Global Goals Directory. Even though our algorithm has been fine-tuned over hundreds of hours of careful research and correctly assesses nine out of ten startups and organizations, there still remain edge cases and exceptions. In addition to verifying the accuracy of the information, the SDG experts are also able to manually correct any information on the organizations' profiles. The feedback and information provided by the review team feeds back into the algorithm, so that the AI becomes more intelligent over time."
 msgstr ""
 
 #: components/OrganizationSideView.js:54
@@ -45,6 +65,10 @@ msgstr ""
 
 #: templates/organizations.js:50
 msgid "Affordable and clean energy"
+msgstr ""
+
+#: templates/how-it-works.js:111
+msgid "After identifying that a startup or organization does indeed contribute to the Sustainable Development Goals, we enrich each profile with relevant metadata that allows users to make the most from the Global Goals Directory. Our fully automatic metadata bot queries several public APIs, including social networks, like Twitter, Facebook, and LinkedIn, but also service providers, like Google Maps, to identify and collect name, logo, address, a short summary, and social media profiles for each of the organizations in the directory. We take privacy seriously and only collect information that is publicly available."
 msgstr ""
 
 #: templates/organizations.js:158
@@ -183,6 +207,10 @@ msgstr ""
 msgid "Hesse"
 msgstr ""
 
+#: templates/how-it-works.js:10
+msgid "How It Works"
+msgstr ""
+
 #: templates/organizations.js:52
 msgid "Industry, innovation and infrastructure"
 msgstr ""
@@ -229,6 +257,22 @@ msgstr ""
 
 #: templates/organizations.js:75
 msgid "North Rhine-Westphalia"
+msgstr ""
+
+#: templates/how-it-works.js:56
+msgid "Our AI-based approach has been refined over hundreds of hours of research and coding. It can be broadly classified into four phases: First, an autonomous web scraper crawls the Internet and identifies relevant organizations and websites. The content of each website is then matched against a list of keywords based on the 17 Sustainable Development Goals and their 169 targets to identify which SDGs an organization contributes to. Next, a bot queries several public APIs to enrich each profile with key metadata, including address, name, and logo. Finally, a team of SDG experts reviews the results produced by the AI, verifies their accuracy, and makes any changes necessary."
+msgstr ""
+
+#: templates/how-it-works.js:13
+msgid "Our AI-based methodology for identifying and analyzing organizations"
+msgstr ""
+
+#: templates/how-it-works.js:53
+msgid "Our Approach: Artificial Intelligence"
+msgstr ""
+
+#: templates/how-it-works.js:74
+msgid "Our autonomous web scraper crawls the Internet and identifies relevant organizations and websites. Our scraper downloads a copy of every selected website, which is later used for content analysis in phase 2. We follow a recursive network approach, similar to what is used by search engines like Google: When we find an organization that contributes to the UN SDGs, we follow all external, outgoing links from the organization's website and scrape those external websites as well. This approach allows us to rapidly find and identify the large majority of actors across the SDG community."
 msgstr ""
 
 #: templates/about.js:176
@@ -308,6 +352,10 @@ msgstr ""
 msgid "The BCCIC is a network engaged in the SDGs, sustainable development, and social justice issues. As part of its Movement Map initiative, the BCCIC has mapped over 12,000 organizations working on the SDGs in Canada and around the globe."
 msgstr ""
 
+#: templates/how-it-works.js:163
+msgid "The Global Goals Directory is completely free. Our directory is a non-commercial project and we consider it a public good. Our objective is to inspire more partnerships for tackling the Agenda 2030. It's as simple as that.<0/><1/>The content on this website is licensed under the Creative Commons license <2>CC BY 4.0</2> — a permissive license, that provides a lot of freedom under the sole condition that appropriate credit is given and a link back to the Global Goals Directory website is provided. Our software code for the analysis as well as for this website are open source and licensed under the <3>GNU General Public License 3.0</3>, meaning that reuse and adaptation of our code is permitted (and encouraged!) as long as any copies and derivatives are made available under the same GNU GPLv3 open source license. You can find our GitHub repositories at <4>https://github.com/GlobalGoalsDirectory</4>. Contributions welcome!"
+msgstr ""
+
 #: templates/organizations.js:83
 msgid "Thuringia"
 msgstr ""
@@ -316,8 +364,20 @@ msgstr ""
 msgid "View Directory"
 msgstr ""
 
+#: templates/how-it-works.js:19
+msgid "We have developed a novel approach for the automatic identification and classification of startups and organization working on the SDGs, based on artificial intelligence, natural language processing, and text analysis. Our AI-based approach yields two key advantages over manual analysis and classification of organizations: First, artificial intelligence requires a fraction of the time that a human needs to both find and assess organizations (about 2 minutes per organization), while simultaneously ensuring a greater degree of consistency and comparability. Second, our program can continuously run in the background, automatically re-analyzing organizations at least every 90 days to ensure that results are always up to date. While our specific approach and its application are novel, our methodology builds upon similar methods for classifying content by SDG that have been tried and proven by the <0>TU Berlin and MIT</0> and the <1>European Commission's Joint Research Center</1>."
+msgstr ""
+
+#: templates/how-it-works.js:92
+msgid "We scan each scraped website for certain keywords to classify startups and organizations by the Sustainable Development Goals that they are contributing to. We developed these keywords, over 100 in total, based on the official language of the 17 SDGs and the 169 targets and compiled them in both English and German versions. We then count the number of matches found and the frequencies with which these keywords appear on the website to assess whether an organization contributes to a specific goal. We also determine which goals are an organization's primary focus and which ones are side objectives."
+msgstr ""
+
 #: templates/organizations.js:246
 msgid "We would love to feature them in the Global Goals Directory. Click here to add an organization."
+msgstr ""
+
+#: templates/how-it-works.js:160
+msgid "We ❤️ Open Source"
 msgstr ""
 
 #: templates/organizations.js:45

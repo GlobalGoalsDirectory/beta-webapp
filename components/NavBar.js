@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Trans, defineMessage } from "@lingui/macro";
 import {
   AppBar,
   Box,
@@ -110,23 +111,23 @@ const DesktopOnlyBox = styled(Box).attrs({
 
 const pages = [
   {
-    label: "Directory",
+    label: defineMessage({ message: "Directory" }),
     href: "/organizations",
   },
   {
-    label: "Map",
+    label: defineMessage({ message: "Map" }),
     href: "/map",
   },
   {
-    label: "Mission",
+    label: defineMessage({ message: "Mission" }),
     href: "/mission",
   },
   {
-    label: "How it works",
+    label: defineMessage({ message: "How it works" }),
     href: "/how-it-works",
   },
   {
-    label: "About",
+    label: defineMessage({ id: "About us", message: "About" }),
     href: "/about",
   },
 ];
@@ -194,7 +195,7 @@ const NavBar = ({ fluid = true }) => {
                     <LocaleLink key={href} href={href} passHref>
                       <Button>
                         <Typography variant="h4" component="p">
-                          {label}
+                          <Trans id={label.id} />
                         </Typography>
                       </Button>
                     </LocaleLink>

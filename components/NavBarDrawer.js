@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { t } from "@lingui/macro";
 import {
   Box,
   Drawer,
@@ -37,14 +38,14 @@ const NavBarDrawer = ({
       </LocaleLink>
       <LocaleLink href="/" passHref>
         <ListItem button component="a" divider>
-          <ListItemText primary="Home" />
+          <ListItemText primary={t`Home`} />
         </ListItem>
       </LocaleLink>
       {pages.map(({ href, label }) => (
         <Fragment key={href}>
           <LocaleLink href={href} passHref>
             <ListItem button component="a" divider>
-              <ListItemText primary={label} />
+              <ListItemText primary={t({ id: label.id })} />
             </ListItem>
           </LocaleLink>
         </Fragment>
@@ -56,7 +57,7 @@ const NavBarDrawer = ({
         href={addOrganizationUrl()}
         divider
       >
-        <ListItemText primary="Add organization or startup" />
+        <ListItemText primary={t`Add organization or startup`} />
       </ListItem>
     </List>
   </Drawer>

@@ -54,6 +54,7 @@ msgstr ""
 msgid "About"
 msgstr ""
 
+#: components/NavBar.js:132
 #: templates/about.js:71
 msgid "About us"
 msgstr "About"
@@ -61,6 +62,10 @@ msgstr "About"
 #: templates/map.js:90
 #: templates/organizations.js:140
 msgid "Add Organization or Startup"
+msgstr ""
+
+#: components/NavBarDrawer.js:60
+msgid "Add organization or startup"
 msgstr ""
 
 #: templates/about.js:145
@@ -81,6 +86,10 @@ msgstr ""
 
 #: templates/organizations.js:192
 msgid "All states"
+msgstr ""
+
+#: components/Footer.js:59
+msgid "An initiative of"
 msgstr ""
 
 #: templates/about.js:154
@@ -157,6 +166,7 @@ msgstr ""
 msgid "Decent work and economic growth"
 msgstr ""
 
+#: components/NavBar.js:116
 #: templates/organizations.js:129
 msgid "Directory"
 msgstr ""
@@ -231,8 +241,16 @@ msgstr ""
 msgid "Hesse"
 msgstr ""
 
+#: components/NavBarDrawer.js:41
+msgid "Home"
+msgstr ""
+
 #: templates/how-it-works.js:10
 msgid "How It Works"
+msgstr ""
+
+#: components/NavBar.js:128
+msgid "How it works"
 msgstr ""
 
 #: templates/organizations.js:52
@@ -263,10 +281,15 @@ msgstr ""
 msgid "Lower Saxony"
 msgstr ""
 
+#: components/NavBar.js:120
+msgid "Map"
+msgstr ""
+
 #: templates/organizations.js:72
 msgid "Mecklenburg-Vorpommern"
 msgstr ""
 
+#: components/NavBar.js:124
 #: templates/mission.js:10
 msgid "Mission"
 msgstr ""
@@ -313,6 +336,10 @@ msgstr ""
 
 #: templates/organizations.js:59
 msgid "Peace, justice and strong institutions"
+msgstr ""
+
+#: components/Footer.js:51
+msgid "Privacy Policy"
 msgstr ""
 
 #: templates/organizations.js:47

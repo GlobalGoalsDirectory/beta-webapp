@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: templates/mission.js:14
+msgid "\"To implement the Global Goals, we need all hands on deck.\""
+msgstr "\"To implement the Global Goals, we need all hands on deck.\""
+
 #: components/InteractiveMap.js:130
 msgid "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
 msgstr "&copy; Mitwirkende von <a href=\"http://osm.org/copyright\">OpenStreetMap</a>"
@@ -39,7 +43,7 @@ msgstr "4. Überprüfung durch Experten"
 
 #: templates/about.js:75
 msgid "<0>The Global Goals Directory is a public list of startups, organizations, and companies working on the 17 UN Sustainable Development Goals. The directory is a public good and is completely free.</0> The idea for the Global Goals Directory was born in 2019, out of many conversations with thought leaders and innovators from the SDG community. Throughout these conversations, we observed one theme re-emerging over and over again: The importance of partnerships and their critical role for tackling the UN Sustainable Development Goals. While many partnerships exist in the SDG community today, a large share of them are formed from serendipitous connections — people and organizations we meet at a workshop, an event, or a webinar. But in a network as big as the SDG community, there are hundreds of potential partners that we have not yet met. The Global Goals Directory exists to put the entire SDG community at your fingertips and to make it easy to find new collaborators and build new partnerships, so that we as an ecosystem can become more connected, more collaborative, and accelerate our progress on the 2030 Agenda."
-msgstr "<0>Das Global Goals Directory ist eine öffentliche Liste von Startups, Organisationen und Unternehmen, die an den 17 UN-Zielen für nachhaltige Entwicklung arbeiten. Das Verzeichnis ist ein öffentliches Gut und komplett kostenlos.</0> Die Idee für das Global Goals Directory entstand 2019 nach vielen Gesprächen mit Akteur*innen und Vordenker*innen der SDG-Community. Ein Thema hat sich in diesen Gesprächen regelmäßig wiederholt: Die Bedeutung von Partnerschaften und ihre entscheidende Rolle für die Erreichung der UN-Ziele für nachhaltige Entwicklung. Obwohl es heutzutage viele Partnerschaften in der SDG-Community gibt, entsteht ein großer Teil davon durch zufälligen Verbindungen - Menschen und Organisationen, die sich bei einem Workshop, auf einer Veranstaltung oder in einem Webinar treffen. In einem so großen Netzwerk wie der SDG-Community gibt es jedoch Hunderte potenzielle Partner, die sich noch nicht kennen. Das Global Goals Directory dient dazu, die SDG-Community zu vernetzen und die Suche nach neuen Kollaborator*innen und Partnerschaften zu unterstützen — damit wir als Ökosystem vernetzter und kooperativer werden und die Umsetzung der Agenda 2030 beschleunigen."
+msgstr "<0>Das Global Goals Directory ist eine öffentliche Liste von Startups, Organisationen und Unternehmen, die an den 17 UN Zielen für nachhaltige Entwicklung arbeiten. Das Verzeichnis ist ein öffentliches Gut und komplett kostenlos.</0> Die Idee für das Global Goals Directory entstand 2019 nach vielen Gesprächen mit Akteur*innen und Vordenker*innen der SDG-Community. Ein Thema hat sich in diesen Gesprächen regelmäßig wiederholt: Die Bedeutung von Partnerschaften und ihre entscheidende Rolle für die Erreichung der UN Ziele für nachhaltige Entwicklung. Obwohl es heutzutage viele Partnerschaften in der SDG-Community gibt, entsteht ein großer Teil davon durch zufälligen Verbindungen - Menschen und Organisationen, die sich bei einem Workshop, auf einer Veranstaltung oder in einem Webinar treffen. In einem so großen Netzwerk wie der SDG-Community gibt es jedoch Hunderte potenzielle Partner, die sich noch nicht kennen. Das Global Goals Directory dient dazu, die SDG-Community zu vernetzen und die Suche nach neuen Kollaborator*innen und Partnerschaften zu unterstützen — damit wir als Ökosystem vernetzter und kooperativer werden und die Umsetzung der Agenda 2030 beschleunigen."
 
 #: templates/how-it-works.js:130
 msgid "A team of SDG experts carefully reviews all profiles before they appear on the Global Goals Directory. Even though our algorithm has been fine-tuned over hundreds of hours of careful research and correctly assesses nine out of ten startups and organizations, there still remain edge cases and exceptions. In addition to verifying the accuracy of the information, the SDG experts are also able to manually correct any information on the organizations' profiles. The feedback and information provided by the review team feeds back into the algorithm, so that the AI becomes more intelligent over time."
@@ -83,6 +87,10 @@ msgstr "Alle Bundesländer"
 msgid "Antonia previously worked with Movement Map, a Canadian initiative that mapped 10,000+ non-profits by SDG. Antonia also played a key role in adapting their methodology to Germany."
 msgstr "Antonia hat an der kanadischen Movement Map mitgearbeitet und geholfen mehr als 10.000 Organisationen nach den SDGs zu klassifizieren. Unter anderem hat sie dazu beigetragen, die Methodik für die Anwendung in Deutschland anzupassen."
 
+#: templates/mission.js:63
+msgid "Around the world, tens of thousands of organizations, companies, and governments are working towards the achievement of the UN Sustainable Development Goals. Our mission is to give visibility to this great SDG community and to champion the 2030 Agenda."
+msgstr "Auf der ganzen Welt arbeiten Zehntausende von Organisationen, Unternehmen und Regierungen an der Erreichung der UN Ziele für Nachhaltige Entwicklung (Sustainable Development Goals). Unsere Mission ist es, dieser großen SDG-Gemeinschaft Sichtbarkeit zu verleihen und die 2030 Agenda zu fördern."
+
 #: templates/organizations.js:64
 msgid "Baden-Württemberg"
 msgstr "Baden-Württemberg"
@@ -105,9 +113,17 @@ msgstr "Brandenburg"
 msgid "Bremen"
 msgstr "Bremen"
 
+#: templates/mission.js:60
+msgid "Championing the SDGs"
+msgstr "Die SDGs fördern"
+
 #: templates/about.js:122
 msgid "Christian's expertise is in digital business model development and applications for social impact. He focuses on building organizations that are financially sustainable, return a profit to their shareholders, and achieve social responsibility."
 msgstr "Christians Expertise liegt in der Entwicklung digitaler Geschäftsmodelle mit social impact. Er konzentriert sich auf den Aufbau von Organisationen, die finanziell nachhaltig sind und gesellschaftliche Verantwortung übernehmen."
+
+#: templates/mission.js:89
+msgid "Cities and communities play a pivotal role in the implementation of the 2030 Agenda. We help cities understand their local ecosystem of SDG actors by analyzing and identifying the gaps and challenges that exist across each of the 17 SDGs and 169 targets."
+msgstr "Städte und Gemeinden spielen eine zentrale Rolle bei der Umsetzung der 2030-Agenda. Wir helfen Städten dabei, ihr lokales Ökosystem von SDG-Akteuren zu verstehen, indem wir die Lücken und Herausforderungen hinsichtlich der 17 SDGs und 169 Unterziele identifizieren und analysieren."
 
 #: templates/organizations.js:49
 msgid "Clean water and sanitation"
@@ -120,6 +136,10 @@ msgstr "Maßnahmen zum Klimaschutz"
 #: components/SideViewHeading.js:11
 msgid "Close"
 msgstr "Schließen"
+
+#: templates/mission.js:76
+msgid "Collaboration is critical for tackling the world's toughest problems, like climate change and extreme poverty. We facilitate the creation of new partnerships by helping organizations and companies identify new collaborators through our public directory."
+msgstr "Zusammenarbeit ist entscheidend für die Bewältigung der schwierigsten Probleme der Welt, wie Klimawandel und extreme Armut. Wir erleichtern den Aufbau neuer Partnerschaften, indem wir Organisationen und Unternehmen über unser öffentliches Verzeichnis helfen, neue Kooperationspartner zu finden."
 
 #: templates/index.js:12
 msgid "Cologne"
@@ -156,6 +176,10 @@ msgstr "Karte erkunden"
 #: templates/map.js:73
 msgid "Explore startups, organizations, and companies in Germany that are working on one of the 17 UN Sustainable Development Goals. Click on a pin for details."
 msgstr "Entdecke Startups, Organisationen und Unternehmen in Deutschland, die an den 17 UN Sustainable Development Goals arbeiten. Klicke auf einen Pin auf der Karte, um Details zu sehen."
+
+#: templates/mission.js:73
+msgid "Facilitating Partnerships"
+msgstr "Partnerschaften ermöglichen"
 
 #: templates/organizations.js:210
 msgid "Filter by one of the 16 German states"
@@ -242,6 +266,10 @@ msgstr "Niedersachsen"
 #: templates/organizations.js:72
 msgid "Mecklenburg-Vorpommern"
 msgstr "Mecklenburg-Vorpommern"
+
+#: templates/mission.js:10
+msgid "Mission"
+msgstr "Mission"
 
 #: templates/index.js:13
 msgid "Munich"
@@ -340,6 +368,10 @@ msgstr "Steve entwickelt technologiebasierte Lösungen zur Analyse von Daten und
 msgid "Stuttgart"
 msgstr "Stuttgart"
 
+#: templates/mission.js:86
+msgid "Supporting Cities and Communities"
+msgstr "Städte und Gemeinden unterstützen"
+
 #: templates/organizations.js:54
 msgid "Sustainable cities and communities"
 msgstr "Nachhaltige Städte und Gemeinden"
@@ -351,6 +383,10 @@ msgstr "Team"
 #: templates/about.js:214
 msgid "The BCCIC is a network engaged in the SDGs, sustainable development, and social justice issues. As part of its Movement Map initiative, the BCCIC has mapped over 12,000 organizations working on the SDGs in Canada and around the globe."
 msgstr "Der BCCIC ist ein Netzwerk, das sich mit den SDGs, nachhaltiger Entwicklung und sozialer Gerechtigkeit befasst. Im Rahmen der Movement Map-Initiative hat der BCCIC über 12.000 Organisationen kartiert, die in Kanada und weltweit an den SDGs arbeiten."
+
+#: templates/mission.js:39
+msgid "The Global Goals Directory exists to accelerate our progress on the UN Sustainable Development Goals by supporting and facilitating collaboration and partnerships between non-profit organizations, private companies, think tanks, universities, and governments. We pursue this mission in three ways: 1) Championing the UN Sustainable Development Goals by highlighting the countless number of organizations and companies working on this global agenda, 2) facilitating the creation of new partnerships by helping organizations find suitable collaborators through our public directory, and 3) supporting cities and communities with analyses of their local ecosystem of SDG actors and identifying gaps and opportunities."
+msgstr "Das Global Goals Directory existiert, um unseren Fortschritt bei den UN Nachhaltigkeitszielen zu beschleunigen, indem es Zusammenarbeit und Partnerschaften zwischen gemeinnützigen Organisationen, privaten Unternehmen, Think Tanks, Universitäten und Regierungen unterstützt und erleichtert. Wir verfolgen diese Mission auf drei Arten: 1) Förderung der SDGs durch Hervorhebung der unzähligen Organisationen und Unternehmen, die an dieser globalen Agenda arbeiten, 2) Erleichterung des Aufbaus neuer Partnerschaften indem wir Organisationen bei der Suche nach geeigneten Kooperationspartnern durch unser öffentliches Verzeichnis helfen und 3) Unterstützung von Städten und Gemeinden mit Analysen ihres lokalen Ökosystems von SDG-Akteuren und Identifizierung von Lücken und Chancen."
 
 #: templates/how-it-works.js:163
 msgid "The Global Goals Directory is completely free. Our directory is a non-commercial project and we consider it a public good. Our objective is to inspire more partnerships for tackling the Agenda 2030. It's as simple as that.<0/><1/>The content on this website is licensed under the Creative Commons license <2>CC BY 4.0</2> — a permissive license, that provides a lot of freedom under the sole condition that appropriate credit is given and a link back to the Global Goals Directory website is provided. Our software code for the analysis as well as for this website are open source and licensed under the <3>GNU General Public License 3.0</3>, meaning that reuse and adaptation of our code is permitted (and encouraged!) as long as any copies and derivatives are made available under the same GNU GPLv3 open source license. You can find our GitHub repositories at <4>https://github.com/GlobalGoalsDirectory</4>. Contributions welcome!"
@@ -380,6 +416,14 @@ msgstr "Wir würden sie gerne im Global Goals Directory vorstellen. Klicke hier 
 msgid "We ❤️ Open Source"
 msgstr "Wir ❤️ Open Source"
 
+#: templates/mission.js:25
+msgid "With less than a decade to go until 2030, we are still facing many major challenges when it comes to the achievement of the UN Sustainable Development Goals: from climate change and pollution to extreme poverty and widening inequalities. What these challenges have in common is that they are global, interconnected, and systemic. Issues like these cannot be solved by a single organization, company, or government alone. Collaboration and partnerships are critical for advancing the 2030 Agenda on our world's toughest problems during this Decade of Action."
+msgstr "Mit weniger als einem Jahrzehnt bis 2030 stehen wir immer noch vor vielen großen Herausforderungen, wenn es um die Erreichung der Ziele für nachhaltige Entwicklung geht: vom Klimawandel und Umweltverschmutzung bis hin zu extremer Armut und wachsenden Ungleichheiten. Was diese Herausforderungen gemeinsam haben, ist, dass sie global, miteinander verbunden und systemisch sind. Probleme wie diese können nicht von einer einzelnen Organisation, einem Unternehmen oder einer Regierung allein gelöst werden. Zusammenarbeit und Partnerschaften sind entscheidend, um die Agenda 2030 bei den schwierigsten Problemen unserer Welt während dieser Aktionsdekade voranzubringen."
+
 #: templates/organizations.js:45
 msgid "Zero hunger"
 msgstr "Kein Hunger"
+
+#: templates/mission.js:20
+msgid "— Ban Ki-Moon"
+msgstr "— Ban Ki-Moon"

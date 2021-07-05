@@ -1,19 +1,12 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
-import {
-  parseUrl,
-  parseTemplateUrl,
-  compileLocalizedUrl,
-} from "helpers/locales";
+import useCurrentLocale from "hooks/useCurrentLocale";
+import { parseTemplateUrl, compileLocalizedUrl } from "helpers/locales";
 
 const LocaleLink = ({ href, locale, ...componentParams }) => {
-  const router = useRouter();
+  const currentLocale = useCurrentLocale();
 
   // Get current locale, unless specified
-  if (!locale) {
-    const currentUrl = router.pathname;
-    locale = parseUrl(currentUrl).locale;
-  }
+  if (!locale) locale = currentLocale;
 
   // Localize href to desired (or current) locale
   const { template, params } = parseTemplateUrl(href);

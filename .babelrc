@@ -9,6 +9,7 @@
           "components": "./components/",
           "data": "./data",
           "helpers": "./helpers",
+          "hooks": "./hooks",
           "layouts": "./layouts",
           "locales": "./locales",
           "pages": "./pages",

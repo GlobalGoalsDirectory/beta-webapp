@@ -22,16 +22,16 @@ const I18nHandler = ({ children }) => {
 
   // Identify language on component mount
   if (!i18nInitialized.current) {
-    const locale = getLocaleForPathname(router.pathname);
+    const locale = getLocaleForPathname(router.asPath);
     i18n.activate(locale || "en");
     i18nInitialized.current = true;
   }
 
   // Update language on page change
   useEffect(() => {
-    const locale = getLocaleForPathname(router.pathname);
+    const locale = getLocaleForPathname(router.asPath);
     i18n.activate(locale || "en");
-  }, [router.pathname]);
+  }, [router.asPath]);
 
   return <I18nProvider i18n={i18n}>{children}</I18nProvider>;
 };

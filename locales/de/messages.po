@@ -64,7 +64,7 @@ msgstr "Über uns"
 msgid "Add Organization or Startup"
 msgstr "Neue Organisation oder Startup"
 
-#: components/NavBarDrawer.js:60
+#: components/NavBarDrawer.js:61
 msgid "Add organization or startup"
 msgstr "Neue Organisation oder Startup"
 
@@ -187,7 +187,7 @@ msgstr "Schreiben Sie uns eine E-Mail an finn.woelm/at/gmail.com"
 msgid "Expert in SDG Mapping"
 msgstr "Expertin in SDG Mapping"
 
-#: templates/index.js:154
+#: templates/index.js:157
 msgid "Explore Map"
 msgstr "Karte erkunden"
 
@@ -265,7 +265,7 @@ msgstr "Hamburg"
 msgid "Hesse"
 msgstr "Hessen"
 
-#: components/NavBarDrawer.js:41
+#: components/NavBarDrawer.js:42
 msgid "Home"
 msgstr "Startseite"
 
@@ -492,7 +492,7 @@ msgstr "Das Recht auf Einschränkung der Verarbeitung: Sie haben das Recht zu ve
 msgid "Thuringia"
 msgstr "Thüringen"
 
-#: templates/index.js:172
+#: templates/index.js:175
 msgid "View Directory"
 msgstr "Verzeichnis ansehen"
 

@@ -64,7 +64,7 @@ msgstr "About"
 msgid "Add Organization or Startup"
 msgstr ""
 
-#: components/NavBarDrawer.js:60
+#: components/NavBarDrawer.js:61
 msgid "Add organization or startup"
 msgstr ""
 
@@ -187,7 +187,7 @@ msgstr ""
 msgid "Expert in SDG Mapping"
 msgstr ""
 
-#: templates/index.js:154
+#: templates/index.js:157
 msgid "Explore Map"
 msgstr ""
 
@@ -265,7 +265,7 @@ msgstr ""
 msgid "Hesse"
 msgstr ""
 
-#: components/NavBarDrawer.js:41
+#: components/NavBarDrawer.js:42
 msgid "Home"
 msgstr ""
 
@@ -492,7 +492,7 @@ msgstr ""
 msgid "Thuringia"
 msgstr ""
 
-#: templates/index.js:172
+#: templates/index.js:175
 msgid "View Directory"
 msgstr ""
 

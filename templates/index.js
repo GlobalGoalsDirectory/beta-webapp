@@ -1,23 +1,23 @@
-import { Trans, t } from "@lingui/macro";
+import { Trans, defineMessage, t } from "@lingui/macro";
 import dynamic from "next/dynamic";
 import { Box, Button, Grid, Typography } from "@material-ui/core";
 import styled from "styled-components";
 import Layout from "components/Layout";
 import LocaleLink from "components/LocaleLink";
 
-const DEFAULT_CITY = t`Berlin`;
+const DEFAULT_CITY = defineMessage({ id: "Berlin" });
 const CITIES = [
-  t`Hamburg`,
-  t`Bremen`,
-  t`Cologne`,
-  t`Munich`,
-  t`Frankfurt`,
-  t`Stuttgart`,
+  defineMessage({ id: "Hamburg" }),
+  defineMessage({ id: "Bremen" }),
+  defineMessage({ id: "Cologne" }),
+  defineMessage({ id: "Munich" }),
+  defineMessage({ id: "Frankfurt" }),
+  defineMessage({ id: "Stuttgart" }),
 ];
 
 const Typed = dynamic(() => import("react-typed"), {
   ssr: false,
-  loading: ({ children }) => <>{DEFAULT_CITY}</>,
+  loading: ({ children }) => <Trans id={DEFAULT_CITY.id} />,
 });
 
 const LargeButton = styled(Button).attrs({
@@ -132,7 +132,10 @@ const HomePage = ({ organizationsCount }) => (
               </Bold>{" "}
               in{" "}
               <Typed
-                strings={[DEFAULT_CITY, ...shuffle(CITIES)]}
+                strings={[
+                  t({ id: DEFAULT_CITY.id }),
+                  ...shuffle(CITIES.map((city) => t({ id: city.id }))),
+                ]}
                 typeSpeed={40}
                 backSpeed={50}
                 backDelay={3000}

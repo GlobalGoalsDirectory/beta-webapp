@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import { Trans, defineMessage } from "@lingui/macro";
 import {
   AppBar,
@@ -8,6 +8,7 @@ import {
   Divider,
   Hidden,
   IconButton,
+  MenuItem,
   Toolbar,
   Typography,
 } from "@material-ui/core";
@@ -15,6 +16,7 @@ import { Menu } from "mdi-material-ui";
 import styled from "styled-components";
 import NavBarDrawer from "components/NavBarDrawer";
 import LocaleLink from "components/LocaleLink";
+import LocaleSelect from "components/LocaleSelect";
 
 const Button = styled(ButtonBase).attrs({
   component: "a",
@@ -200,6 +202,22 @@ const NavBar = ({ fluid = true }) => {
                       </Button>
                     </LocaleLink>
                   ))}
+                  <LocaleSelect
+                    ButtonComponent={forwardRef(
+                      ({ children, ...params }, ref) => (
+                        <Button {...params} ref={ref}>
+                          <Typography variant="h4">{children}</Typography>
+                        </Button>
+                      )
+                    )}
+                    MenuItemComponent={forwardRef(
+                      ({ children, ...params }, ref) => (
+                        <MenuItem {...params} ref={ref}>
+                          <Typography variant="h4">{children}</Typography>
+                        </MenuItem>
+                      )
+                    )}
+                  />
                 </DesktopOnlyBox>
               </Container>
             </Box>

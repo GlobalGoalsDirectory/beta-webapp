@@ -99,13 +99,16 @@ const parseUrl = (url) => {
 
   if (!match) throw Error(`Could not parse url: ${url}`);
 
-  // Identify the locale of the route
-  const locale = LOCALES.find((locale) =>
-    ROUTES.some((route) => route[locale] === match.route)
+  // Identify the locale of the route and the corresponding template
+  const route = ROUTES.find((route) =>
+    Object.values(route).includes(match.route)
   );
+  const locale = LOCALES.find((locale) => route[locale] === match.route);
+  const template = route.template;
 
   return {
     locale,
+    template,
     ...match,
   };
 };

@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, forwardRef } from "react";
 import { t } from "@lingui/macro";
 import {
   Box,
@@ -9,6 +9,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import LocaleLink from "components/LocaleLink";
+import LocaleSelect from "components/LocaleSelect";
 import { addOrganizationUrl } from "helpers/organization";
 
 const NavBarDrawer = ({
@@ -59,6 +60,13 @@ const NavBarDrawer = ({
       >
         <ListItemText primary={t`Add organization or startup`} />
       </ListItem>
+      <LocaleSelect
+        ButtonComponent={forwardRef(({ children, ...params }, ref) => (
+          <ListItem button divider ref={ref} {...params}>
+            <ListItemText primary={children} />
+          </ListItem>
+        ))}
+      />
     </List>
   </Drawer>
 );

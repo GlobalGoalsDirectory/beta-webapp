@@ -1,5 +1,5 @@
-import { useState } from "react";
-import Link from "next/link";
+import { forwardRef, useState } from "react";
+import { Trans, defineMessage } from "@lingui/macro";
 import {
   AppBar,
   Box,
@@ -8,12 +8,15 @@ import {
   Divider,
   Hidden,
   IconButton,
+  MenuItem,
   Toolbar,
   Typography,
 } from "@material-ui/core";
 import { Menu } from "mdi-material-ui";
 import styled from "styled-components";
 import NavBarDrawer from "components/NavBarDrawer";
+import LocaleLink from "components/LocaleLink";
+import LocaleSelect from "components/LocaleSelect";
 
 const Button = styled(ButtonBase).attrs({
   component: "a",
@@ -110,23 +113,23 @@ const DesktopOnlyBox = styled(Box).attrs({
 
 const pages = [
   {
-    label: "Directory",
+    label: defineMessage({ message: "Directory" }),
     href: "/organizations",
   },
   {
-    label: "Map",
+    label: defineMessage({ message: "Map" }),
     href: "/map",
   },
   {
-    label: "Mission",
+    label: defineMessage({ message: "Mission" }),
     href: "/mission",
   },
   {
-    label: "How it works",
+    label: defineMessage({ message: "How it works" }),
     href: "/how-it-works",
   },
   {
-    label: "About",
+    label: defineMessage({ id: "About us", message: "About" }),
     href: "/about",
   },
 ];
@@ -176,11 +179,11 @@ const NavBar = ({ fluid = true }) => {
                     </IconButton>
                   </Box>
                 </Hidden>
-                <Link href="/" passHref>
+                <LocaleLink href="/" passHref>
                   <Button style={{ padding: 0 }}>
                     <img src="/static/logo.png" />
                   </Button>
-                </Link>
+                </LocaleLink>
                 <Hidden implementation="js" mdUp>
                   <NavBarDrawer
                     open={showNavDrawer}
@@ -191,14 +194,30 @@ const NavBar = ({ fluid = true }) => {
                 <DesktopOnlyBox>
                   <Box display="flex" flexGrow={1} />
                   {pages.map(({ label, href }) => (
-                    <Link key={href} href={href} passHref>
+                    <LocaleLink key={href} href={href} passHref>
                       <Button>
                         <Typography variant="h4" component="p">
-                          {label}
+                          <Trans id={label.id} />
                         </Typography>
                       </Button>
-                    </Link>
+                    </LocaleLink>
                   ))}
+                  <LocaleSelect
+                    ButtonComponent={forwardRef(
+                      ({ children, ...params }, ref) => (
+                        <Button {...params} ref={ref}>
+                          <Typography variant="h4">{children}</Typography>
+                        </Button>
+                      )
+                    )}
+                    MenuItemComponent={forwardRef(
+                      ({ children, ...params }, ref) => (
+                        <MenuItem {...params} ref={ref}>
+                          <Typography variant="h4">{children}</Typography>
+                        </MenuItem>
+                      )
+                    )}
+                  />
                 </DesktopOnlyBox>
               </Container>
             </Box>

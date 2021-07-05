@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import dynamic from "next/dynamic";
+import { Trans } from "@lingui/macro";
 import {
   Box,
   Button,
@@ -13,7 +14,6 @@ import { Plus } from "mdi-material-ui";
 import FullScreenLayout from "components/FullScreenLayout";
 import OrganizationSideView from "components/OrganizationSideView";
 import SideViewHeading from "components/SideViewHeading";
-import getOrganizations from "helpers/getOrganizations";
 import { addOrganizationUrl } from "helpers/organization";
 
 const InteractiveMap = dynamic(() => import("components/InteractiveMap"), {
@@ -70,10 +70,12 @@ const Map = ({ organizations }) => {
                         flexDirection="column"
                       >
                         <Typography variant="body1">
-                          Explore startups, organizations, and companies in
-                          Germany that are working on one of the 17 UN
-                          Sustainable Development Goals. Click on a pin for
-                          details.
+                          <Trans>
+                            Explore startups, organizations, and companies in
+                            Germany that are working on one of the 17 UN
+                            Sustainable Development Goals. Click on a pin for
+                            details.
+                          </Trans>
                         </Typography>
                         <Box flexGrow={1} />
                         <Box>
@@ -85,7 +87,7 @@ const Map = ({ organizations }) => {
                             variant="outlined"
                             fullWidth
                           >
-                            Add Organization or Startup
+                            <Trans>Add Organization or Startup</Trans>
                           </Button>
                         </Box>
                       </Box>
@@ -123,20 +125,5 @@ const Map = ({ organizations }) => {
     </FullScreenLayout>
   );
 };
-
-export function getStaticProps() {
-  let organizations = getOrganizations();
-
-  // Keep only organizations with defined latitude and longitude
-  organizations = organizations.filter(
-    (org) => (org.latitude != null) & (org.longitude != null)
-  );
-
-  return {
-    props: {
-      organizations,
-    },
-  };
-}
 
 export default Map;

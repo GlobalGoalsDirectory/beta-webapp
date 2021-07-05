@@ -1,24 +1,23 @@
-import { readJsonSync } from "fs-extra";
-import path from "path";
-import Link from "next/link";
+import { Trans, defineMessage, t } from "@lingui/macro";
 import dynamic from "next/dynamic";
 import { Box, Button, Grid, Typography } from "@material-ui/core";
 import styled from "styled-components";
 import Layout from "components/Layout";
+import LocaleLink from "components/LocaleLink";
 
-const DEFAULT_CITY = "Berlin";
+const DEFAULT_CITY = defineMessage({ id: "Berlin" });
 const CITIES = [
-  "Hamburg",
-  "Bremen",
-  "Cologne",
-  "Munich",
-  "Frankfurt",
-  "Stuttgart",
+  defineMessage({ id: "Hamburg" }),
+  defineMessage({ id: "Bremen" }),
+  defineMessage({ id: "Cologne" }),
+  defineMessage({ id: "Munich" }),
+  defineMessage({ id: "Frankfurt" }),
+  defineMessage({ id: "Stuttgart" }),
 ];
 
 const Typed = dynamic(() => import("react-typed"), {
   ssr: false,
-  loading: ({ children }) => <>{DEFAULT_CITY}</>,
+  loading: ({ children }) => <Trans id={DEFAULT_CITY.id} />,
 });
 
 const LargeButton = styled(Button).attrs({
@@ -121,41 +120,47 @@ const HomePage = ({ organizationsCount }) => (
       <ResponsiveGridContainer spacing={5}>
         <Grid item xs={12} lg={8}>
           <Typography variant="h1" gutterBottom style={{ fontWeight: 400 }}>
-            Discover{" "}
-            <Bold>
-              <Bigger>{organizationsCount}</Bigger>
-            </Bold>{" "}
-            <Bold>startups</Bold> and <Bold>organizations</Bold> working on the{" "}
-            <Bold>
-              <SdgsText>Sustainable Development Goals</SdgsText>
-            </Bold>{" "}
-            in{" "}
-            <Typed
-              strings={[DEFAULT_CITY, ...shuffle(CITIES)]}
-              typeSpeed={40}
-              backSpeed={50}
-              backDelay={3000}
-              smartBackspace={false}
-              loop
-              attribute="textContent"
-            />
+            <Trans>
+              Discover{" "}
+              <Bold>
+                <Bigger>{organizationsCount}</Bigger>
+              </Bold>{" "}
+              <Bold>startups</Bold> and <Bold>organizations</Bold> working on
+              the{" "}
+              <Bold>
+                <SdgsText>Sustainable Development Goals</SdgsText>
+              </Bold>{" "}
+              in{" "}
+              <Typed
+                strings={[
+                  t({ id: DEFAULT_CITY.id }),
+                  ...shuffle(CITIES.map((city) => t({ id: city.id }))),
+                ]}
+                typeSpeed={40}
+                backSpeed={50}
+                backDelay={3000}
+                smartBackspace={false}
+                loop
+                attribute="textContent"
+              />
+            </Trans>
           </Typography>
           <Grid container spacing={2}>
             <Grid item xs={12} sm="auto">
-              <Link href="/map" passHref>
+              <LocaleLink href="/map" passHref>
                 <LargeButton component="a" variant="contained" color="primary">
                   <Typography
                     variant="h4"
                     component="span"
                     style={{ fontWeight: 500 }}
                   >
-                    Explore Map
+                    <Trans>Explore Map</Trans>
                   </Typography>
                 </LargeButton>
-              </Link>
+              </LocaleLink>
             </Grid>
             <Grid item xs={12} sm="auto">
-              <Link href="/organizations" passHref>
+              <LocaleLink href="/organizations" passHref>
                 <LargeButton
                   component="a"
                   variant="contained"
@@ -167,10 +172,10 @@ const HomePage = ({ organizationsCount }) => (
                     color="primary"
                     style={{ fontWeight: 500 }}
                   >
-                    View Directory
+                    <Trans>View Directory</Trans>
                   </Typography>
                 </LargeButton>
-              </Link>
+              </LocaleLink>
             </Grid>
           </Grid>
         </Grid>
@@ -184,16 +189,5 @@ const HomePage = ({ organizationsCount }) => (
     </Box>
   </Layout>
 );
-
-export function getStaticProps() {
-  const dataPath = path.join(process.cwd(), "data", "organizations.json");
-  const { organizations } = readJsonSync(dataPath);
-
-  return {
-    props: {
-      organizationsCount: organizations.length,
-    },
-  };
-}
 
 export default HomePage;

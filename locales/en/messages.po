@@ -1,0 +1,545 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2021-05-24 23:22+0200\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: templates/mission.js:14
+msgid "\"To implement the Global Goals, we need all hands on deck.\""
+msgstr ""
+
+#: components/InteractiveMap.js:130
+msgid "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
+msgstr ""
+
+#: templates/how-it-works.js:72
+msgid "1. Organization Discovery"
+msgstr ""
+
+#: templates/how-it-works.js:90
+msgid "2. Content Analysis"
+msgstr ""
+
+#: templates/about.js:184
+msgid "2030 Cabinet is an impact oriented ecosystem builder and partnership architect to enable sustainable innovation, using the UN's Sustainable Development Goals."
+msgstr ""
+
+#: templates/how-it-works.js:109
+msgid "3. Metadata Collection"
+msgstr ""
+
+#: templates/how-it-works.js:128
+msgid "4. Human Review"
+msgstr ""
+
+#: templates/about.js:75
+msgid "<0>The Global Goals Directory is a public list of startups, organizations, and companies working on the 17 UN Sustainable Development Goals. The directory is a public good and is completely free.</0> The idea for the Global Goals Directory was born in 2019, out of many conversations with thought leaders and innovators from the SDG community. Throughout these conversations, we observed one theme re-emerging over and over again: The importance of partnerships and their critical role for tackling the UN Sustainable Development Goals. While many partnerships exist in the SDG community today, a large share of them are formed from serendipitous connections — people and organizations we meet at a workshop, an event, or a webinar. But in a network as big as the SDG community, there are hundreds of potential partners that we have not yet met. The Global Goals Directory exists to put the entire SDG community at your fingertips and to make it easy to find new collaborators and build new partnerships, so that we as an ecosystem can become more connected, more collaborative, and accelerate our progress on the 2030 Agenda."
+msgstr ""
+
+#: templates/how-it-works.js:130
+msgid "A team of SDG experts carefully reviews all profiles before they appear on the Global Goals Directory. Even though our algorithm has been fine-tuned over hundreds of hours of careful research and correctly assesses nine out of ten startups and organizations, there still remain edge cases and exceptions. In addition to verifying the accuracy of the information, the SDG experts are also able to manually correct any information on the organizations' profiles. The feedback and information provided by the review team feeds back into the algorithm, so that the AI becomes more intelligent over time."
+msgstr ""
+
+#: components/OrganizationSideView.js:54
+#: templates/organizations/[slug].js:61
+msgid "About"
+msgstr ""
+
+#: components/NavBar.js:132
+#: templates/about.js:71
+msgid "About us"
+msgstr "About"
+
+#: templates/map.js:90
+#: templates/organizations.js:140
+msgid "Add Organization or Startup"
+msgstr ""
+
+#: components/NavBarDrawer.js:61
+msgid "Add organization or startup"
+msgstr ""
+
+#: templates/about.js:145
+msgid "Advisors"
+msgstr ""
+
+#: templates/organizations.js:50
+msgid "Affordable and clean energy"
+msgstr ""
+
+#: templates/how-it-works.js:111
+msgid "After identifying that a startup or organization does indeed contribute to the Sustainable Development Goals, we enrich each profile with relevant metadata that allows users to make the most from the Global Goals Directory. Our fully automatic metadata bot queries several public APIs, including social networks, like Twitter, Facebook, and LinkedIn, but also service providers, like Google Maps, to identify and collect name, logo, address, a short summary, and social media profiles for each of the organizations in the directory. We take privacy seriously and only collect information that is publicly available."
+msgstr ""
+
+#: templates/organizations.js:158
+msgid "All SDGs"
+msgstr ""
+
+#: templates/organizations.js:192
+msgid "All states"
+msgstr ""
+
+#: components/Footer.js:59
+msgid "An initiative of"
+msgstr ""
+
+#: templates/about.js:154
+msgid "Antonia previously worked with Movement Map, a Canadian initiative that mapped 10,000+ non-profits by SDG. Antonia also played a key role in adapting their methodology to Germany."
+msgstr ""
+
+#: templates/mission.js:63
+msgid "Around the world, tens of thousands of organizations, companies, and governments are working towards the achievement of the UN Sustainable Development Goals. Our mission is to give visibility to this great SDG community and to champion the 2030 Agenda."
+msgstr ""
+
+#: templates/organizations.js:64
+msgid "Baden-Württemberg"
+msgstr ""
+
+#: templates/organizations.js:65
+msgid "Bavaria"
+msgstr ""
+
+#: templates/index.js:8
+#: templates/organizations.js:66
+msgid "Berlin"
+msgstr ""
+
+#: templates/organizations.js:67
+msgid "Brandenburg"
+msgstr ""
+
+#: templates/index.js:11
+#: templates/organizations.js:68
+msgid "Bremen"
+msgstr ""
+
+#: templates/mission.js:60
+msgid "Championing the SDGs"
+msgstr ""
+
+#: templates/privacy-policy.js:123
+msgid "Changes to our privacy policy"
+msgstr ""
+
+#: templates/about.js:122
+msgid "Christian's expertise is in digital business model development and applications for social impact. He focuses on building organizations that are financially sustainable, return a profit to their shareholders, and achieve social responsibility."
+msgstr ""
+
+#: templates/mission.js:89
+msgid "Cities and communities play a pivotal role in the implementation of the 2030 Agenda. We help cities understand their local ecosystem of SDG actors by analyzing and identifying the gaps and challenges that exist across each of the 17 SDGs and 169 targets."
+msgstr ""
+
+#: templates/organizations.js:49
+msgid "Clean water and sanitation"
+msgstr ""
+
+#: templates/organizations.js:56
+msgid "Climate action"
+msgstr ""
+
+#: components/SideViewHeading.js:11
+msgid "Close"
+msgstr ""
+
+#: templates/mission.js:76
+msgid "Collaboration is critical for tackling the world's toughest problems, like climate change and extreme poverty. We facilitate the creation of new partnerships by helping organizations and companies identify new collaborators through our public directory."
+msgstr ""
+
+#: templates/index.js:12
+msgid "Cologne"
+msgstr ""
+
+#: templates/about.js:163
+msgid "Consultant to the Joint Research Centre of the European Commission"
+msgstr ""
+
+#: templates/about.js:132
+msgid "Data Scientist and Analyst, UN Sustainable Development Solutions Network"
+msgstr ""
+
+#: templates/organizations.js:51
+msgid "Decent work and economic growth"
+msgstr ""
+
+#: components/NavBar.js:116
+#: templates/organizations.js:129
+msgid "Directory"
+msgstr ""
+
+#: templates/index.js:123
+msgid "Discover <0><1>{organizationsCount}</1></0> <2>startups</2> and <3>organizations</3> working on the <4><5>Sustainable Development Goals</5></4> in <6/>"
+msgstr ""
+
+#: templates/privacy-policy.js:145
+msgid "Email us at finn.woelm/at/gmail.com"
+msgstr ""
+
+#: templates/about.js:151
+msgid "Expert in SDG Mapping"
+msgstr ""
+
+#: templates/index.js:157
+msgid "Explore Map"
+msgstr ""
+
+#: templates/map.js:73
+msgid "Explore startups, organizations, and companies in Germany that are working on one of the 17 UN Sustainable Development Goals. Click on a pin for details."
+msgstr ""
+
+#: templates/mission.js:73
+msgid "Facilitating Partnerships"
+msgstr ""
+
+#: templates/organizations.js:210
+msgid "Filter by one of the 16 German states"
+msgstr ""
+
+#: templates/organizations.js:176
+msgid "Filter by one of the 17 Sustainable Development Goals"
+msgstr ""
+
+#: templates/about.js:135
+msgid "Finn is a software developer working at the intersection of technology and the UN Sustainable Development Goals. His focus is web development, web scraping, and text mining."
+msgstr ""
+
+#: templates/organizations.js:149
+msgid "Focus"
+msgstr ""
+
+#: components/OrganizationSideView.js:65
+#: templates/organizations/[slug].js:70
+msgid "Focus SDGs"
+msgstr ""
+
+#: templates/about.js:107
+msgid "Founder at 2030 Cabinet"
+msgstr ""
+
+#: templates/about.js:119
+msgid "Founding Partner at SDGx"
+msgstr ""
+
+#: templates/index.js:14
+msgid "Frankfurt"
+msgstr ""
+
+#: templates/organizations.js:48
+msgid "Gender equality"
+msgstr ""
+
+#: templates/privacy-policy.js:32
+msgid "Global Goals Directory collects public information about organizations from their websites, such as keywords, focus SDGs, a short blurb, and social media handles for Facebook, Twitter, and LinkedIn. Global Goals Directory also collects public information about organizations from Twitter and Google Maps, including name, logo, and street address."
+msgstr ""
+
+#: templates/privacy-policy.js:18
+msgid "Global Goals Directory does not collect any data from the visitors of its website."
+msgstr ""
+
+#: templates/privacy-policy.js:104
+msgid "Global Goals Directory does not use any cookies on its website."
+msgstr ""
+
+#: templates/privacy-policy.js:126
+msgid "Global Goals Directory keeps its privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 1 March 2021."
+msgstr ""
+
+#: templates/organizations.js:46
+msgid "Good health and well-being"
+msgstr ""
+
+#: templates/index.js:10
+#: templates/organizations.js:69
+msgid "Hamburg"
+msgstr ""
+
+#: templates/organizations.js:70
+msgid "Hesse"
+msgstr ""
+
+#: components/NavBarDrawer.js:42
+msgid "Home"
+msgstr ""
+
+#: templates/how-it-works.js:10
+msgid "How It Works"
+msgstr ""
+
+#: components/NavBar.js:128
+msgid "How it works"
+msgstr ""
+
+#: templates/privacy-policy.js:135
+msgid "How to contact Global Goals Directory"
+msgstr ""
+
+#: templates/privacy-policy.js:138
+msgid "If you have any questions about our privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us."
+msgstr ""
+
+#: templates/privacy-policy.js:92
+msgid "If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email: finn.woelm/at/gmail.com"
+msgstr ""
+
+#: templates/organizations.js:52
+msgid "Industry, innovation and infrastructure"
+msgstr ""
+
+#: templates/organizations.js:240
+msgid "Know another organization, startup, or company?"
+msgstr ""
+
+#: templates/organizations/[slug].js:157
+msgid "Latest tweets by {twitter_handle}"
+msgstr ""
+
+#: templates/organizations.js:57
+msgid "Life below water"
+msgstr ""
+
+#: templates/organizations.js:58
+msgid "Life on land"
+msgstr ""
+
+#: templates/about.js:202
+msgid "Lightwave promotes regenerative social change by connecting organizations & people with an IT platform, content & events. Lightwave has mapped more than 1,500 SDG organizations in Switzerland."
+msgstr ""
+
+#: templates/organizations.js:71
+msgid "Lower Saxony"
+msgstr ""
+
+#: components/NavBar.js:120
+msgid "Map"
+msgstr ""
+
+#: templates/organizations.js:72
+msgid "Mecklenburg-Vorpommern"
+msgstr ""
+
+#: components/NavBar.js:124
+#: templates/mission.js:10
+msgid "Mission"
+msgstr ""
+
+#: templates/index.js:13
+msgid "Munich"
+msgstr ""
+
+#: templates/about.js:110
+msgid "Nadim convenes people & ideas to build partnerships for achieving the UN Sustainable Development Goals. His background is in mechanical engineering, business, and diplomacy."
+msgstr ""
+
+#: templates/organizations.js:44
+msgid "No poverty"
+msgstr ""
+
+#: templates/organizations.js:75
+msgid "North Rhine-Westphalia"
+msgstr ""
+
+#: templates/how-it-works.js:56
+msgid "Our AI-based approach has been refined over hundreds of hours of research and coding. It can be broadly classified into four phases: First, an autonomous web scraper crawls the Internet and identifies relevant organizations and websites. The content of each website is then matched against a list of keywords based on the 17 Sustainable Development Goals and their 169 targets to identify which SDGs an organization contributes to. Next, a bot queries several public APIs to enrich each profile with key metadata, including address, name, and logo. Finally, a team of SDG experts reviews the results produced by the AI, verifies their accuracy, and makes any changes necessary."
+msgstr ""
+
+#: templates/how-it-works.js:13
+msgid "Our AI-based methodology for identifying and analyzing organizations"
+msgstr ""
+
+#: templates/how-it-works.js:53
+msgid "Our Approach: Artificial Intelligence"
+msgstr ""
+
+#: templates/how-it-works.js:74
+msgid "Our autonomous web scraper crawls the Internet and identifies relevant organizations and websites. Our scraper downloads a copy of every selected website, which is later used for content analysis in phase 2. We follow a recursive network approach, similar to what is used by search engines like Google: When we find an organization that contributes to the UN SDGs, we follow all external, outgoing links from the organization's website and scrape those external websites as well. This approach allows us to rapidly find and identify the large majority of actors across the SDG community."
+msgstr ""
+
+#: templates/about.js:176
+msgid "Partners"
+msgstr ""
+
+#: templates/organizations.js:60
+msgid "Partnerships for the goals"
+msgstr ""
+
+#: templates/organizations.js:59
+msgid "Peace, justice and strong institutions"
+msgstr ""
+
+#: components/Footer.js:51
+#: templates/privacy-policy.js:9
+msgid "Privacy Policy"
+msgstr ""
+
+#: templates/privacy-policy.js:111
+msgid "Privacy policies of other websites"
+msgstr ""
+
+#: templates/organizations.js:47
+msgid "Quality education"
+msgstr ""
+
+#: templates/organizations.js:53
+msgid "Reduced inequalities"
+msgstr ""
+
+#: templates/organizations.js:55
+msgid "Responsible consumption and production"
+msgstr ""
+
+#: templates/organizations.js:78
+msgid "Rhineland-Palatinate"
+msgstr ""
+
+#: templates/organizations.js:171
+msgid "SDG {key}:"
+msgstr ""
+
+#: templates/about.js:191
+msgid "SDGx is a private UN Sustainable Development Goals technology funds management and advisory group, headquartered in Singapore with offices in Sydney, Bangkok, and Berlin."
+msgstr ""
+
+#: templates/organizations.js:79
+msgid "Saarland"
+msgstr ""
+
+#: templates/organizations.js:80
+msgid "Saxony"
+msgstr ""
+
+#: templates/organizations.js:81
+msgid "Saxony-Anhalt"
+msgstr ""
+
+#: templates/organizations.js:82
+msgid "Schleswig-Holstein"
+msgstr ""
+
+#: components/OrganizationSideView.js:89
+#: templates/organizations/[slug].js:94
+msgid "Social Media"
+msgstr ""
+
+#: templates/about.js:166
+msgid "Steve develops tech-based solutions for analyzing data and policies for the European Commission. His tools include machine learning, natural language processing, and text mining."
+msgstr ""
+
+#: templates/index.js:15
+msgid "Stuttgart"
+msgstr ""
+
+#: templates/mission.js:86
+msgid "Supporting Cities and Communities"
+msgstr ""
+
+#: templates/organizations.js:54
+msgid "Sustainable cities and communities"
+msgstr ""
+
+#: templates/about.js:101
+msgid "Team"
+msgstr ""
+
+#: templates/about.js:214
+msgid "The BCCIC is a network engaged in the SDGs, sustainable development, and social justice issues. As part of its Movement Map initiative, the BCCIC has mapped over 12,000 organizations working on the SDGs in Canada and around the globe."
+msgstr ""
+
+#: templates/privacy-policy.js:114
+msgid "The Global Goals Directory contains links to other websites. Our privacy policy applies only to our website, so if you click on a link to another website, you should read their privacy policy."
+msgstr ""
+
+#: templates/mission.js:39
+msgid "The Global Goals Directory exists to accelerate our progress on the UN Sustainable Development Goals by supporting and facilitating collaboration and partnerships between non-profit organizations, private companies, think tanks, universities, and governments. We pursue this mission in three ways: 1) Championing the UN Sustainable Development Goals by highlighting the countless number of organizations and companies working on this global agenda, 2) facilitating the creation of new partnerships by helping organizations find suitable collaborators through our public directory, and 3) supporting cities and communities with analyses of their local ecosystem of SDG actors and identifying gaps and opportunities."
+msgstr ""
+
+#: templates/how-it-works.js:163
+msgid "The Global Goals Directory is completely free. Our directory is a non-commercial project and we consider it a public good. Our objective is to inspire more partnerships for tackling the Agenda 2030. It's as simple as that.<0/><1/>The content on this website is licensed under the Creative Commons license <2>CC BY 4.0</2> — a permissive license, that provides a lot of freedom under the sole condition that appropriate credit is given and a link back to the Global Goals Directory website is provided. Our software code for the analysis as well as for this website are open source and licensed under the <3>GNU General Public License 3.0</3>, meaning that reuse and adaptation of our code is permitted (and encouraged!) as long as any copies and derivatives are made available under the same GNU GPLv3 open source license. You can find our GitHub repositories at <4>https://github.com/GlobalGoalsDirectory</4>. Contributions welcome!"
+msgstr ""
+
+#: templates/privacy-policy.js:52
+msgid "The right to access: You have the right to request copies of your personal data. We may charge you a small fee for this service."
+msgstr ""
+
+#: templates/privacy-policy.js:85
+msgid "The right to data portability: You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions."
+msgstr ""
+
+#: templates/privacy-policy.js:66
+msgid "The right to erasure: You have the right to request that we erase your personal data, under certain conditions."
+msgstr ""
+
+#: templates/privacy-policy.js:79
+msgid "The right to object to processing: You have the right to object to our processing of your personal data, under certain conditions."
+msgstr ""
+
+#: templates/privacy-policy.js:58
+msgid "The right to rectification: You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete."
+msgstr ""
+
+#: templates/privacy-policy.js:72
+msgid "The right to restrict processing: You have the right to request that we restrict the processing of your personal data, under certain conditions."
+msgstr ""
+
+#: templates/organizations.js:83
+msgid "Thuringia"
+msgstr ""
+
+#: templates/index.js:175
+msgid "View Directory"
+msgstr ""
+
+#: templates/how-it-works.js:19
+msgid "We have developed a novel approach for the automatic identification and classification of startups and organization working on the SDGs, based on artificial intelligence, natural language processing, and text analysis. Our AI-based approach yields two key advantages over manual analysis and classification of organizations: First, artificial intelligence requires a fraction of the time that a human needs to both find and assess organizations (about 2 minutes per organization), while simultaneously ensuring a greater degree of consistency and comparability. Second, our program can continuously run in the background, automatically re-analyzing organizations at least every 90 days to ensure that results are always up to date. While our specific approach and its application are novel, our methodology builds upon similar methods for classifying content by SDG that have been tried and proven by the <0>TU Berlin and MIT</0> and the <1>European Commission's Joint Research Center</1>."
+msgstr ""
+
+#: templates/how-it-works.js:92
+msgid "We scan each scraped website for certain keywords to classify startups and organizations by the Sustainable Development Goals that they are contributing to. We developed these keywords, over 100 in total, based on the official language of the 17 SDGs and the 169 targets and compiled them in both English and German versions. We then count the number of matches found and the frequencies with which these keywords appear on the website to assess whether an organization contributes to a specific goal. We also determine which goals are an organization's primary focus and which ones are side objectives."
+msgstr ""
+
+#: templates/organizations.js:246
+msgid "We would love to feature them in the Global Goals Directory. Click here to add an organization."
+msgstr ""
+
+#: templates/how-it-works.js:160
+msgid "We ❤️ Open Source"
+msgstr ""
+
+#: templates/privacy-policy.js:43
+msgid "What are your data protection rights?"
+msgstr ""
+
+#: templates/privacy-policy.js:101
+msgid "What cookies does Global Goals Directory use?"
+msgstr ""
+
+#: templates/privacy-policy.js:26
+msgid "What data does Global Goals Directory collect for the organizations listed in the directory?"
+msgstr ""
+
+#: templates/privacy-policy.js:13
+msgid "What data does Global Goals Directory collect from visitors?"
+msgstr ""
+
+#: templates/mission.js:25
+msgid "With less than a decade to go until 2030, we are still facing many major challenges when it comes to the achievement of the UN Sustainable Development Goals: from climate change and pollution to extreme poverty and widening inequalities. What these challenges have in common is that they are global, interconnected, and systemic. Issues like these cannot be solved by a single organization, company, or government alone. Collaboration and partnerships are critical for advancing the 2030 Agenda on our world's toughest problems during this Decade of Action."
+msgstr ""
+
+#: templates/privacy-policy.js:46
+msgid "You — whether you are a user or an organization listed in the directory — are entitled to the following:"
+msgstr ""
+
+#: templates/organizations.js:45
+msgid "Zero hunger"
+msgstr ""
+
+#: templates/mission.js:20
+msgid "— Ban Ki-Moon"
+msgstr ""

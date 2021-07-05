@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   Avatar,
   Box,
@@ -9,6 +8,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import OrganizationLogo from "components/OrganizationLogo";
+import LocaleLink from "components/LocaleLink";
 import { getLink } from "helpers/organization";
 import getFocusSdgs from "helpers/getFocusSdgs";
 
@@ -25,7 +25,7 @@ const OrganizationPreview = ({ organization }) => {
 
   return (
     <Card style={{ height: "100%" }}>
-      <Link href={getLink(organization)} passHref>
+      <LocaleLink href={getLink(organization)} passHref>
         <CardActionArea component="a" style={{ height: "100%" }}>
           <CardContent
             style={{ display: "flex", flexDirection: "column", height: "100%" }}
@@ -61,7 +61,7 @@ const OrganizationPreview = ({ organization }) => {
             </Box>
           </CardContent>
         </CardActionArea>
-      </Link>
+      </LocaleLink>
     </Card>
   );
 };

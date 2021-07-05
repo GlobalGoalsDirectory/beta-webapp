@@ -5,6 +5,7 @@ import { CssBaseline } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { ThemeProvider } from "styled-components";
 import NextNProgress from "components/NextNProgress";
+import I18nHandler from "components/I18nHandler";
 import { theme } from "../helpers/getTheme";
 
 function MyApp({ Component, pageProps }) {
@@ -17,7 +18,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <>
+    <I18nHandler>
       <Head>
         <title>Global Goals Directory</title>
         <meta
@@ -33,7 +34,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </ThemeProvider>
       </MuiThemeProvider>
-    </>
+    </I18nHandler>
   );
 }
 

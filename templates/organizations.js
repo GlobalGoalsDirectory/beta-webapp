@@ -1,8 +1,6 @@
-import getOrganizations from "helpers/getOrganizations";
-
 import { useEffect, useState, useRef } from "react";
-import Link from "next/link";
 import { useRouter } from "next/router";
+import { Trans, defineMessage } from "@lingui/macro";
 import {
   Box,
   Button,
@@ -42,44 +40,48 @@ const filterByState = (organizations, state) => {
   return organizations.filter((organization) => organization.state === state);
 };
 
-const GOALS = [
-  "No poverty",
-  "Zero hunger",
-  "Good health and well-being",
-  "Quality education",
-  "Gender equality",
-  "Clean water and sanitation",
-  "Affordable and clean energy",
-  "Decent work and economic growth",
-  "Industry, innovation and infrastructure",
-  "Reduced inequalities",
-  "Sustainable cities and communities",
-  "Responsible consumption and production",
-  "Climate action",
-  "Life below water",
-  "Life on land",
-  "Peace, justice and strong institutions",
-  "Partnerships for the goals",
-];
+const GOALS = {
+  1: defineMessage({ message: "No poverty" }),
+  2: defineMessage({ message: "Zero hunger" }),
+  3: defineMessage({ message: "Good health and well-being" }),
+  4: defineMessage({ message: "Quality education" }),
+  5: defineMessage({ message: "Gender equality" }),
+  6: defineMessage({ message: "Clean water and sanitation" }),
+  7: defineMessage({ message: "Affordable and clean energy" }),
+  8: defineMessage({ message: "Decent work and economic growth" }),
+  9: defineMessage({ message: "Industry, innovation and infrastructure" }),
+  10: defineMessage({ message: "Reduced inequalities" }),
+  11: defineMessage({ message: "Sustainable cities and communities" }),
+  12: defineMessage({ message: "Responsible consumption and production" }),
+  13: defineMessage({ message: "Climate action" }),
+  14: defineMessage({ message: "Life below water" }),
+  15: defineMessage({ message: "Life on land" }),
+  16: defineMessage({ message: "Peace, justice and strong institutions" }),
+  17: defineMessage({ message: "Partnerships for the goals" }),
+};
 
-const STATES = [
-  "Baden-Württemberg",
-  "Bavaria",
-  "Berlin",
-  "Brandenburg",
-  "Bremen",
-  "Hamburg",
-  "Hesse",
-  "Lower Saxony",
-  "Mecklenburg-Vorpommern",
-  "North Rhine-Westphalia",
-  "Rhineland-Palatinate",
-  "Saarland",
-  "Saxony",
-  "Saxony-Anhalt",
-  "Schleswig-Holstein",
-  "Thuringia",
-];
+const STATES = {
+  "Baden-Württemberg": defineMessage({ message: "Baden-Württemberg" }),
+  Bavaria: defineMessage({ message: "Bavaria" }),
+  Berlin: defineMessage({ message: "Berlin" }),
+  Brandenburg: defineMessage({ message: "Brandenburg" }),
+  Bremen: defineMessage({ message: "Bremen" }),
+  Hamburg: defineMessage({ message: "Hamburg" }),
+  Hesse: defineMessage({ message: "Hesse" }),
+  "Lower Saxony": defineMessage({ message: "Lower Saxony" }),
+  "Mecklenburg-Vorpommern": defineMessage({
+    message: "Mecklenburg-Vorpommern",
+  }),
+  "North Rhine-Westphalia": defineMessage({
+    message: "North Rhine-Westphalia",
+  }),
+  "Rhineland-Palatinate": defineMessage({ message: "Rhineland-Palatinate" }),
+  Saarland: defineMessage({ message: "Saarland" }),
+  Saxony: defineMessage({ message: "Saxony" }),
+  "Saxony-Anhalt": defineMessage({ message: "Saxony-Anhalt" }),
+  "Schleswig-Holstein": defineMessage({ message: "Schleswig-Holstein" }),
+  Thuringia: defineMessage({ message: "Thuringia" }),
+};
 
 const DirectoryPage = ({ organizations }) => {
   const [sdgFilter, setSdgFilter] = useState("all");
@@ -87,43 +89,44 @@ const DirectoryPage = ({ organizations }) => {
   const [isInitialized, setIsInitialized] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    if (isInitialized) return;
-    const queryParams = new URLSearchParams(window.location.search);
-    setSdgFilter(queryParams.get("sdg") || "all");
-    setStateFilter(queryParams.get("state") || "all");
-    setIsInitialized(true);
-  }, []);
-
-  // Run this effect only after we have parsed the initial URL params
-  // (see above)
-  useEffect(() => {
-    if (!isInitialized) return;
-
-    // Construct query params
-    const queryParams = {};
-
-    // Set new or modify existing parameter value.
-    if (sdgFilter != "all") queryParams.sdg = sdgFilter;
-    if (stateFilter != "all") queryParams.state = stateFilter;
-
-    // Replace current querystring with the new one
-    router.replace(
-      { pathname: "/organizations" },
-      {
-        pathname: "/organizations",
-        query: queryParams,
-      },
-      { scroll: false, shallow: true }
-    );
-  }, [sdgFilter, stateFilter]);
+  // TODO: Reenable after making compatible with multiple locales
+  // useEffect(() => {
+  //   if (isInitialized) return;
+  //   const queryParams = new URLSearchParams(window.location.search);
+  //   setSdgFilter(queryParams.get("sdg") || "all");
+  //   setStateFilter(queryParams.get("state") || "all");
+  //   setIsInitialized(true);
+  // }, []);
+  //
+  // // Run this effect only after we have parsed the initial URL params
+  // // (see above)
+  // useEffect(() => {
+  //   if (!isInitialized) return;
+  //
+  //   // Construct query params
+  //   const queryParams = {};
+  //
+  //   // Set new or modify existing parameter value.
+  //   if (sdgFilter != "all") queryParams.sdg = sdgFilter;
+  //   if (stateFilter != "all") queryParams.state = stateFilter;
+  //
+  //   // Replace current querystring with the new one
+  //   router.replace(
+  //     { pathname: "/organizations" },
+  //     {
+  //       pathname: "/organizations",
+  //       query: queryParams,
+  //     },
+  //     { scroll: false, shallow: true }
+  //   );
+  // }, [sdgFilter, stateFilter]);
 
   return (
     <Layout>
       <Box display="flex">
         <Box flexGrow={1}>
           <Typography variant="h1" gutterBottom>
-            Directory
+            <Trans>Directory</Trans>
           </Typography>
         </Box>
         <Box display={{ xs: "none", md: "block" }}>
@@ -134,7 +137,7 @@ const DirectoryPage = ({ organizations }) => {
             startIcon={<Plus />}
             variant="outlined"
           >
-            Add Organization or Startup
+            <Trans>Add Organization or Startup</Trans>
           </Button>
         </Box>
       </Box>
@@ -142,31 +145,37 @@ const DirectoryPage = ({ organizations }) => {
         <Box display={{ md: "flex" }}>
           <Box marginRight={{ md: 2 }} marginBottom={{ xs: 2, md: 0 }}>
             <FormControl variant="filled" style={{ maxWidth: "100%" }}>
-              <InputLabel id="sdgFilter">Focus</InputLabel>
+              <InputLabel id="sdgFilter">
+                <Trans>Focus</Trans>
+              </InputLabel>
               <Select
                 labelId="sdgFilter"
                 value={sdgFilter}
                 onChange={(event) => setSdgFilter(event.target.value)}
                 autoWidth={true}
               >
-                <MenuItem value={"all"}>All SDGs</MenuItem>
-                {Array.from({ length: 17 }).map((_e, index) => (
+                <MenuItem value={"all"}>
+                  <Trans>All SDGs</Trans>
+                </MenuItem>
+                {Object.entries(GOALS).map(([key, value]) => (
                   <MenuItem
-                    key={index}
-                    value={index + 1}
+                    key={key}
+                    value={key}
                     disabled={
                       applyFilters(organizations, {
-                        sdgFilter: index + 1,
+                        sdgFilter: key,
                         stateFilter,
                       }).length == 0
                     }
                   >
-                    SDG {index + 1}: {GOALS[index]}
+                    <Trans>SDG {key}:</Trans> <Trans id={value.id} />
                   </MenuItem>
                 ))}
               </Select>
               <FormHelperText>
-                Filter by one of the 17 Sustainable Development Goals
+                <Trans>
+                  Filter by one of the 17 Sustainable Development Goals
+                </Trans>
               </FormHelperText>
             </FormControl>
           </Box>
@@ -179,24 +188,26 @@ const DirectoryPage = ({ organizations }) => {
                 onChange={(event) => setStateFilter(event.target.value)}
                 autoWidth={true}
               >
-                <MenuItem value={"all"}>All states</MenuItem>
-                {STATES.map((state) => (
+                <MenuItem value={"all"}>
+                  <Trans>All states</Trans>
+                </MenuItem>
+                {Object.entries(STATES).map(([key, value]) => (
                   <MenuItem
-                    key={state}
-                    value={state}
+                    key={key}
+                    value={key}
                     disabled={
                       applyFilters(organizations, {
                         sdgFilter,
-                        stateFilter: state,
+                        stateFilter: key,
                       }).length == 0
                     }
                   >
-                    {state}
+                    <Trans id={value.id} />
                   </MenuItem>
                 ))}
               </Select>
               <FormHelperText>
-                Filter by one of the 16 German states
+                <Trans>Filter by one of the 16 German states</Trans>
               </FormHelperText>
             </FormControl>
           </Box>
@@ -226,12 +237,16 @@ const DirectoryPage = ({ organizations }) => {
                     </Box>
                     <Box marginTop={1}>
                       <Typography variant="h5" style={{ fontWeight: 500 }}>
-                        Know another organization, startup, or company?
+                        <Trans>
+                          Know another organization, startup, or company?
+                        </Trans>
                       </Typography>
                     </Box>
                     <Typography variant="body2">
-                      We would love to feature them in the Global Goals
-                      Directory. Click here to add an organization.
+                      <Trans>
+                        We would love to feature them in the Global Goals
+                        Directory. Click here to add an organization.
+                      </Trans>
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -243,15 +258,5 @@ const DirectoryPage = ({ organizations }) => {
     </Layout>
   );
 };
-
-export function getStaticProps() {
-  const organizations = getOrganizations();
-
-  return {
-    props: {
-      organizations,
-    },
-  };
-}
 
 export default DirectoryPage;

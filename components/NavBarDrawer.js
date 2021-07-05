@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import Link from "next/link";
+import { Fragment, forwardRef } from "react";
+import { t } from "@lingui/macro";
 import {
   Box,
   Drawer,
@@ -8,6 +8,8 @@ import {
   ListItemText,
   Typography,
 } from "@material-ui/core";
+import LocaleLink from "components/LocaleLink";
+import LocaleSelect from "components/LocaleSelect";
 import { addOrganizationUrl } from "helpers/organization";
 
 const NavBarDrawer = ({
@@ -21,7 +23,7 @@ const NavBarDrawer = ({
     PaperProps={{ style: { minWidth: "60%", maxWidth: "80%" } }}
   >
     <List disablePadding>
-      <Link href="/" passHref>
+      <LocaleLink href="/" passHref>
         <Box background="primary.main" clone>
           <ListItem
             button
@@ -34,19 +36,19 @@ const NavBarDrawer = ({
             <img src="/static/logo.png" style={{ maxWidth: "100%" }} />
           </ListItem>
         </Box>
-      </Link>
-      <Link href="/" passHref>
+      </LocaleLink>
+      <LocaleLink href="/" passHref>
         <ListItem button component="a" divider>
-          <ListItemText primary="Home" />
+          <ListItemText primary={t`Home`} />
         </ListItem>
-      </Link>
+      </LocaleLink>
       {pages.map(({ href, label }) => (
         <Fragment key={href}>
-          <Link href={href} passHref>
+          <LocaleLink href={href} passHref>
             <ListItem button component="a" divider>
-              <ListItemText primary={label} />
+              <ListItemText primary={t({ id: label.id })} />
             </ListItem>
-          </Link>
+          </LocaleLink>
         </Fragment>
       ))}
       <ListItem
@@ -56,8 +58,15 @@ const NavBarDrawer = ({
         href={addOrganizationUrl()}
         divider
       >
-        <ListItemText primary="Add organization or startup" />
+        <ListItemText primary={t`Add organization or startup`} />
       </ListItem>
+      <LocaleSelect
+        ButtonComponent={forwardRef(({ children, ...params }, ref) => (
+          <ListItem button divider ref={ref} {...params}>
+            <ListItemText primary={children} />
+          </ListItem>
+        ))}
+      />
     </List>
   </Drawer>
 );

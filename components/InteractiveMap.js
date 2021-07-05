@@ -1,5 +1,7 @@
-import { memo } from "react";
+import { memo, useCallback, useEffect, useState, useRef } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import { useRouter } from "next/router";
+import { t } from "@lingui/macro";
 import Leaflet from "leaflet";
 import {
   MapContainer,
@@ -11,7 +13,7 @@ import {
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import "leaflet/dist/leaflet.css";
 import "react-leaflet-markercluster/dist/styles.min.css";
-import { Avatar, Box } from "@material-ui/core";
+import { Avatar, Box, CircularProgress } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { ThemeProvider } from "styled-components";
 import OrganizationLogo from "components/OrganizationLogo";
@@ -118,38 +120,81 @@ const getClusterIcon = (cluster, organizations) => {
     // popupAnchor: [0, -47],
   });
 };
-const InteractiveMap = memo(({ organizations, onClick }) => (
-  <MapContainer
-    bounds={organizations.map((org) => [org.latitude, org.longitude])}
-    // We manually add zoom controls in the bottom-right corner
-    zoomControl={false}
-    style={{ height: "100%" }}
-  >
-    <TileLayer
-      attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    />
-    <MarkerClusterGroup
-      iconCreateFunction={(cluster) => getClusterIcon(cluster, organizations)}
+const InteractiveMap = memo(({ organizations, onClick }) => {
+  const router = useRouter();
+  const [isVisible, setVisibility] = useState(false);
+  const timeoutRef = useRef(null);
+
+  const showMap = useCallback(() => {
+    if (timeoutRef.current) return;
+
+    timeoutRef.current = setTimeout(() => setVisibility(true), 100);
+  }, [timeoutRef.current]);
+
+  const hideMap = useCallback(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = null;
+    setVisibility(false);
+  }, [timeoutRef.current]);
+
+  useEffect(() => {
+    showMap();
+    router.events.on("routeChangeStart", hideMap);
+    router.events.on("routeChangeComplete", showMap);
+
+    return () => {
+      router.events.off("routeChangeStart", hideMap);
+      router.events.off("routeChangeComplete", showMap);
+      hideMap();
+    };
+  }, []);
+
+  if (!isVisible)
+    return (
+      <Box
+        width={1}
+        height={1}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <CircularProgress disableShrink />
+      </Box>
+    );
+
+  return (
+    <MapContainer
+      bounds={organizations.map((org) => [org.latitude, org.longitude])}
+      // We manually add zoom controls in the bottom-right corner
+      zoomControl={false}
+      style={{ height: "100%" }}
     >
-      {organizations.map((organization) => (
-        <Marker
-          key={organization.slug}
-          icon={getIcon(organization)}
-          position={[organization.latitude, organization.longitude]}
-          eventHandlers={{
-            click: () => {
-              onClick(organization);
-            },
-          }}
-          dataSlug={organization.slug}
-        >
-          <Popup>{organization.name}</Popup>
-        </Marker>
-      ))}
-    </MarkerClusterGroup>
-    <ZoomControl position="bottomright" />
-  </MapContainer>
-));
+      <TileLayer
+        attribution={t`&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors`}
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      <MarkerClusterGroup
+        iconCreateFunction={(cluster) => getClusterIcon(cluster, organizations)}
+      >
+        {organizations.map((organization) => (
+          <Marker
+            key={organization.slug}
+            icon={getIcon(organization)}
+            position={[organization.latitude, organization.longitude]}
+            eventHandlers={{
+              click: () => {
+                onClick(organization);
+              },
+            }}
+            dataSlug={organization.slug}
+          >
+            <Popup>{organization.name}</Popup>
+          </Marker>
+        ))}
+      </MarkerClusterGroup>
+      <ZoomControl position="bottomright" />
+    </MapContainer>
+  );
+});
 
 export default InteractiveMap;

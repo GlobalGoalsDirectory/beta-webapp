@@ -9,10 +9,14 @@
           "components": "./components/",
           "data": "./data",
           "helpers": "./helpers",
+          "hooks": "./hooks",
           "layouts": "./layouts",
-          "pages": "./pages"
+          "locales": "./locales",
+          "pages": "./pages",
+          "templates": "./templates"
         }
       }
-    ]
+    ],
+    ["macros"]
   ]
 }

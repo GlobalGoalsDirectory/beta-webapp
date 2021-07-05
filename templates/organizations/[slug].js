@@ -1,5 +1,4 @@
-import getOrganizations from "helpers/getOrganizations";
-
+import { Trans } from "@lingui/macro";
 import {
   Box,
   Card,
@@ -59,7 +58,7 @@ const OrganizationPage = ({ organization }) => {
               <Divider />
               <Box marginTop={2} marginBottom={3}>
                 <Typography variant="h2" gutterBottom>
-                  About
+                  <Trans>About</Trans>
                 </Typography>
                 <Typography variant="body1">{summary}</Typography>
               </Box>
@@ -68,7 +67,7 @@ const OrganizationPage = ({ organization }) => {
           <Divider />
           <Box marginTop={2} marginBottom={3}>
             <Typography variant="h2" gutterBottom>
-              Focus SDGs
+              <Trans>Focus SDGs</Trans>
             </Typography>
             <Grid container spacing={1}>
               {Array.from({ length: 17 }).map((_e, index) => (
@@ -92,7 +91,7 @@ const OrganizationPage = ({ organization }) => {
               <Divider />
               <Box marginTop={2} marginBottom={3}>
                 <Typography variant="h2" gutterBottom>
-                  Social Media
+                  <Trans>Social Media</Trans>
                 </Typography>
                 <Box marginY={2}>
                   {facebook_handle && (
@@ -155,7 +154,7 @@ const OrganizationPage = ({ organization }) => {
                   data-tweet-limit="4"
                   data-width="400"
                 >
-                  Latest tweets by {twitter_handle}
+                  <Trans>Latest tweets by {twitter_handle}</Trans>
                 </a>{" "}
                 <script
                   async
@@ -170,28 +169,5 @@ const OrganizationPage = ({ organization }) => {
     </Layout>
   );
 };
-
-export function getStaticPaths() {
-  const organizations = getOrganizations();
-  const slugs = organizations.map((organization) => organization.slug);
-
-  return {
-    paths: slugs.map((slug) => ({
-      params: { slug },
-    })),
-    fallback: false,
-  };
-}
-
-export function getStaticProps({ params }) {
-  const { slug } = params;
-
-  const organizations = getOrganizations();
-  const organization = organizations.find((org) => org.slug === slug);
-
-  return {
-    props: { organization },
-  };
-}
 
 export default OrganizationPage;

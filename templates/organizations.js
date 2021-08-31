@@ -89,6 +89,11 @@ const DirectoryPage = ({ organizations }) => {
   const [isInitialized, setIsInitialized] = useState(false);
   const router = useRouter();
 
+  const filteredOrganizations = applyFilters(organizations, {
+    sdgFilter,
+    stateFilter,
+  });
+
   // TODO: Reenable after making compatible with multiple locales
   // useEffect(() => {
   //   if (isInitialized) return;
@@ -179,7 +184,7 @@ const DirectoryPage = ({ organizations }) => {
               </FormHelperText>
             </FormControl>
           </Box>
-          <Box>
+          <Box marginRight={{ md: 2 }} marginBottom={{ xs: 2, md: 0 }}>
             <FormControl variant="filled" style={{ maxWidth: "100%" }}>
               <InputLabel id="stateFilter">Location</InputLabel>
               <Select
@@ -211,17 +216,22 @@ const DirectoryPage = ({ organizations }) => {
               </FormHelperText>
             </FormControl>
           </Box>
+          <Box justifyContent={{ md: "flex-end" }} flexGrow={1} display="flex">
+            <Box height={{ md: 56 }} display="flex" alignItems="center">
+              <Typography variant="h6" component="p" color="textSecondary">
+                <Trans>Showing {filteredOrganizations.length} results</Trans>
+              </Typography>
+            </Box>
+          </Box>
         </Box>
       </Box>
       <Grid container spacing={3}>
         <InfiniteScroll sdgFilter={sdgFilter} stateFilter={stateFilter}>
-          {applyFilters(organizations, { sdgFilter, stateFilter }).map(
-            (organization) => (
-              <Grid key={organization.slug} xs={12} sm={4} md={3} item>
-                <OrganizationPreview organization={organization} />
-              </Grid>
-            )
-          )}
+          {filteredOrganizations.map((organization) => (
+            <Grid key={organization.slug} xs={12} sm={4} md={3} item>
+              <OrganizationPreview organization={organization} />
+            </Grid>
+          ))}
           <Grid xs={12} sm={4} md={3} item>
             <Box bgcolor="black" color="white" clone>
               <Card style={{ height: "100%" }}>

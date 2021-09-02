@@ -16,7 +16,7 @@ const OrganizationPage = ({ organization }) => {
   const {
     name,
     summary,
-    url,
+    homepage,
     address,
     twitter_handle,
     facebook_handle,
@@ -39,8 +39,8 @@ const OrganizationPage = ({ organization }) => {
                 <Earth />
               </Box>
               <Typography variant="body1">
-                <a href={url} target="_blank">
-                  {url}
+                <a href={homepage} target="_blank">
+                  {homepage}
                 </a>
               </Typography>
             </Box>

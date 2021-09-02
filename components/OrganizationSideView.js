@@ -10,7 +10,7 @@ const OrganizationSideView = ({ organization, onClose }) => {
   const {
     name,
     summary,
-    url,
+    homepage,
     address,
     twitter_handle,
     facebook_handle,
@@ -31,8 +31,8 @@ const OrganizationSideView = ({ organization, onClose }) => {
             <Earth />
           </Box>
           <Typography variant="body1">
-            <a href={url} target="_blank">
-              {url}
+            <a href={homepage} target="_blank">
+              {homepage}
             </a>
           </Typography>
         </Box>

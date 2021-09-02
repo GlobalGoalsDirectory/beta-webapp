@@ -40,7 +40,7 @@ const getIcon = (organization) => {
           />
           <Box position="absolute" width={36} left={2} top={11}>
             <OrganizationLogo
-              variant="circle"
+              variant="circular"
               organization={organization}
               size={36}
             />
@@ -105,7 +105,7 @@ const getClusterIcon = (cluster, organizations) => {
                 style={{ padding: 1 }}
               >
                 <OrganizationLogo
-                  variant="circle"
+                  variant="circular"
                   organization={organization}
                   size={24}
                 />

@@ -31,7 +31,7 @@ organizations = organizations.map((organization) => {
   const keys = Object.keys(organization);
 
   const keysToKeep = keys.filter((key) => {
-    if (["domain", "homepage", "logo", "name", "summary"].includes(key))
+    if (["domain", "homepage", "logo", "name", "about"].includes(key))
       return true;
 
     if (["address", "state", "latitude", "longitude"].includes(key))

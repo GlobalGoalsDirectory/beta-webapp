@@ -15,7 +15,7 @@ import getFocusSdgs from "helpers/getFocusSdgs";
 const OrganizationPage = ({ organization }) => {
   const {
     name,
-    summary,
+    about,
     homepage,
     address,
     twitter_handle,
@@ -53,14 +53,14 @@ const OrganizationPage = ({ organization }) => {
               </Box>
             )}
           </Box>
-          {summary && (
+          {about && (
             <>
               <Divider />
               <Box marginTop={2} marginBottom={3}>
                 <Typography variant="h2" gutterBottom>
                   <Trans>About</Trans>
                 </Typography>
-                <Typography variant="body1">{summary}</Typography>
+                <Typography variant="body1">{about}</Typography>
               </Box>
             </>
           )}

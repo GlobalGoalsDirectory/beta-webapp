@@ -9,7 +9,7 @@ import getFocusSdgs from "helpers/getFocusSdgs";
 const OrganizationSideView = ({ organization, onClose }) => {
   const {
     name,
-    summary,
+    about,
     homepage,
     address,
     twitter_handle,
@@ -45,7 +45,7 @@ const OrganizationSideView = ({ organization, onClose }) => {
           </Box>
         )}
       </Box>
-      {summary && (
+      {about && (
         <>
           <Divider />
           <Box padding={2} paddingBottom={3}>
@@ -54,7 +54,7 @@ const OrganizationSideView = ({ organization, onClose }) => {
                 <Trans>About</Trans>
               </Bold>
             </Typography>
-            <Typography variant="body1">{summary}</Typography>
+            <Typography variant="body1">{about}</Typography>
           </Box>
         </>
       )}

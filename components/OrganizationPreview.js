@@ -19,7 +19,7 @@ const trim = (text, length) => {
 };
 
 const OrganizationPreview = ({ organization }) => {
-  const { name, summary } = organization;
+  const { name, about } = organization;
   const focusSdgs = getFocusSdgs(organization, 3);
   const hiddenSdgsCount = getFocusSdgs(organization).length - 3;
 
@@ -38,7 +38,7 @@ const OrganizationPreview = ({ organization }) => {
                 </Typography>
               </Box>
               <Typography variant="body2">
-                {trim(summary, 200) || (
+                {trim(about, 200) || (
                   <Box fontStyle="italic" component="span">
                     No description.
                   </Box>

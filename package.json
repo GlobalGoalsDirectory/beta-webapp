@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
     "netlify": "npm run download && npm run setup && next build && next export",
-    "i18n": "NODE_ENV=development lingui extract"
+    "i18n": "NODE_ENV=development lingui extract --overwrite --clean"
   },
   "keywords": [],
   "author": "",

@@ -17,7 +17,7 @@ msgstr ""
 msgid "\"To implement the Global Goals, we need all hands on deck.\""
 msgstr ""
 
-#: components/InteractiveMap.js:160
+#: components/InteractiveMap.js:173
 msgid "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
 msgstr ""
 
@@ -59,6 +59,10 @@ msgstr ""
 msgid "About us"
 msgstr "About"
 
+#: helpers/getSdg.js:40
+msgid "Achieve gender equality and empower all women and girls."
+msgstr ""
+
 #: templates/map.js:90
 #: templates/organizations.js:145
 msgid "Add Organization or Startup"
@@ -72,6 +76,7 @@ msgstr ""
 msgid "Advisors"
 msgstr ""
 
+#: helpers/getSdg.js:54
 #: templates/organizations.js:50
 msgid "Affordable and clean energy"
 msgstr ""
@@ -122,6 +127,10 @@ msgstr ""
 msgid "Bremen"
 msgstr ""
 
+#: helpers/getSdg.js:73
+msgid "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation."
+msgstr ""
+
 #: templates/mission.js:60
 msgid "Championing the SDGs"
 msgstr ""
@@ -138,10 +147,12 @@ msgstr ""
 msgid "Cities and communities play a pivotal role in the implementation of the 2030 Agenda. We help cities understand their local ecosystem of SDG actors by analyzing and identifying the gaps and challenges that exist across each of the 17 SDGs and 169 targets."
 msgstr ""
 
+#: helpers/getSdg.js:46
 #: templates/organizations.js:49
 msgid "Clean water and sanitation"
 msgstr ""
 
+#: helpers/getSdg.js:102
 #: templates/organizations.js:56
 msgid "Climate action"
 msgstr ""
@@ -158,6 +169,10 @@ msgstr ""
 msgid "Cologne"
 msgstr ""
 
+#: helpers/getSdg.js:110
+msgid "Conserve and sustainably use the oceans, seas and marine resources for sustainable development."
+msgstr ""
+
 #: templates/about.js:163
 msgid "Consultant to the Joint Research Centre of the European Commission"
 msgstr ""
@@ -166,6 +181,7 @@ msgstr ""
 msgid "Data Scientist and Analyst, UN Sustainable Development Solutions Network"
 msgstr ""
 
+#: helpers/getSdg.js:62
 #: templates/organizations.js:51
 msgid "Decent work and economic growth"
 msgstr ""
@@ -181,6 +197,34 @@ msgstr ""
 
 #: templates/privacy-policy.js:145
 msgid "Email us at finn.woelm/at/gmail.com"
+msgstr ""
+
+#: helpers/getSdg.js:16
+msgid "End hunger, achieve food security and improved nutrition and promote sustainable agriculture."
+msgstr ""
+
+#: helpers/getSdg.js:7
+msgid "End poverty in all its forms everywhere."
+msgstr ""
+
+#: helpers/getSdg.js:55
+msgid "Ensure access to affordable, reliable, sustainable and modern energy for all."
+msgstr ""
+
+#: helpers/getSdg.js:47
+msgid "Ensure availability and sustainable management of water and sanitation for all."
+msgstr ""
+
+#: helpers/getSdg.js:24
+msgid "Ensure healthy lives and promote well-being for all at all ages."
+msgstr ""
+
+#: helpers/getSdg.js:32
+msgid "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all."
+msgstr ""
+
+#: helpers/getSdg.js:96
+msgid "Ensure sustainable consumption and production patterns."
 msgstr ""
 
 #: templates/about.js:151
@@ -232,6 +276,7 @@ msgstr ""
 msgid "Frankfurt"
 msgstr ""
 
+#: helpers/getSdg.js:39
 #: templates/organizations.js:48
 msgid "Gender equality"
 msgstr ""
@@ -252,6 +297,7 @@ msgstr ""
 msgid "Global Goals Directory keeps its privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 1 March 2021."
 msgstr ""
 
+#: helpers/getSdg.js:23
 #: templates/organizations.js:46
 msgid "Good health and well-being"
 msgstr ""
@@ -289,6 +335,7 @@ msgstr ""
 msgid "If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email: finn.woelm/at/gmail.com"
 msgstr ""
 
+#: helpers/getSdg.js:70
 #: templates/organizations.js:52
 msgid "Industry, innovation and infrastructure"
 msgstr ""
@@ -301,10 +348,12 @@ msgstr ""
 msgid "Latest tweets by {twitter_handle}"
 msgstr ""
 
+#: helpers/getSdg.js:109
 #: templates/organizations.js:57
 msgid "Life below water"
 msgstr ""
 
+#: helpers/getSdg.js:117
 #: templates/organizations.js:58
 msgid "Life on land"
 msgstr ""
@@ -315,6 +364,10 @@ msgstr ""
 
 #: templates/organizations.js:71
 msgid "Lower Saxony"
+msgstr ""
+
+#: helpers/getSdg.js:88
+msgid "Make cities and human settlements inclusive, safe, resilient and sustainable."
 msgstr ""
 
 #: components/NavBar.js:120
@@ -338,6 +391,7 @@ msgstr ""
 msgid "Nadim convenes people & ideas to build partnerships for achieving the UN Sustainable Development Goals. His background is in mechanical engineering, business, and diplomacy."
 msgstr ""
 
+#: helpers/getSdg.js:6
 #: templates/organizations.js:44
 msgid "No poverty"
 msgstr ""
@@ -366,10 +420,12 @@ msgstr ""
 msgid "Partners"
 msgstr ""
 
+#: helpers/getSdg.js:133
 #: templates/organizations.js:60
 msgid "Partnerships for the goals"
 msgstr ""
 
+#: helpers/getSdg.js:125
 #: templates/organizations.js:59
 msgid "Peace, justice and strong institutions"
 msgstr ""
@@ -383,14 +439,33 @@ msgstr ""
 msgid "Privacy policies of other websites"
 msgstr ""
 
+#: helpers/getSdg.js:126
+msgid "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels."
+msgstr ""
+
+#: helpers/getSdg.js:63
+msgid "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all."
+msgstr ""
+
+#: helpers/getSdg.js:118
+msgid "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss ."
+msgstr ""
+
+#: helpers/getSdg.js:31
 #: templates/organizations.js:47
 msgid "Quality education"
 msgstr ""
 
+#: helpers/getSdg.js:81
+msgid "Reduce inequality within and among countries."
+msgstr ""
+
+#: helpers/getSdg.js:80
 #: templates/organizations.js:53
 msgid "Reduced inequalities"
 msgstr ""
 
+#: helpers/getSdg.js:95
 #: templates/organizations.js:55
 msgid "Responsible consumption and production"
 msgstr ""
@@ -436,6 +511,10 @@ msgstr ""
 msgid "Steve develops tech-based solutions for analyzing data and policies for the European Commission. His tools include machine learning, natural language processing, and text mining."
 msgstr ""
 
+#: helpers/getSdg.js:134
+msgid "Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development."
+msgstr ""
+
 #: templates/index.js:15
 msgid "Stuttgart"
 msgstr ""
@@ -444,8 +523,13 @@ msgstr ""
 msgid "Supporting Cities and Communities"
 msgstr ""
 
+#: helpers/getSdg.js:87
 #: templates/organizations.js:54
 msgid "Sustainable cities and communities"
+msgstr ""
+
+#: helpers/getSdg.js:103
+msgid "Take urgent action to combat climate change and its impacts."
 msgstr ""
 
 #: templates/about.js:101
@@ -540,6 +624,7 @@ msgstr ""
 msgid "You — whether you are a user or an organization listed in the directory — are entitled to the following:"
 msgstr ""
 
+#: helpers/getSdg.js:13
 #: templates/organizations.js:45
 msgid "Zero hunger"
 msgstr ""

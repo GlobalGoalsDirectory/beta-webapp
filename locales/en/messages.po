@@ -50,7 +50,6 @@ msgid "A team of SDG experts carefully reviews all profiles before they appear o
 msgstr ""
 
 #: components/OrganizationSideView.js:54
-#: templates/organizations/[slug].js:61
 msgid "About"
 msgstr ""
 
@@ -59,12 +58,12 @@ msgstr ""
 msgid "About us"
 msgstr "About"
 
-#: helpers/getSdg.js:40
+#: helpers/sdg.js:40
 msgid "Achieve gender equality and empower all women and girls."
 msgstr ""
 
 #: templates/map.js:90
-#: templates/organizations.js:145
+#: templates/organizations.js:126
 msgid "Add Organization or Startup"
 msgstr ""
 
@@ -72,12 +71,15 @@ msgstr ""
 msgid "Add organization or startup"
 msgstr ""
 
+#: templates/organizations/[slug].js:259
+msgid "Address"
+msgstr ""
+
 #: templates/about.js:145
 msgid "Advisors"
 msgstr ""
 
-#: helpers/getSdg.js:54
-#: templates/organizations.js:50
+#: helpers/sdg.js:54
 msgid "Affordable and clean energy"
 msgstr ""
 
@@ -85,11 +87,11 @@ msgstr ""
 msgid "After identifying that a startup or organization does indeed contribute to the Sustainable Development Goals, we enrich each profile with relevant metadata that allows users to make the most from the Global Goals Directory. Our fully automatic metadata bot queries several public APIs, including social networks, like Twitter, Facebook, and LinkedIn, but also service providers, like Google Maps, to identify and collect name, logo, address, a short summary, and social media profiles for each of the organizations in the directory. We take privacy seriously and only collect information that is publicly available."
 msgstr ""
 
-#: templates/organizations.js:163
+#: templates/organizations.js:144
 msgid "All SDGs"
 msgstr ""
 
-#: templates/organizations.js:197
+#: templates/organizations.js:178
 msgid "All states"
 msgstr ""
 
@@ -105,29 +107,29 @@ msgstr ""
 msgid "Around the world, tens of thousands of organizations, companies, and governments are working towards the achievement of the UN Sustainable Development Goals. Our mission is to give visibility to this great SDG community and to champion the 2030 Agenda."
 msgstr ""
 
-#: templates/organizations.js:64
+#: templates/organizations.js:45
 msgid "Baden-Württemberg"
 msgstr ""
 
-#: templates/organizations.js:65
+#: templates/organizations.js:46
 msgid "Bavaria"
 msgstr ""
 
 #: templates/index.js:8
-#: templates/organizations.js:66
+#: templates/organizations.js:47
 msgid "Berlin"
 msgstr ""
 
-#: templates/organizations.js:67
+#: templates/organizations.js:48
 msgid "Brandenburg"
 msgstr ""
 
 #: templates/index.js:11
-#: templates/organizations.js:68
+#: templates/organizations.js:49
 msgid "Bremen"
 msgstr ""
 
-#: helpers/getSdg.js:73
+#: helpers/sdg.js:73
 msgid "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation."
 msgstr ""
 
@@ -147,13 +149,11 @@ msgstr ""
 msgid "Cities and communities play a pivotal role in the implementation of the 2030 Agenda. We help cities understand their local ecosystem of SDG actors by analyzing and identifying the gaps and challenges that exist across each of the 17 SDGs and 169 targets."
 msgstr ""
 
-#: helpers/getSdg.js:46
-#: templates/organizations.js:49
+#: helpers/sdg.js:46
 msgid "Clean water and sanitation"
 msgstr ""
 
-#: helpers/getSdg.js:102
-#: templates/organizations.js:56
+#: helpers/sdg.js:102
 msgid "Climate action"
 msgstr ""
 
@@ -169,7 +169,7 @@ msgstr ""
 msgid "Cologne"
 msgstr ""
 
-#: helpers/getSdg.js:110
+#: helpers/sdg.js:110
 msgid "Conserve and sustainably use the oceans, seas and marine resources for sustainable development."
 msgstr ""
 
@@ -181,13 +181,12 @@ msgstr ""
 msgid "Data Scientist and Analyst, UN Sustainable Development Solutions Network"
 msgstr ""
 
-#: helpers/getSdg.js:62
-#: templates/organizations.js:51
+#: helpers/sdg.js:62
 msgid "Decent work and economic growth"
 msgstr ""
 
 #: components/NavBar.js:116
-#: templates/organizations.js:134
+#: templates/organizations.js:115
 msgid "Directory"
 msgstr ""
 
@@ -199,31 +198,31 @@ msgstr ""
 msgid "Email us at finn.woelm/at/gmail.com"
 msgstr ""
 
-#: helpers/getSdg.js:16
+#: helpers/sdg.js:16
 msgid "End hunger, achieve food security and improved nutrition and promote sustainable agriculture."
 msgstr ""
 
-#: helpers/getSdg.js:7
+#: helpers/sdg.js:7
 msgid "End poverty in all its forms everywhere."
 msgstr ""
 
-#: helpers/getSdg.js:55
+#: helpers/sdg.js:55
 msgid "Ensure access to affordable, reliable, sustainable and modern energy for all."
 msgstr ""
 
-#: helpers/getSdg.js:47
+#: helpers/sdg.js:47
 msgid "Ensure availability and sustainable management of water and sanitation for all."
 msgstr ""
 
-#: helpers/getSdg.js:24
+#: helpers/sdg.js:24
 msgid "Ensure healthy lives and promote well-being for all at all ages."
 msgstr ""
 
-#: helpers/getSdg.js:32
+#: helpers/sdg.js:32
 msgid "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all."
 msgstr ""
 
-#: helpers/getSdg.js:96
+#: helpers/sdg.js:96
 msgid "Ensure sustainable consumption and production patterns."
 msgstr ""
 
@@ -239,15 +238,19 @@ msgstr ""
 msgid "Explore startups, organizations, and companies in Germany that are working on one of the 17 UN Sustainable Development Goals. Click on a pin for details."
 msgstr ""
 
+#: templates/organizations/[slug].js:266
+msgid "Facebook"
+msgstr ""
+
 #: templates/mission.js:73
 msgid "Facilitating Partnerships"
 msgstr ""
 
-#: templates/organizations.js:215
+#: templates/organizations.js:196
 msgid "Filter by one of the 16 German states"
 msgstr ""
 
-#: templates/organizations.js:181
+#: templates/organizations.js:162
 msgid "Filter by one of the 17 Sustainable Development Goals"
 msgstr ""
 
@@ -255,12 +258,15 @@ msgstr ""
 msgid "Finn is a software developer working at the intersection of technology and the UN Sustainable Development Goals. His focus is web development, web scraping, and text mining."
 msgstr ""
 
-#: templates/organizations.js:154
+#: templates/organizations.js:135
 msgid "Focus"
 msgstr ""
 
+#: templates/organizations/[slug].js:200
+msgid "Focus Areas"
+msgstr ""
+
 #: components/OrganizationSideView.js:65
-#: templates/organizations/[slug].js:70
 msgid "Focus SDGs"
 msgstr ""
 
@@ -276,8 +282,7 @@ msgstr ""
 msgid "Frankfurt"
 msgstr ""
 
-#: helpers/getSdg.js:39
-#: templates/organizations.js:48
+#: helpers/sdg.js:39
 msgid "Gender equality"
 msgstr ""
 
@@ -297,17 +302,16 @@ msgstr ""
 msgid "Global Goals Directory keeps its privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 1 March 2021."
 msgstr ""
 
-#: helpers/getSdg.js:23
-#: templates/organizations.js:46
+#: helpers/sdg.js:23
 msgid "Good health and well-being"
 msgstr ""
 
 #: templates/index.js:10
-#: templates/organizations.js:69
+#: templates/organizations.js:50
 msgid "Hamburg"
 msgstr ""
 
-#: templates/organizations.js:70
+#: templates/organizations.js:51
 msgid "Hesse"
 msgstr ""
 
@@ -335,26 +339,23 @@ msgstr ""
 msgid "If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email: finn.woelm/at/gmail.com"
 msgstr ""
 
-#: helpers/getSdg.js:70
-#: templates/organizations.js:52
+#: helpers/sdg.js:70
 msgid "Industry, innovation and infrastructure"
 msgstr ""
 
-#: templates/organizations.js:250
+#: templates/organizations/[slug].js:245
+msgid "Infos"
+msgstr ""
+
+#: templates/organizations.js:231
 msgid "Know another organization, startup, or company?"
 msgstr ""
 
-#: templates/organizations/[slug].js:157
-msgid "Latest tweets by {twitter_handle}"
-msgstr ""
-
-#: helpers/getSdg.js:109
-#: templates/organizations.js:57
+#: helpers/sdg.js:109
 msgid "Life below water"
 msgstr ""
 
-#: helpers/getSdg.js:117
-#: templates/organizations.js:58
+#: helpers/sdg.js:117
 msgid "Life on land"
 msgstr ""
 
@@ -362,11 +363,15 @@ msgstr ""
 msgid "Lightwave promotes regenerative social change by connecting organizations & people with an IT platform, content & events. Lightwave has mapped more than 1,500 SDG organizations in Switzerland."
 msgstr ""
 
-#: templates/organizations.js:71
+#: templates/organizations/[slug].js:282
+msgid "LinkedIn"
+msgstr ""
+
+#: templates/organizations.js:52
 msgid "Lower Saxony"
 msgstr ""
 
-#: helpers/getSdg.js:88
+#: helpers/sdg.js:88
 msgid "Make cities and human settlements inclusive, safe, resilient and sustainable."
 msgstr ""
 
@@ -374,7 +379,7 @@ msgstr ""
 msgid "Map"
 msgstr ""
 
-#: templates/organizations.js:72
+#: templates/organizations.js:53
 msgid "Mecklenburg-Vorpommern"
 msgstr ""
 
@@ -391,12 +396,11 @@ msgstr ""
 msgid "Nadim convenes people & ideas to build partnerships for achieving the UN Sustainable Development Goals. His background is in mechanical engineering, business, and diplomacy."
 msgstr ""
 
-#: helpers/getSdg.js:6
-#: templates/organizations.js:44
+#: helpers/sdg.js:6
 msgid "No poverty"
 msgstr ""
 
-#: templates/organizations.js:75
+#: templates/organizations.js:56
 msgid "North Rhine-Westphalia"
 msgstr ""
 
@@ -420,13 +424,11 @@ msgstr ""
 msgid "Partners"
 msgstr ""
 
-#: helpers/getSdg.js:133
-#: templates/organizations.js:60
+#: helpers/sdg.js:133
 msgid "Partnerships for the goals"
 msgstr ""
 
-#: helpers/getSdg.js:125
-#: templates/organizations.js:59
+#: helpers/sdg.js:125
 msgid "Peace, justice and strong institutions"
 msgstr ""
 
@@ -439,71 +441,72 @@ msgstr ""
 msgid "Privacy policies of other websites"
 msgstr ""
 
-#: helpers/getSdg.js:126
+#: helpers/sdg.js:126
 msgid "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels."
 msgstr ""
 
-#: helpers/getSdg.js:63
+#: helpers/sdg.js:63
 msgid "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all."
 msgstr ""
 
-#: helpers/getSdg.js:118
+#: helpers/sdg.js:118
 msgid "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss ."
 msgstr ""
 
-#: helpers/getSdg.js:31
-#: templates/organizations.js:47
+#: helpers/sdg.js:31
 msgid "Quality education"
 msgstr ""
 
-#: helpers/getSdg.js:81
+#: helpers/sdg.js:81
 msgid "Reduce inequality within and among countries."
 msgstr ""
 
-#: helpers/getSdg.js:80
-#: templates/organizations.js:53
+#: helpers/sdg.js:80
 msgid "Reduced inequalities"
 msgstr ""
 
-#: helpers/getSdg.js:95
-#: templates/organizations.js:55
+#: helpers/sdg.js:95
 msgid "Responsible consumption and production"
 msgstr ""
 
-#: templates/organizations.js:78
+#: templates/organizations.js:59
 msgid "Rhineland-Palatinate"
 msgstr ""
 
-#: templates/organizations.js:176
-msgid "SDG {key}:"
+#: templates/organizations/[slug].js:160
+msgid "SDG Champion"
+msgstr ""
+
+#: templates/organizations/[slug].js:225
+#: templates/organizations.js:157
+msgid "SDG {0}:"
 msgstr ""
 
 #: templates/about.js:191
 msgid "SDGx is a private UN Sustainable Development Goals technology funds management and advisory group, headquartered in Singapore with offices in Sydney, Bangkok, and Berlin."
 msgstr ""
 
-#: templates/organizations.js:79
+#: templates/organizations.js:60
 msgid "Saarland"
 msgstr ""
 
-#: templates/organizations.js:80
+#: templates/organizations.js:61
 msgid "Saxony"
 msgstr ""
 
-#: templates/organizations.js:81
+#: templates/organizations.js:62
 msgid "Saxony-Anhalt"
 msgstr ""
 
-#: templates/organizations.js:82
+#: templates/organizations.js:63
 msgid "Schleswig-Holstein"
 msgstr ""
 
-#: templates/organizations.js:222
+#: templates/organizations.js:203
 msgid "Showing {0} results"
 msgstr ""
 
 #: components/OrganizationSideView.js:89
-#: templates/organizations/[slug].js:94
 msgid "Social Media"
 msgstr ""
 
@@ -511,7 +514,7 @@ msgstr ""
 msgid "Steve develops tech-based solutions for analyzing data and policies for the European Commission. His tools include machine learning, natural language processing, and text mining."
 msgstr ""
 
-#: helpers/getSdg.js:134
+#: helpers/sdg.js:134
 msgid "Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development."
 msgstr ""
 
@@ -523,12 +526,11 @@ msgstr ""
 msgid "Supporting Cities and Communities"
 msgstr ""
 
-#: helpers/getSdg.js:87
-#: templates/organizations.js:54
+#: helpers/sdg.js:87
 msgid "Sustainable cities and communities"
 msgstr ""
 
-#: helpers/getSdg.js:103
+#: helpers/sdg.js:103
 msgid "Take urgent action to combat climate change and its impacts."
 msgstr ""
 
@@ -576,12 +578,24 @@ msgstr ""
 msgid "The right to restrict processing: You have the right to request that we restrict the processing of your personal data, under certain conditions."
 msgstr ""
 
-#: templates/organizations.js:83
+#: templates/organizations.js:64
 msgid "Thuringia"
+msgstr ""
+
+#: templates/organizations/[slug].js:274
+msgid "Twitter"
+msgstr ""
+
+#: templates/organizations/[slug].js:164
+msgid "Verified"
 msgstr ""
 
 #: templates/index.js:175
 msgid "View Directory"
+msgstr ""
+
+#: templates/organizations/[slug].js:188
+msgid "View commitment"
 msgstr ""
 
 #: templates/how-it-works.js:19
@@ -592,12 +606,17 @@ msgstr ""
 msgid "We scan each scraped website for certain keywords to classify startups and organizations by the Sustainable Development Goals that they are contributing to. We developed these keywords, over 100 in total, based on the official language of the 17 SDGs and the 169 targets and compiled them in both English and German versions. We then count the number of matches found and the frequencies with which these keywords appear on the website to assess whether an organization contributes to a specific goal. We also determine which goals are an organization's primary focus and which ones are side objectives."
 msgstr ""
 
-#: templates/organizations.js:256
+#: templates/organizations.js:237
 msgid "We would love to feature them in the Global Goals Directory. Click here to add an organization."
 msgstr ""
 
 #: templates/how-it-works.js:160
 msgid "We ❤️ Open Source"
+msgstr ""
+
+#: templates/organizations/[slug].js:115
+#: templates/organizations/[slug].js:253
+msgid "Website"
 msgstr ""
 
 #: templates/privacy-policy.js:43
@@ -624,9 +643,16 @@ msgstr ""
 msgid "You — whether you are a user or an organization listed in the directory — are entitled to the following:"
 msgstr ""
 
-#: helpers/getSdg.js:13
-#: templates/organizations.js:45
+#: helpers/sdg.js:13
 msgid "Zero hunger"
+msgstr ""
+
+#: templates/organizations/[slug].js:204
+msgid "{name} contributes to the following Sustainable Development Goals."
+msgstr ""
+
+#: templates/organizations/[slug].js:169
+msgid "{name} is supporting the implementation of the 17 UN Sustainable Development Goals (SDGs). This goal is explicitly anchored on the website of {name}. For this, we award {name} with the title \"SDG Champion\". {name} is thus one of the {sdgChampionsCount} SDG Champions in Germany that are committed to the 17 global goals and are making a contribution."
 msgstr ""
 
 #: templates/mission.js:20

@@ -17,8 +17,9 @@ export function getStaticProps({ params }) {
 
   const organizations = getOrganizations();
   const organization = organizations.find((org) => org.slug === slug);
+  const sdgChampionsCount = organizations.length;
 
   return {
-    props: { organization },
+    props: { organization, sdgChampionsCount },
   };
 }

@@ -28,7 +28,7 @@ const Logo = styled(Avatar).attrs((props) => ({
   }
 `;
 
-const OrganizationLogo = ({ size, organization, variant = "square" }) => {
+const OrganizationLogo = ({ size, organization, variant = "rounded" }) => {
   const { name } = organization;
 
   return (

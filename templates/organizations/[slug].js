@@ -105,7 +105,7 @@ const OrganizationPage = ({ organization, sdgChampionsCount }) => {
               </Typography>
             </Box>
             <Box marginTop={2} display="flex" alignItems="center">
-              <Box marginRight={2} clone>
+              <Box marginRight={1}>
                 <Button
                   href={homepage}
                   target="_blank"

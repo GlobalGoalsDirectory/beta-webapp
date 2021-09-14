@@ -20,6 +20,7 @@ import Layout from "components/Layout";
 import OrganizationPreview from "components/OrganizationPreview";
 import InfiniteScroll from "components/InfiniteScroll";
 import { addOrganizationUrl } from "helpers/organization";
+import { getSdgs } from "helpers/sdg";
 
 const applyFilters = (organizations, { sdgFilter, stateFilter }) => {
   return filterByState(filterBySdg(organizations, sdgFilter), stateFilter);
@@ -38,26 +39,6 @@ const filterByState = (organizations, state) => {
   if (state === "all") return organizations;
 
   return organizations.filter((organization) => organization.state === state);
-};
-
-const GOALS = {
-  1: defineMessage({ message: "No poverty" }),
-  2: defineMessage({ message: "Zero hunger" }),
-  3: defineMessage({ message: "Good health and well-being" }),
-  4: defineMessage({ message: "Quality education" }),
-  5: defineMessage({ message: "Gender equality" }),
-  6: defineMessage({ message: "Clean water and sanitation" }),
-  7: defineMessage({ message: "Affordable and clean energy" }),
-  8: defineMessage({ message: "Decent work and economic growth" }),
-  9: defineMessage({ message: "Industry, innovation and infrastructure" }),
-  10: defineMessage({ message: "Reduced inequalities" }),
-  11: defineMessage({ message: "Sustainable cities and communities" }),
-  12: defineMessage({ message: "Responsible consumption and production" }),
-  13: defineMessage({ message: "Climate action" }),
-  14: defineMessage({ message: "Life below water" }),
-  15: defineMessage({ message: "Life on land" }),
-  16: defineMessage({ message: "Peace, justice and strong institutions" }),
-  17: defineMessage({ message: "Partnerships for the goals" }),
 };
 
 const STATES = {
@@ -162,18 +143,18 @@ const DirectoryPage = ({ organizations }) => {
                 <MenuItem value={"all"}>
                   <Trans>All SDGs</Trans>
                 </MenuItem>
-                {Object.entries(GOALS).map(([key, value]) => (
+                {getSdgs().map((sdg) => (
                   <MenuItem
-                    key={key}
-                    value={key}
+                    key={sdg.number}
+                    value={sdg.number}
                     disabled={
                       applyFilters(organizations, {
-                        sdgFilter: key,
+                        sdgFilter: sdg.number,
                         stateFilter,
                       }).length == 0
                     }
                   >
-                    <Trans>SDG {key}:</Trans> <Trans id={value.id} />
+                    <Trans>SDG {sdg.number}:</Trans> <Trans id={sdg.label.id} />
                   </MenuItem>
                 ))}
               </Select>

@@ -32,7 +32,7 @@ const Footer = () => (
     <Grid
       container
       spacing={2}
-      justify="center"
+      justifyContent="center"
       alignItems="center"
       style={{ textAlign: "center" }}
     >

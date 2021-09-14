@@ -9,8 +9,8 @@ import getFocusSdgs from "helpers/getFocusSdgs";
 const OrganizationSideView = ({ organization, onClose }) => {
   const {
     name,
-    summary,
-    url,
+    about,
+    homepage,
     address,
     twitter_handle,
     facebook_handle,
@@ -31,8 +31,8 @@ const OrganizationSideView = ({ organization, onClose }) => {
             <Earth />
           </Box>
           <Typography variant="body1">
-            <a href={url} target="_blank">
-              {url}
+            <a href={homepage} target="_blank">
+              {homepage}
             </a>
           </Typography>
         </Box>
@@ -45,7 +45,7 @@ const OrganizationSideView = ({ organization, onClose }) => {
           </Box>
         )}
       </Box>
-      {summary && (
+      {about && (
         <>
           <Divider />
           <Box padding={2} paddingBottom={3}>
@@ -54,7 +54,7 @@ const OrganizationSideView = ({ organization, onClose }) => {
                 <Trans>About</Trans>
               </Bold>
             </Typography>
-            <Typography variant="body1">{summary}</Typography>
+            <Typography variant="body1">{about}</Typography>
           </Box>
         </>
       )}

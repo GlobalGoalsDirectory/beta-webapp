@@ -4,12 +4,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "download": "node data/download.js",
+    "download": "node -r dotenv/config data/download.js",
     "setup": "node ./scripts/setUpRoutes.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
     "netlify": "npm run download && npm run setup && next build && next export",
-    "i18n": "NODE_ENV=development lingui extract"
+    "i18n": "NODE_ENV=development lingui extract --overwrite --clean"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +22,7 @@
     "leaflet.markercluster": "^1.4.1",
     "lodash.pick": "^4.4.0",
     "mdi-material-ui": "^6.20.0",
-    "next": "^10.2.3",
+    "next": "^11.1.2",
     "nprogress": "^0.2.0",
     "path-to-regexp": "^6.2.0",
     "prettier": "2.1.2",
@@ -41,8 +41,10 @@
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.11.1",
+    "dotenv": "^10.0.0",
+    "faunadb": "^4.4.0",
     "fs-extra": "^9.0.1",
-    "sheetrock": "^1.1.4",
+    "netlify-cli": "^6.8.5",
     "slugify": "^1.4.6"
   }
 }

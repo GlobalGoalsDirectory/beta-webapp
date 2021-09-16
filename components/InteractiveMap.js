@@ -143,7 +143,7 @@ const getClusterIcon = (cluster, organizations) => {
     // popupAnchor: [0, -47],
   });
 };
-const InteractiveMap = memo(({ organizations, onClick }) => {
+const InteractiveMap = memo(({ organizations }) => {
   const router = useRouter();
   const [isVisible, setVisibility] = useState(false);
   const timeoutRef = useRef(null);
@@ -208,11 +208,6 @@ const InteractiveMap = memo(({ organizations, onClick }) => {
               key={organization.slug}
               icon={getIcon(organization)}
               position={[organization.latitude, organization.longitude]}
-              eventHandlers={{
-                click: () => {
-                  onClick(organization);
-                },
-              }}
               dataSlug={organization.slug}
             >
               <Popup closeButton={false}>

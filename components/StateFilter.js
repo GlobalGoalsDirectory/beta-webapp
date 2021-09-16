@@ -9,7 +9,9 @@ import { Trans } from "@lingui/macro";
 
 const StateFilter = ({ activeState, filterByState, stateOptions }) => (
   <FormControl variant="filled" style={{ maxWidth: "100%" }}>
-    <InputLabel id="stateFilter">Location</InputLabel>
+    <InputLabel id="stateFilter">
+      <Trans>Location</Trans>
+    </InputLabel>
     <Select
       labelId="stateFilter"
       value={activeState}

@@ -17,7 +17,7 @@ msgstr ""
 msgid "\"To implement the Global Goals, we need all hands on deck.\""
 msgstr ""
 
-#: components/InteractiveMap.js:198
+#: components/InteractiveMap.js:213
 msgid "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
 msgstr ""
 
@@ -58,8 +58,8 @@ msgstr "About"
 msgid "Achieve gender equality and empower all women and girls."
 msgstr ""
 
-#: templates/map.js:66
-#: templates/organizations.js:108
+#: templates/map.js:98
+#: templates/organizations.js:84
 msgid "Add Organization or Startup"
 msgstr ""
 
@@ -83,11 +83,11 @@ msgstr ""
 msgid "After identifying that a startup or organization does indeed contribute to the Sustainable Development Goals, we enrich each profile with relevant metadata that allows users to make the most from the Global Goals Directory. Our fully automatic metadata bot queries several public APIs, including social networks, like Twitter, Facebook, and LinkedIn, but also service providers, like Google Maps, to identify and collect name, logo, address, a short summary, and social media profiles for each of the organizations in the directory. We take privacy seriously and only collect information that is publicly available."
 msgstr ""
 
-#: templates/organizations.js:126
+#: components/SdgFilter.js:22
 msgid "All SDGs"
 msgstr ""
 
-#: templates/organizations.js:160
+#: components/StateFilter.js:22
 msgid "All states"
 msgstr ""
 
@@ -103,25 +103,11 @@ msgstr ""
 msgid "Around the world, tens of thousands of organizations, companies, and governments are working towards the achievement of the UN Sustainable Development Goals. Our mission is to give visibility to this great SDG community and to champion the 2030 Agenda."
 msgstr ""
 
-#: templates/organizations.js:26
-msgid "Baden-Württemberg"
-msgstr ""
-
-#: templates/organizations.js:27
-msgid "Bavaria"
-msgstr ""
-
 #: templates/index.js:8
-#: templates/organizations.js:28
 msgid "Berlin"
 msgstr ""
 
-#: templates/organizations.js:29
-msgid "Brandenburg"
-msgstr ""
-
 #: templates/index.js:11
-#: templates/organizations.js:30
 msgid "Bremen"
 msgstr ""
 
@@ -149,7 +135,7 @@ msgstr ""
 msgid "Clean water and sanitation"
 msgstr ""
 
-#: templates/map.js:54
+#: templates/map.js:69
 msgid "Click on a pin for details."
 msgstr ""
 
@@ -182,7 +168,7 @@ msgid "Decent work and economic growth"
 msgstr ""
 
 #: components/NavBar.js:116
-#: templates/organizations.js:97
+#: templates/organizations.js:73
 msgid "Directory"
 msgstr ""
 
@@ -230,7 +216,7 @@ msgstr ""
 msgid "Explore Map"
 msgstr ""
 
-#: templates/map.js:47
+#: templates/map.js:62
 msgid "Explore startups, organizations, and companies in Germany that are working on one of the 17 UN Sustainable Development Goals."
 msgstr ""
 
@@ -242,11 +228,11 @@ msgstr ""
 msgid "Facilitating Partnerships"
 msgstr ""
 
-#: templates/organizations.js:178
+#: components/StateFilter.js:31
 msgid "Filter by one of the 16 German states"
 msgstr ""
 
-#: templates/organizations.js:144
+#: components/SdgFilter.js:31
 msgid "Filter by one of the 17 Sustainable Development Goals"
 msgstr ""
 
@@ -254,7 +240,7 @@ msgstr ""
 msgid "Finn is a software developer working at the intersection of technology and the UN Sustainable Development Goals. His focus is web development, web scraping, and text mining."
 msgstr ""
 
-#: templates/organizations.js:117
+#: components/SdgFilter.js:13
 msgid "Focus"
 msgstr ""
 
@@ -299,12 +285,7 @@ msgid "Good health and well-being"
 msgstr ""
 
 #: templates/index.js:10
-#: templates/organizations.js:31
 msgid "Hamburg"
-msgstr ""
-
-#: templates/organizations.js:32
-msgid "Hesse"
 msgstr ""
 
 #: components/NavBarDrawer.js:42
@@ -339,7 +320,7 @@ msgstr ""
 msgid "Infos"
 msgstr ""
 
-#: templates/organizations.js:213
+#: templates/organizations.js:135
 msgid "Know another organization, startup, or company?"
 msgstr ""
 
@@ -359,21 +340,17 @@ msgstr ""
 msgid "LinkedIn"
 msgstr ""
 
-#: templates/organizations.js:33
-msgid "Lower Saxony"
-msgstr ""
+#: components/StateFilter.js:13
+msgid "Location"
+msgstr "Location"
 
 #: helpers/sdg.js:88
 msgid "Make cities and human settlements inclusive, safe, resilient and sustainable."
 msgstr ""
 
 #: components/NavBar.js:120
-#: templates/map.js:44
+#: templates/map.js:59
 msgid "Map"
-msgstr ""
-
-#: templates/organizations.js:34
-msgid "Mecklenburg-Vorpommern"
 msgstr ""
 
 #: components/NavBar.js:124
@@ -391,10 +368,6 @@ msgstr ""
 
 #: helpers/sdg.js:6
 msgid "No poverty"
-msgstr ""
-
-#: templates/organizations.js:37
-msgid "North Rhine-Westphalia"
 msgstr ""
 
 #: templates/how-it-works.js:56
@@ -462,16 +435,12 @@ msgstr ""
 msgid "Responsible consumption and production"
 msgstr ""
 
-#: templates/organizations.js:40
-msgid "Rhineland-Palatinate"
-msgstr ""
-
 #: templates/organizations/[slug].js:160
 msgid "SDG Champion"
 msgstr ""
 
+#: components/SdgFilter.js:26
 #: templates/organizations/[slug].js:226
-#: templates/organizations.js:139
 msgid "SDG {0}:"
 msgstr ""
 
@@ -479,23 +448,7 @@ msgstr ""
 msgid "SDGx is a private UN Sustainable Development Goals technology funds management and advisory group, headquartered in Singapore with offices in Sydney, Bangkok, and Berlin."
 msgstr ""
 
-#: templates/organizations.js:41
-msgid "Saarland"
-msgstr ""
-
-#: templates/organizations.js:42
-msgid "Saxony"
-msgstr ""
-
-#: templates/organizations.js:43
-msgid "Saxony-Anhalt"
-msgstr ""
-
-#: templates/organizations.js:44
-msgid "Schleswig-Holstein"
-msgstr ""
-
-#: templates/organizations.js:185
+#: templates/organizations.js:107
 msgid "Showing {0} results"
 msgstr ""
 
@@ -567,10 +520,6 @@ msgstr ""
 msgid "The right to restrict processing: You have the right to request that we restrict the processing of your personal data, under certain conditions."
 msgstr ""
 
-#: templates/organizations.js:45
-msgid "Thuringia"
-msgstr ""
-
 #: templates/organizations/[slug].js:276
 msgid "Twitter"
 msgstr ""
@@ -595,7 +544,7 @@ msgstr ""
 msgid "We scan each scraped website for certain keywords to classify startups and organizations by the Sustainable Development Goals that they are contributing to. We developed these keywords, over 100 in total, based on the official language of the 17 SDGs and the 169 targets and compiled them in both English and German versions. We then count the number of matches found and the frequencies with which these keywords appear on the website to assess whether an organization contributes to a specific goal. We also determine which goals are an organization's primary focus and which ones are side objectives."
 msgstr ""
 
-#: templates/organizations.js:219
+#: templates/organizations.js:141
 msgid "We would love to feature them in the Global Goals Directory. Click here to add an organization."
 msgstr ""
 

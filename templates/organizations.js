@@ -1,79 +1,37 @@
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
-import { Trans, defineMessage } from "@lingui/macro";
+import { Trans } from "@lingui/macro";
 import {
   Box,
   Button,
   Card,
   CardActionArea,
   CardContent,
-  FormControl,
-  FormHelperText,
   Grid,
-  InputLabel,
-  MenuItem,
-  Select,
   Typography,
 } from "@material-ui/core";
 import { Plus, ShapePlus } from "mdi-material-ui";
 import Layout from "components/Layout";
 import OrganizationPreview from "components/OrganizationPreview";
 import InfiniteScroll from "components/InfiniteScroll";
+import SdgFilter from "components/SdgFilter";
+import StateFilter from "components/StateFilter";
 import { addOrganizationUrl } from "helpers/organization";
-import { getSdgs } from "helpers/sdg";
-
-const applyFilters = (organizations, { sdgFilter, stateFilter }) => {
-  return filterByState(filterBySdg(organizations, sdgFilter), stateFilter);
-};
-
-const filterBySdg = (organizations, sdg) => {
-  let key = "total_score";
-  if (sdg != "all") key = `sdg${sdg}_score`;
-
-  return [...organizations]
-    .filter((organization) => organization[key] > 0)
-    .sort((a, b) => b[key] - a[key]);
-};
-
-const filterByState = (organizations, state) => {
-  if (state === "all") return organizations;
-
-  return organizations.filter((organization) => organization.state === state);
-};
-
-const STATES = {
-  "Baden-Württemberg": defineMessage({ message: "Baden-Württemberg" }),
-  Bavaria: defineMessage({ message: "Bavaria" }),
-  Berlin: defineMessage({ message: "Berlin" }),
-  Brandenburg: defineMessage({ message: "Brandenburg" }),
-  Bremen: defineMessage({ message: "Bremen" }),
-  Hamburg: defineMessage({ message: "Hamburg" }),
-  Hesse: defineMessage({ message: "Hesse" }),
-  "Lower Saxony": defineMessage({ message: "Lower Saxony" }),
-  "Mecklenburg-Vorpommern": defineMessage({
-    message: "Mecklenburg-Vorpommern",
-  }),
-  "North Rhine-Westphalia": defineMessage({
-    message: "North Rhine-Westphalia",
-  }),
-  "Rhineland-Palatinate": defineMessage({ message: "Rhineland-Palatinate" }),
-  Saarland: defineMessage({ message: "Saarland" }),
-  Saxony: defineMessage({ message: "Saxony" }),
-  "Saxony-Anhalt": defineMessage({ message: "Saxony-Anhalt" }),
-  "Schleswig-Holstein": defineMessage({ message: "Schleswig-Holstein" }),
-  Thuringia: defineMessage({ message: "Thuringia" }),
-};
+import useOrganizationFilters from "hooks/useOrganizationFilters";
 
 const DirectoryPage = ({ organizations }) => {
-  const [sdgFilter, setSdgFilter] = useState("all");
-  const [stateFilter, setStateFilter] = useState("all");
+  const {
+    filteredOrganizations,
+    activeSdg,
+    filterBySdg,
+    sdgOptions,
+    activeState,
+    filterByState,
+    stateOptions,
+  } = useOrganizationFilters(organizations);
+
   const [isInitialized, setIsInitialized] = useState(false);
   const router = useRouter();
-
-  const filteredOrganizations = applyFilters(organizations, {
-    sdgFilter,
-    stateFilter,
-  });
 
   // TODO: Reenable after making compatible with multiple locales
   // useEffect(() => {
@@ -130,72 +88,18 @@ const DirectoryPage = ({ organizations }) => {
       <Box marginBottom={2}>
         <Box display={{ md: "flex" }}>
           <Box marginRight={{ md: 2 }} marginBottom={{ xs: 2, md: 0 }}>
-            <FormControl variant="filled" style={{ maxWidth: "100%" }}>
-              <InputLabel id="sdgFilter">
-                <Trans>Focus</Trans>
-              </InputLabel>
-              <Select
-                labelId="sdgFilter"
-                value={sdgFilter}
-                onChange={(event) => setSdgFilter(event.target.value)}
-                autoWidth={true}
-              >
-                <MenuItem value={"all"}>
-                  <Trans>All SDGs</Trans>
-                </MenuItem>
-                {getSdgs().map((sdg) => (
-                  <MenuItem
-                    key={sdg.number}
-                    value={sdg.number}
-                    disabled={
-                      applyFilters(organizations, {
-                        sdgFilter: sdg.number,
-                        stateFilter,
-                      }).length == 0
-                    }
-                  >
-                    <Trans>SDG {sdg.number}:</Trans> <Trans id={sdg.label.id} />
-                  </MenuItem>
-                ))}
-              </Select>
-              <FormHelperText>
-                <Trans>
-                  Filter by one of the 17 Sustainable Development Goals
-                </Trans>
-              </FormHelperText>
-            </FormControl>
+            <SdgFilter
+              activeSdg={activeSdg}
+              sdgOptions={sdgOptions}
+              filterBySdg={filterBySdg}
+            />
           </Box>
           <Box marginRight={{ md: 2 }} marginBottom={{ xs: 2, md: 0 }}>
-            <FormControl variant="filled" style={{ maxWidth: "100%" }}>
-              <InputLabel id="stateFilter">Location</InputLabel>
-              <Select
-                labelId="stateFilter"
-                value={stateFilter}
-                onChange={(event) => setStateFilter(event.target.value)}
-                autoWidth={true}
-              >
-                <MenuItem value={"all"}>
-                  <Trans>All states</Trans>
-                </MenuItem>
-                {Object.entries(STATES).map(([key, value]) => (
-                  <MenuItem
-                    key={key}
-                    value={key}
-                    disabled={
-                      applyFilters(organizations, {
-                        sdgFilter,
-                        stateFilter: key,
-                      }).length == 0
-                    }
-                  >
-                    <Trans id={value.id} />
-                  </MenuItem>
-                ))}
-              </Select>
-              <FormHelperText>
-                <Trans>Filter by one of the 16 German states</Trans>
-              </FormHelperText>
-            </FormControl>
+            <StateFilter
+              activeState={activeState}
+              stateOptions={stateOptions}
+              filterByState={filterByState}
+            />
           </Box>
           <Box justifyContent={{ md: "flex-end" }} flexGrow={1} display="flex">
             <Box height={{ md: 56 }} display="flex" alignItems="center">
@@ -207,7 +111,7 @@ const DirectoryPage = ({ organizations }) => {
         </Box>
       </Box>
       <Grid container spacing={3}>
-        <InfiniteScroll sdgFilter={sdgFilter} stateFilter={stateFilter}>
+        <InfiniteScroll>
           {filteredOrganizations.map((organization) => (
             <Grid key={organization.slug} xs={12} sm={4} md={3} item>
               <OrganizationPreview organization={organization} />

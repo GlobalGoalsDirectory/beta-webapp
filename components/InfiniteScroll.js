@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Box, CircularProgress } from "@material-ui/core";
 
 // Adapted from: https://dev.to/hunterjsbit/react-infinite-scroll-in-few-lines-588f
-const InfiniteScroll = ({ children, itemsPerPage = 16, filter }) => {
+const InfiniteScroll = ({ children, itemsPerPage = 16 }) => {
   // tracking on which page we currently are
   const [page, setPage] = useState(1);
   const maxPage = Math.ceil(React.Children.count(children) / itemsPerPage);

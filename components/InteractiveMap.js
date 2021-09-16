@@ -143,86 +143,102 @@ const getClusterIcon = (cluster, organizations) => {
     // popupAnchor: [0, -47],
   });
 };
-const InteractiveMap = memo(({ organizations }) => {
-  const router = useRouter();
-  const [isVisible, setVisibility] = useState(false);
-  const timeoutRef = useRef(null);
 
-  const showMap = useCallback(() => {
-    if (timeoutRef.current) return;
+const InteractiveMap = memo(
+  ({ organizations }) => {
+    const router = useRouter();
+    const [isVisible, setVisibility] = useState(false);
+    const timeoutRef = useRef(null);
 
-    timeoutRef.current = setTimeout(() => setVisibility(true), 100);
-  }, [timeoutRef.current]);
+    const showMap = useCallback(() => {
+      if (timeoutRef.current) return;
 
-  const hideMap = useCallback(() => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = null;
-    setVisibility(false);
-  }, [timeoutRef.current]);
+      timeoutRef.current = setTimeout(() => setVisibility(true), 100);
+    }, [timeoutRef.current]);
 
-  useEffect(() => {
-    showMap();
-    router.events.on("routeChangeStart", hideMap);
-    router.events.on("routeChangeComplete", showMap);
+    const hideMap = useCallback(() => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+      setVisibility(false);
+    }, [timeoutRef.current]);
 
-    return () => {
-      router.events.off("routeChangeStart", hideMap);
-      router.events.off("routeChangeComplete", showMap);
-      hideMap();
-    };
-  }, []);
+    useEffect(() => {
+      showMap();
+      router.events.on("routeChangeStart", hideMap);
+      router.events.on("routeChangeComplete", showMap);
 
-  if (!isVisible)
-    return (
-      <Box
-        width={1}
-        height={1}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-      >
-        <CircularProgress disableShrink />
-      </Box>
-    );
+      return () => {
+        router.events.off("routeChangeStart", hideMap);
+        router.events.off("routeChangeComplete", showMap);
+        hideMap();
+      };
+    }, []);
 
-  return (
-    <>
-      <PopupStyle />
-      <MapContainer
-        bounds={organizations.map((org) => [org.latitude, org.longitude])}
-        // We manually add zoom controls in the bottom-right corner
-        zoomControl={false}
-        style={{ height: "100%" }}
-      >
-        <TileLayer
-          attribution={t`&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors`}
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <MarkerClusterGroup
-          iconCreateFunction={(cluster) =>
-            getClusterIcon(cluster, organizations)
-          }
+    if (!isVisible)
+      return (
+        <Box
+          width={1}
+          height={1}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
         >
-          {organizations.map((organization) => (
-            <Marker
-              key={organization.slug}
-              icon={getIcon(organization)}
-              position={[organization.latitude, organization.longitude]}
-              dataSlug={organization.slug}
-            >
-              <Popup closeButton={false}>
-                <OrganizationPreview
-                  organization={organization}
-                  elevation={0}
-                />
-              </Popup>
-            </Marker>
-          ))}
-        </MarkerClusterGroup>
-        <ZoomControl position="bottomright" />
-      </MapContainer>
-    </>
-  );
-});
+          <CircularProgress disableShrink />
+        </Box>
+      );
+
+    return (
+      <>
+        <PopupStyle />
+        <MapContainer
+          bounds={organizations.map((org) => [org.latitude, org.longitude])}
+          // We manually add zoom controls in the bottom-right corner
+          zoomControl={false}
+          style={{ height: "100%" }}
+        >
+          <TileLayer
+            attribution={t`&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors`}
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <MarkerClusterGroup
+            key={Date.now()}
+            iconCreateFunction={(cluster) =>
+              getClusterIcon(cluster, organizations)
+            }
+          >
+            {organizations.map((organization) => (
+              <Marker
+                key={organization.slug}
+                icon={getIcon(organization)}
+                position={[organization.latitude, organization.longitude]}
+                dataSlug={organization.slug}
+              >
+                <Popup closeButton={false}>
+                  <OrganizationPreview
+                    organization={organization}
+                    elevation={0}
+                  />
+                </Popup>
+              </Marker>
+            ))}
+          </MarkerClusterGroup>
+          <ZoomControl position="bottomright" />
+        </MapContainer>
+      </>
+    );
+  },
+  (prevProps, nextProps) => {
+    // Re-render if the number of organizations has changed
+    if (prevProps.organizations.length !== nextProps.organizations.length)
+      return false;
+
+    // Re-render if we have different slugs
+    return !prevProps.organizations
+      .map((org) => org.slug)
+      .every((slug) =>
+        nextProps.organizations.some((org) => org.slug === slug)
+      );
+  }
+);
 
 export default InteractiveMap;

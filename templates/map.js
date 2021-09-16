@@ -107,7 +107,10 @@ const Map = ({ organizations }) => {
         </Grid>
         <Grid item xs={12} md={9} lg={9} style={{ maxHeight: "100%" }}>
           <Box height={1}>
-            <InteractiveMap organizations={filteredOrganizations} />
+            <InteractiveMap
+              organizations={filteredOrganizations}
+              activeState={activeState}
+            />
           </Box>
         </Grid>
       </Grid>

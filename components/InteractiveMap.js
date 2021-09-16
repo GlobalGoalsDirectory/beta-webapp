@@ -8,6 +8,7 @@ import {
   TileLayer,
   Marker,
   Popup,
+  useMap,
   ZoomControl,
 } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-markercluster";
@@ -144,8 +145,18 @@ const getClusterIcon = (cluster, organizations) => {
   });
 };
 
+const FitMapBounds = ({ bounds, trigger }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    map.fitBounds(bounds, { animate: true, duration: 1 });
+  }, [trigger]);
+
+  return null;
+};
+
 const InteractiveMap = memo(
-  ({ organizations }) => {
+  ({ organizations, activeState }) => {
     const router = useRouter();
     const [isVisible, setVisibility] = useState(false);
     const timeoutRef = useRef(null);
@@ -174,6 +185,8 @@ const InteractiveMap = memo(
       };
     }, []);
 
+    const bounds = organizations.map((org) => [org.latitude, org.longitude]);
+
     if (!isVisible)
       return (
         <Box
@@ -191,7 +204,7 @@ const InteractiveMap = memo(
       <>
         <PopupStyle />
         <MapContainer
-          bounds={organizations.map((org) => [org.latitude, org.longitude])}
+          bounds={bounds}
           // We manually add zoom controls in the bottom-right corner
           zoomControl={false}
           style={{ height: "100%" }}
@@ -200,6 +213,7 @@ const InteractiveMap = memo(
             attribution={t`&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors`}
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <FitMapBounds bounds={bounds} trigger={activeState} />
           <MarkerClusterGroup
             key={Date.now()}
             iconCreateFunction={(cluster) =>
@@ -231,6 +245,9 @@ const InteractiveMap = memo(
     // Re-render if the number of organizations has changed
     if (prevProps.organizations.length !== nextProps.organizations.length)
       return false;
+
+    // Re-render if active state (filter) has changed
+    if (prevProps.activeState !== nextProps.activeState) return false;
 
     // Re-render if we have different slugs
     return !prevProps.organizations

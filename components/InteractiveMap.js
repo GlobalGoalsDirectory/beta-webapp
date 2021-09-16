@@ -15,9 +15,32 @@ import "leaflet/dist/leaflet.css";
 import "react-leaflet-markercluster/dist/styles.min.css";
 import { Avatar, Box, CircularProgress } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 import OrganizationLogo from "components/OrganizationLogo";
+import OrganizationPreview from "components/OrganizationPreview";
 import { theme } from "helpers/getTheme";
+
+const PopupStyle = createGlobalStyle`
+  .leaflet-container {
+    font: unset;
+  }
+
+  .leaflet-popup-content-wrapper {
+    padding: 0;
+    
+    .leaflet-popup-content {
+      margin: 0;
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        color: unset;
+      }
+    }
+  }
+`;
 
 const getIcon = (organization) => {
   return Leaflet.divIcon({
@@ -163,37 +186,47 @@ const InteractiveMap = memo(({ organizations, onClick }) => {
     );
 
   return (
-    <MapContainer
-      bounds={organizations.map((org) => [org.latitude, org.longitude])}
-      // We manually add zoom controls in the bottom-right corner
-      zoomControl={false}
-      style={{ height: "100%" }}
-    >
-      <TileLayer
-        attribution={t`&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors`}
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <MarkerClusterGroup
-        iconCreateFunction={(cluster) => getClusterIcon(cluster, organizations)}
+    <>
+      <PopupStyle />
+      <MapContainer
+        bounds={organizations.map((org) => [org.latitude, org.longitude])}
+        // We manually add zoom controls in the bottom-right corner
+        zoomControl={false}
+        style={{ height: "100%" }}
       >
-        {organizations.map((organization) => (
-          <Marker
-            key={organization.slug}
-            icon={getIcon(organization)}
-            position={[organization.latitude, organization.longitude]}
-            eventHandlers={{
-              click: () => {
-                onClick(organization);
-              },
-            }}
-            dataSlug={organization.slug}
-          >
-            <Popup>{organization.name}</Popup>
-          </Marker>
-        ))}
-      </MarkerClusterGroup>
-      <ZoomControl position="bottomright" />
-    </MapContainer>
+        <TileLayer
+          attribution={t`&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors`}
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <MarkerClusterGroup
+          iconCreateFunction={(cluster) =>
+            getClusterIcon(cluster, organizations)
+          }
+        >
+          {organizations.map((organization) => (
+            <Marker
+              key={organization.slug}
+              icon={getIcon(organization)}
+              position={[organization.latitude, organization.longitude]}
+              eventHandlers={{
+                click: () => {
+                  onClick(organization);
+                },
+              }}
+              dataSlug={organization.slug}
+            >
+              <Popup closeButton={false}>
+                <OrganizationPreview
+                  organization={organization}
+                  elevation={0}
+                />
+              </Popup>
+            </Marker>
+          ))}
+        </MarkerClusterGroup>
+        <ZoomControl position="bottomright" />
+      </MapContainer>
+    </>
   );
 });
 

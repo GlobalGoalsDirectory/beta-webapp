@@ -18,13 +18,13 @@ const trim = (text, length) => {
   return text.substr(0, text.lastIndexOf(" ", length)) + "...";
 };
 
-const OrganizationPreview = ({ organization }) => {
+const OrganizationPreview = ({ organization, elevation = 1 }) => {
   const { name, about } = organization;
   const focusSdgs = getFocusSdgs(organization, 3);
   const hiddenSdgsCount = getFocusSdgs(organization).length - 3;
 
   return (
-    <Card style={{ height: "100%" }}>
+    <Card style={{ height: "100%" }} elevation={elevation}>
       <LocaleLink href={getLink(organization)} passHref>
         <CardActionArea component="a" style={{ height: "100%" }}>
           <CardContent
@@ -32,10 +32,17 @@ const OrganizationPreview = ({ organization }) => {
           >
             <Box flexGrow={1}>
               <OrganizationLogo organization={organization} size={64} />
-              <Box marginTop={1}>
-                <Typography variant="h5" style={{ fontWeight: 500 }}>
-                  {name}
-                </Typography>
+              <Box
+                fontSize="h5.fontSize"
+                marginTop={1.5}
+                marginBottom={1}
+                style={{
+                  fontWeight: 500,
+                  overflowWrap: "break-word",
+                  lineHeight: 1.25,
+                }}
+              >
+                {name}
               </Box>
               <Typography variant="body2">
                 {trim(about, 200) || (

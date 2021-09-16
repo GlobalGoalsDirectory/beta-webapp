@@ -191,51 +191,53 @@ const OrganizationPage = ({ organization, sdgChampionsCount }) => {
           </CardContent>
         </Card>
       </Box>
-      <Box marginY={4}>
-        <Card>
-          <CardContent>
-            <Box marginBottom={2}>
-              <Typography component="h2">
-                <Bold fontSize="h2.fontSize">
-                  <Trans>Focus Areas</Trans>
-                </Bold>
-              </Typography>
-              <Typography variant="body1" color="textSecondary">
-                <Trans>
-                  {name} contributes to the following Sustainable Development
-                  Goals.
-                </Trans>
-              </Typography>
-            </Box>
-            {focusSdgs.map(getSdg).map((sdg) => (
-              <Box marginTop={{ xs: 3, sm: 1 }} key={sdg.number}>
-                <Grid container spacing={1}>
-                  <Grid key={sdg.number} lg={1} md={1} sm={2} xs={3} item>
-                    <img
-                      src={`/static/sdgs/sdg${sdg.number}.jpg`}
-                      style={{
-                        maxWidth: "100%",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </Grid>
-                  <Grid item lg={11} md={11} sm={10} xs={12}>
-                    <Typography variant="body1">
-                      <Bold>
-                        <Trans>SDG {sdg.number}:</Trans>{" "}
-                        <Trans id={sdg.label.id} />
-                      </Bold>
-                    </Typography>
-                    <Typography variant="body2">
-                      <Trans id={sdg.description.id} />
-                    </Typography>
-                  </Grid>
-                </Grid>
+      {focusSdgs.length > 0 && (
+        <Box marginY={4}>
+          <Card>
+            <CardContent>
+              <Box marginBottom={2}>
+                <Typography component="h2">
+                  <Bold fontSize="h2.fontSize">
+                    <Trans>Focus Areas</Trans>
+                  </Bold>
+                </Typography>
+                <Typography variant="body1" color="textSecondary">
+                  <Trans>
+                    {name} contributes to the following Sustainable Development
+                    Goals.
+                  </Trans>
+                </Typography>
               </Box>
-            ))}
-          </CardContent>
-        </Card>
-      </Box>
+              {focusSdgs.map(getSdg).map((sdg) => (
+                <Box marginTop={{ xs: 3, sm: 1 }} key={sdg.number}>
+                  <Grid container spacing={1}>
+                    <Grid key={sdg.number} lg={1} md={1} sm={2} xs={3} item>
+                      <img
+                        src={`/static/sdgs/sdg${sdg.number}.jpg`}
+                        style={{
+                          maxWidth: "100%",
+                          objectFit: "contain",
+                        }}
+                      />
+                    </Grid>
+                    <Grid item lg={11} md={11} sm={10} xs={12}>
+                      <Typography variant="body1">
+                        <Bold>
+                          <Trans>SDG {sdg.number}:</Trans>{" "}
+                          <Trans id={sdg.label.id} />
+                        </Bold>
+                      </Typography>
+                      <Typography variant="body2">
+                        <Trans id={sdg.description.id} />
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Box>
+              ))}
+            </CardContent>
+          </Card>
+        </Box>
+      )}
       <Box marginY={4}>
         <Card>
           <CardContent>

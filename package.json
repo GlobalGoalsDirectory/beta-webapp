@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next",
     "download": "node -r dotenv/config data/download.js",
+    "verify": "node data/verify.js",
     "setup": "node ./scripts/setUpRoutes.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
@@ -44,6 +45,7 @@
     "dotenv": "^10.0.0",
     "faunadb": "^4.4.0",
     "fs-extra": "^9.0.1",
+    "lodash.groupby": "^4.6.0",
     "netlify-cli": "^6.8.5",
     "slugify": "^1.4.6"
   }

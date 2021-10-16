@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Layout from "components/Layout";
 import Section from "components/Section";
 import Bold from "components/Bold";
+import Emphasis from "components/Emphasis";
 
 const LinkWrapper = ({ href, children }) => {
   if (!href) return <>{children}</>;
@@ -216,6 +217,19 @@ const AboutPage = () => (
             and social justice issues. As part of its Movement Map initiative,
             the BCCIC has mapped over 12,000 organizations working on the SDGs
             in Canada and around the globe.
+          </Trans>
+        </Partner>
+        <Partner
+          name="Dealroom"
+          image="dealroom.svg"
+          href="https://dealroom.co/"
+        >
+          <Trans>
+            Dealroom aggregates data on startups, growth companies and tech
+            ecosystems in Europe and around the globe. As part of the initiative{" "}
+            <Emphasis>Startup Map Berlin</Emphasis>, we collaborated with
+            Dealroom and the city of Berlin to map and classify over 100
+            startups that contribute to the SDGs.
           </Trans>
         </Partner>
       </Grid>

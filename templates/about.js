@@ -232,6 +232,18 @@ const AboutPage = () => (
             startups that contribute to the SDGs.
           </Trans>
         </Partner>
+        <Partner
+          name="The Security &amp; Sustainability Guide"
+          image="securesustain.png"
+          href="https://securesustain.org/"
+        >
+          <Trans>
+            The Security and Sustainability Guide seeks to identify and describe
+            leading organizations that are focused on the two basic human goals
+            of security and sustainability. The guide contains more than 2,000
+            organizations from all around the globe.
+          </Trans>
+        </Partner>
       </Grid>
     </Section>
   </Layout>

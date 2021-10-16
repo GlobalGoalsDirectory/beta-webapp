@@ -165,7 +165,7 @@ msgstr ""
 
 #: templates/about.js:227
 msgid "Dealroom aggregates data on startups, growth companies and tech ecosystems in Europe and around the globe. As part of the initiative <0>Startup Map Berlin</0>, we collaborated with Dealroom and the city of Berlin to map and classify over 100 startups that contribute to the SDGs."
-msgstr "Dealroom aggregates data on startups, growth companies and tech ecosystems in Europe and around the globe. As part of the initiative <0>Startup Map Berlin</0>, we collaborated with Dealroom and the city of Berlin to map and classify over 100 startups that contribute to the SDGs."
+msgstr ""
 
 #: helpers/sdg.js:62
 msgid "Decent work and economic growth"
@@ -498,6 +498,10 @@ msgstr ""
 
 #: templates/how-it-works.js:163
 msgid "The Global Goals Directory is completely free. Our directory is a non-commercial project and we consider it a public good. Our objective is to inspire more partnerships for tackling the Agenda 2030. It's as simple as that.<0/><1/>The content on this website is licensed under the Creative Commons license <2>CC BY 4.0</2> — a permissive license, that provides a lot of freedom under the sole condition that appropriate credit is given and a link back to the Global Goals Directory website is provided. Our software code for the analysis as well as for this website are open source and licensed under the <3>GNU General Public License 3.0</3>, meaning that reuse and adaptation of our code is permitted (and encouraged!) as long as any copies and derivatives are made available under the same GNU GPLv3 open source license. You can find our GitHub repositories at <4>https://github.com/GlobalGoalsDirectory</4>. Contributions welcome!"
+msgstr ""
+
+#: templates/about.js:240
+msgid "The Security and Sustainability Guide seeks to identify and describe leading organizations that are focused on the two basic human goals of security and sustainability. The guide contains more than 2,000 organizations from all around the globe."
 msgstr ""
 
 #: templates/privacy-policy.js:52

@@ -501,7 +501,7 @@ msgid "The Global Goals Directory is completely free. Our directory is a non-com
 msgstr ""
 
 #: templates/about.js:240
-msgid "The Security and Sustainability Guide seeks to identify and describe leading organizations that are focused on the two basic human goals of security and sustainability. The guide contains more than 2,000 organizations from all around the globe."
+msgid "The Security and Sustainability Guide seeks to identify and describe leading organizations that are focused on the two basic human goals of security and sustainability. The guide contains more than 2,000 organizations which can be accessed by four indexes (Generic, Major Categories, Subject, and Organization)."
 msgstr ""
 
 #: templates/privacy-policy.js:52

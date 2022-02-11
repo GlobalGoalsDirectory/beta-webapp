@@ -143,54 +143,56 @@ const OrganizationPage = ({ organization, sdgChampionsCount }) => {
           </CardContent>
         </Card>
       </Box>
-      <Box marginY={4}>
-        <Card>
-          <Box
-            height="8px"
-            width={1}
-            style={{
-              background:
-                "linear-gradient( to right,rgb(229,36,59) 0px,rgb(229,36,59) 5.88235%,rgb(221,166,58) 5.88235%,rgb(221,166,58) 11.7647%,rgb(76,159,56) 11.7647%,rgb(76,159,56) 17.6471%,rgb(197,25,45) 17.6471%,rgb(197,25,45) 23.5294%,rgb(255,58,33) 23.5294%,rgb(255,58,33) 29.4118%,rgb(38,189,226) 29.4118%,rgb(38,189,226) 35.2941%,rgb(252,195,11) 35.2941%,rgb(252,195,11) 41.1765%,rgb(162,25,66) 41.1765%,rgb(162,25,66) 47.0588%,rgb(253,105,37) 47.0588%,rgb(253,105,37) 52.9412%,rgb(221,19,103) 52.9412%,rgb(221,19,103) 58.8235%,rgb(253,157,36) 58.8235%,rgb(253,157,36) 64.7059%,rgb(191,139,46) 64.7059%,rgb(191,139,46) 70.5882%,rgb(63,126,68) 70.5882%,rgb(63,126,68) 76.4706%,rgb(10,151,217) 76.4706%,rgb(10,151,217) 82.3529%,rgb(86,192,43) 82.3529%,rgb(86,192,43) 88.2353%,rgb(0,104,157) 88.2353%,rgb(0,104,157) 94.1176%,rgb(25,72,106) 94.1176%,rgb(25,72,106) 100% )",
-            }}
-          ></Box>
-          <CardContent>
-            <Box display="flex" alignItems="center">
-              <Typography component="h2">
-                <Bold fontSize="h2.fontSize">
-                  <Trans>SDG Champion</Trans>
-                </Bold>
-              </Typography>
-              <Box marginLeft={1} clone>
-                <Chip icon={<Check />} label={t`Verified`} size="small" />
+      {commitment_url != "SKIP" && (
+        <Box marginY={4}>
+          <Card>
+            <Box
+              height="8px"
+              width={1}
+              style={{
+                background:
+                  "linear-gradient( to right,rgb(229,36,59) 0px,rgb(229,36,59) 5.88235%,rgb(221,166,58) 5.88235%,rgb(221,166,58) 11.7647%,rgb(76,159,56) 11.7647%,rgb(76,159,56) 17.6471%,rgb(197,25,45) 17.6471%,rgb(197,25,45) 23.5294%,rgb(255,58,33) 23.5294%,rgb(255,58,33) 29.4118%,rgb(38,189,226) 29.4118%,rgb(38,189,226) 35.2941%,rgb(252,195,11) 35.2941%,rgb(252,195,11) 41.1765%,rgb(162,25,66) 41.1765%,rgb(162,25,66) 47.0588%,rgb(253,105,37) 47.0588%,rgb(253,105,37) 52.9412%,rgb(221,19,103) 52.9412%,rgb(221,19,103) 58.8235%,rgb(253,157,36) 58.8235%,rgb(253,157,36) 64.7059%,rgb(191,139,46) 64.7059%,rgb(191,139,46) 70.5882%,rgb(63,126,68) 70.5882%,rgb(63,126,68) 76.4706%,rgb(10,151,217) 76.4706%,rgb(10,151,217) 82.3529%,rgb(86,192,43) 82.3529%,rgb(86,192,43) 88.2353%,rgb(0,104,157) 88.2353%,rgb(0,104,157) 94.1176%,rgb(25,72,106) 94.1176%,rgb(25,72,106) 100% )",
+              }}
+            ></Box>
+            <CardContent>
+              <Box display="flex" alignItems="center">
+                <Typography component="h2">
+                  <Bold fontSize="h2.fontSize">
+                    <Trans>SDG Champion</Trans>
+                  </Bold>
+                </Typography>
+                <Box marginLeft={1} clone>
+                  <Chip icon={<Check />} label={t`Verified`} size="small" />
+                </Box>
               </Box>
-            </Box>
-            <Box marginTop={1}>
-              <Typography variant="body1">
-                <Trans>
-                  {name} is supporting the implementation of the 17 UN
-                  Sustainable Development Goals (SDGs). This goal is explicitly
-                  anchored on the website of {name}. For this, we award {name}{" "}
-                  with the title "SDG Champion". {name} is thus one of the{" "}
-                  {sdgChampionsCount} SDG Champions in Germany that are
-                  committed to the 17 global goals and are making a
-                  contribution.
-                </Trans>
-              </Typography>
-            </Box>
-            <Box marginTop={2}>
-              <Button
-                color="primary"
-                variant="outlined"
-                target="_blank"
-                href={commitment_url}
-                endIcon={<OpenInNew />}
-              >
-                <Trans>View commitment</Trans>
-              </Button>
-            </Box>
-          </CardContent>
-        </Card>
-      </Box>
+              <Box marginTop={1}>
+                <Typography variant="body1">
+                  <Trans>
+                    {name} is supporting the implementation of the 17 UN
+                    Sustainable Development Goals (SDGs). This goal is
+                    explicitly anchored on the website of {name}. For this, we
+                    award {name} with the title "SDG Champion". {name} is thus
+                    one of the {sdgChampionsCount} SDG Champions in Germany that
+                    are committed to the 17 global goals and are making a
+                    contribution.
+                  </Trans>
+                </Typography>
+              </Box>
+              <Box marginTop={2}>
+                <Button
+                  color="primary"
+                  variant="outlined"
+                  target="_blank"
+                  href={commitment_url}
+                  endIcon={<OpenInNew />}
+                >
+                  <Trans>View commitment</Trans>
+                </Button>
+              </Box>
+            </CardContent>
+          </Card>
+        </Box>
+      )}
       {focusSdgs.length > 0 && (
         <Box marginY={4}>
           <Card>

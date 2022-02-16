@@ -3,7 +3,7 @@ module.exports = {
   catalogs: [
     {
       path: "locales/{locale}/messages",
-      include: ["templates", "components", "helpers"],
+      include: ["templates", "components", "helpers", "hooks"],
     },
   ],
   format: "po",

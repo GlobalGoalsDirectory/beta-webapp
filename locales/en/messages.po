@@ -67,7 +67,7 @@ msgstr ""
 msgid "Add organization or startup"
 msgstr ""
 
-#: templates/organizations/[slug].js:261
+#: templates/organizations/[slug].js:263
 msgid "Address"
 msgstr ""
 
@@ -103,10 +103,24 @@ msgstr ""
 msgid "Around the world, tens of thousands of organizations, companies, and governments are working towards the achievement of the UN Sustainable Development Goals. Our mission is to give visibility to this great SDG community and to champion the 2030 Agenda."
 msgstr ""
 
+#: hooks/useOrganizationFilters.js:27
+msgid "Baden-Württemberg"
+msgstr ""
+
+#: hooks/useOrganizationFilters.js:29
+msgid "Bavaria"
+msgstr ""
+
+#: hooks/useOrganizationFilters.js:30
 #: templates/index.js:8
 msgid "Berlin"
 msgstr ""
 
+#: hooks/useOrganizationFilters.js:31
+msgid "Brandenburg"
+msgstr ""
+
+#: hooks/useOrganizationFilters.js:32
 #: templates/index.js:11
 msgid "Bremen"
 msgstr ""
@@ -224,7 +238,7 @@ msgstr ""
 msgid "Explore startups, organizations, and companies in Germany that are working on one of the 17 UN Sustainable Development Goals."
 msgstr ""
 
-#: templates/organizations/[slug].js:268
+#: templates/organizations/[slug].js:270
 msgid "Facebook"
 msgstr ""
 
@@ -248,7 +262,7 @@ msgstr ""
 msgid "Focus"
 msgstr ""
 
-#: templates/organizations/[slug].js:201
+#: templates/organizations/[slug].js:203
 msgid "Focus Areas"
 msgstr ""
 
@@ -288,8 +302,13 @@ msgstr ""
 msgid "Good health and well-being"
 msgstr ""
 
+#: hooks/useOrganizationFilters.js:33
 #: templates/index.js:10
 msgid "Hamburg"
+msgstr ""
+
+#: hooks/useOrganizationFilters.js:34
+msgid "Hesse"
 msgstr ""
 
 #: components/NavBarDrawer.js:42
@@ -320,7 +339,7 @@ msgstr ""
 msgid "Industry, innovation and infrastructure"
 msgstr ""
 
-#: templates/organizations/[slug].js:247
+#: templates/organizations/[slug].js:249
 msgid "Infos"
 msgstr ""
 
@@ -340,12 +359,16 @@ msgstr ""
 msgid "Lightwave promotes regenerative social change by connecting organizations & people with an IT platform, content & events. Lightwave has mapped more than 1,500 SDG organizations in Switzerland."
 msgstr ""
 
-#: templates/organizations/[slug].js:284
+#: templates/organizations/[slug].js:286
 msgid "LinkedIn"
 msgstr ""
 
 #: components/StateFilter.js:13
 msgid "Location"
+msgstr ""
+
+#: hooks/useOrganizationFilters.js:35
+msgid "Lower Saxony"
 msgstr ""
 
 #: helpers/sdg.js:88
@@ -355,6 +378,10 @@ msgstr ""
 #: components/NavBar.js:120
 #: templates/map.js:59
 msgid "Map"
+msgstr ""
+
+#: hooks/useOrganizationFilters.js:38
+msgid "Mecklenburg-Vorpommern"
 msgstr ""
 
 #: components/NavBar.js:124
@@ -372,6 +399,10 @@ msgstr ""
 
 #: helpers/sdg.js:6
 msgid "No poverty"
+msgstr ""
+
+#: hooks/useOrganizationFilters.js:42
+msgid "North Rhine-Westphalia"
 msgstr ""
 
 #: templates/how-it-works.js:56
@@ -439,17 +470,37 @@ msgstr ""
 msgid "Responsible consumption and production"
 msgstr ""
 
-#: templates/organizations/[slug].js:160
+#: hooks/useOrganizationFilters.js:46
+msgid "Rhineland-Palatinate"
+msgstr ""
+
+#: templates/organizations/[slug].js:161
 msgid "SDG Champion"
 msgstr ""
 
 #: components/SdgFilter.js:26
-#: templates/organizations/[slug].js:226
+#: templates/organizations/[slug].js:228
 msgid "SDG {0}:"
 msgstr ""
 
 #: templates/about.js:192
 msgid "SDGx is a private UN Sustainable Development Goals technology funds management and advisory group, headquartered in Singapore with offices in Sydney, Bangkok, and Berlin."
+msgstr ""
+
+#: hooks/useOrganizationFilters.js:48
+msgid "Saarland"
+msgstr ""
+
+#: hooks/useOrganizationFilters.js:49
+msgid "Saxony"
+msgstr ""
+
+#: hooks/useOrganizationFilters.js:50
+msgid "Saxony-Anhalt"
+msgstr ""
+
+#: hooks/useOrganizationFilters.js:53
+msgid "Schleswig-Holstein"
 msgstr ""
 
 #: templates/organizations.js:107
@@ -528,11 +579,15 @@ msgstr ""
 msgid "The right to restrict processing: You have the right to request that we restrict the processing of your personal data, under certain conditions."
 msgstr ""
 
-#: templates/organizations/[slug].js:276
+#: hooks/useOrganizationFilters.js:55
+msgid "Thuringia"
+msgstr ""
+
+#: templates/organizations/[slug].js:278
 msgid "Twitter"
 msgstr ""
 
-#: templates/organizations/[slug].js:164
+#: templates/organizations/[slug].js:165
 msgid "Verified"
 msgstr ""
 
@@ -540,7 +595,7 @@ msgstr ""
 msgid "View Directory"
 msgstr ""
 
-#: templates/organizations/[slug].js:188
+#: templates/organizations/[slug].js:189
 msgid "View commitment"
 msgstr ""
 
@@ -561,7 +616,7 @@ msgid "We ❤️ Open Source"
 msgstr ""
 
 #: templates/organizations/[slug].js:115
-#: templates/organizations/[slug].js:255
+#: templates/organizations/[slug].js:257
 msgid "Website"
 msgstr ""
 
@@ -593,11 +648,11 @@ msgstr ""
 msgid "Zero hunger"
 msgstr ""
 
-#: templates/organizations/[slug].js:205
+#: templates/organizations/[slug].js:207
 msgid "{name} contributes to the following Sustainable Development Goals."
 msgstr ""
 
-#: templates/organizations/[slug].js:169
+#: templates/organizations/[slug].js:170
 msgid "{name} is supporting the implementation of the 17 UN Sustainable Development Goals (SDGs). This goal is explicitly anchored on the website of {name}. For this, we award {name} with the title \"SDG Champion\". {name} is thus one of the {sdgChampionsCount} SDG Champions in Germany that are committed to the 17 global goals and are making a contribution."
 msgstr ""
 

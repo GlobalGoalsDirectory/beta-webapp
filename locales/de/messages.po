@@ -67,7 +67,7 @@ msgstr "Neue Organisation oder Startup"
 msgid "Add organization or startup"
 msgstr "Neue Organisation oder Startup"
 
-#: templates/organizations/[slug].js:261
+#: templates/organizations/[slug].js:263
 msgid "Address"
 msgstr "Adresse"
 
@@ -103,10 +103,24 @@ msgstr "Antonia hat an der kanadischen Movement Map mitgearbeitet und geholfen m
 msgid "Around the world, tens of thousands of organizations, companies, and governments are working towards the achievement of the UN Sustainable Development Goals. Our mission is to give visibility to this great SDG community and to champion the 2030 Agenda."
 msgstr "Auf der ganzen Welt arbeiten Zehntausende von Organisationen, Unternehmen und Regierungen an der Erreichung der UN Ziele für Nachhaltige Entwicklung (Sustainable Development Goals). Unsere Mission ist es, dieser großen SDG-Gemeinschaft Sichtbarkeit zu verleihen und die 2030 Agenda zu fördern."
 
+#: hooks/useOrganizationFilters.js:27
+msgid "Baden-Württemberg"
+msgstr "Baden-Württemberg"
+
+#: hooks/useOrganizationFilters.js:29
+msgid "Bavaria"
+msgstr "Bayern"
+
+#: hooks/useOrganizationFilters.js:30
 #: templates/index.js:8
 msgid "Berlin"
 msgstr "Berlin"
 
+#: hooks/useOrganizationFilters.js:31
+msgid "Brandenburg"
+msgstr "Brandenburg"
+
+#: hooks/useOrganizationFilters.js:32
 #: templates/index.js:11
 msgid "Bremen"
 msgstr "Bremen"
@@ -224,7 +238,7 @@ msgstr "Karte erkunden"
 msgid "Explore startups, organizations, and companies in Germany that are working on one of the 17 UN Sustainable Development Goals."
 msgstr "Entdecke Startups, Organisationen und Unternehmen in Deutschland, die an den 17 UN Sustainable Development Goals arbeiten."
 
-#: templates/organizations/[slug].js:268
+#: templates/organizations/[slug].js:270
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -248,7 +262,7 @@ msgstr "Finn arbeitet als Software-Developer an der Schnittstelle zwischen Techn
 msgid "Focus"
 msgstr "Schwerpunkt"
 
-#: templates/organizations/[slug].js:201
+#: templates/organizations/[slug].js:203
 msgid "Focus Areas"
 msgstr "Schwerpunkte"
 
@@ -288,9 +302,14 @@ msgstr "Global Goals Directory überprüft seine Datenschutzrichtlinien regelmä
 msgid "Good health and well-being"
 msgstr "Gesundheit und Wohlergehen"
 
+#: hooks/useOrganizationFilters.js:33
 #: templates/index.js:10
 msgid "Hamburg"
 msgstr "Hamburg"
+
+#: hooks/useOrganizationFilters.js:34
+msgid "Hesse"
+msgstr "Hessen"
 
 #: components/NavBarDrawer.js:42
 msgid "Home"
@@ -320,7 +339,7 @@ msgstr "Wenn Sie eine Anfrage stellen, haben wir einen Monat Zeit, um Ihnen zu a
 msgid "Industry, innovation and infrastructure"
 msgstr "Industrie, Innovation und Infrastruktur"
 
-#: templates/organizations/[slug].js:247
+#: templates/organizations/[slug].js:249
 msgid "Infos"
 msgstr "Infos"
 
@@ -340,13 +359,17 @@ msgstr "Leben an Land"
 msgid "Lightwave promotes regenerative social change by connecting organizations & people with an IT platform, content & events. Lightwave has mapped more than 1,500 SDG organizations in Switzerland."
 msgstr "Lightwave fördert den regenerativen sozialen Wandel, indem es Organisationen und Menschen mit einer Webplattform, Inhalten und Veranstaltungen verbindet. Lightwave hat mehr als 1.500 SDG-Organisationen in der Schweiz kartiert."
 
-#: templates/organizations/[slug].js:284
+#: templates/organizations/[slug].js:286
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
 #: components/StateFilter.js:13
 msgid "Location"
 msgstr "Bundesland"
+
+#: hooks/useOrganizationFilters.js:35
+msgid "Lower Saxony"
+msgstr "Niedersachsen"
 
 #: helpers/sdg.js:88
 msgid "Make cities and human settlements inclusive, safe, resilient and sustainable."
@@ -356,6 +379,10 @@ msgstr "Städte und Siedlungen inklusiv, sicher, widerstandsfähig und nachhalti
 #: templates/map.js:59
 msgid "Map"
 msgstr "Karte"
+
+#: hooks/useOrganizationFilters.js:38
+msgid "Mecklenburg-Vorpommern"
+msgstr "Mecklenburg-Vorpommern"
 
 #: components/NavBar.js:124
 #: templates/mission.js:10
@@ -373,6 +400,10 @@ msgstr "Nadim bringt Menschen und Ideen zusammen, um Partnerschaften zum Erreich
 #: helpers/sdg.js:6
 msgid "No poverty"
 msgstr "Keine Armut"
+
+#: hooks/useOrganizationFilters.js:42
+msgid "North Rhine-Westphalia"
+msgstr "Nordrhein-Westfalen"
 
 #: templates/how-it-works.js:56
 msgid "Our AI-based approach has been refined over hundreds of hours of research and coding. It can be broadly classified into four phases: First, an autonomous web scraper crawls the Internet and identifies relevant organizations and websites. The content of each website is then matched against a list of keywords based on the 17 Sustainable Development Goals and their 169 targets to identify which SDGs an organization contributes to. Next, a bot queries several public APIs to enrich each profile with key metadata, including address, name, and logo. Finally, a team of SDG experts reviews the results produced by the AI, verifies their accuracy, and makes any changes necessary."
@@ -439,18 +470,38 @@ msgstr "Weniger Ungleichheiten"
 msgid "Responsible consumption and production"
 msgstr "Nachhaltige/r Konsum und Produktion"
 
-#: templates/organizations/[slug].js:160
+#: hooks/useOrganizationFilters.js:46
+msgid "Rhineland-Palatinate"
+msgstr "Rheinland-Pfalz"
+
+#: templates/organizations/[slug].js:161
 msgid "SDG Champion"
 msgstr "SDG Champion"
 
 #: components/SdgFilter.js:26
-#: templates/organizations/[slug].js:226
+#: templates/organizations/[slug].js:228
 msgid "SDG {0}:"
 msgstr "SDG {0}:"
 
 #: templates/about.js:192
 msgid "SDGx is a private UN Sustainable Development Goals technology funds management and advisory group, headquartered in Singapore with offices in Sydney, Bangkok, and Berlin."
 msgstr "SDGx ist eine private Management- und Beratungsgruppe für Technologiefonds für die UN Sustainable Development Goals mit Hauptsitz in Singapur und Niederlassungen in Sydney, Bangkok und Berlin."
+
+#: hooks/useOrganizationFilters.js:48
+msgid "Saarland"
+msgstr "Saarland"
+
+#: hooks/useOrganizationFilters.js:49
+msgid "Saxony"
+msgstr "Sachsen"
+
+#: hooks/useOrganizationFilters.js:50
+msgid "Saxony-Anhalt"
+msgstr "Sachsen-Anhalt"
+
+#: hooks/useOrganizationFilters.js:53
+msgid "Schleswig-Holstein"
+msgstr "Schleswig-Holstein"
 
 #: templates/organizations.js:107
 msgid "Showing {0} results"
@@ -528,11 +579,15 @@ msgstr "Das Recht auf Berichtigung: Sie haben das Recht, von uns die Berichtigun
 msgid "The right to restrict processing: You have the right to request that we restrict the processing of your personal data, under certain conditions."
 msgstr "Das Recht auf Einschränkung der Verarbeitung: Sie haben das Recht zu verlangen, dass wir die Verarbeitung Ihrer personenbezogenen Daten einschränken, unter bestimmten Bedingungen."
 
-#: templates/organizations/[slug].js:276
+#: hooks/useOrganizationFilters.js:55
+msgid "Thuringia"
+msgstr "Thüringen"
+
+#: templates/organizations/[slug].js:278
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/organizations/[slug].js:164
+#: templates/organizations/[slug].js:165
 msgid "Verified"
 msgstr "Verifiziert"
 
@@ -540,7 +595,7 @@ msgstr "Verifiziert"
 msgid "View Directory"
 msgstr "Verzeichnis ansehen"
 
-#: templates/organizations/[slug].js:188
+#: templates/organizations/[slug].js:189
 msgid "View commitment"
 msgstr "Ziel ansehen"
 
@@ -561,7 +616,7 @@ msgid "We ❤️ Open Source"
 msgstr "Wir ❤️ Open Source"
 
 #: templates/organizations/[slug].js:115
-#: templates/organizations/[slug].js:255
+#: templates/organizations/[slug].js:257
 msgid "Website"
 msgstr "Webseite"
 
@@ -593,11 +648,11 @@ msgstr "Sie - egal ob Sie ein Nutzer oder eine im Verzeichnis aufgeführte Organ
 msgid "Zero hunger"
 msgstr "Kein Hunger"
 
-#: templates/organizations/[slug].js:205
+#: templates/organizations/[slug].js:207
 msgid "{name} contributes to the following Sustainable Development Goals."
 msgstr "{name} leistet einen Beitrag zu den folgenden UN Nachhaltigkeitszielen."
 
-#: templates/organizations/[slug].js:169
+#: templates/organizations/[slug].js:170
 msgid "{name} is supporting the implementation of the 17 UN Sustainable Development Goals (SDGs). This goal is explicitly anchored on the website of {name}. For this, we award {name} with the title \"SDG Champion\". {name} is thus one of the {sdgChampionsCount} SDG Champions in Germany that are committed to the 17 global goals and are making a contribution."
 msgstr "{name} macht sich stark für die Umsetzung der 17 UN Nachhaltigkeitsziele. Dieses Ziel ist explizit auf der Webseite von {name} verankert. Dafür zeichen wir {name} mit dem Titel \"SDG Champion\" aus. {name} gehört damit zu den {sdgChampionsCount} SDG Champions in Deutschland, die sich für die 17 Ziele einsetzen und einen Beitrag leisten."
 

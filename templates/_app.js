@@ -25,6 +25,7 @@ function MyApp({ Component, pageProps }) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <meta name="robots" content="noindex,nofollow" />
       </Head>
       <NextNProgress />
       <MuiThemeProvider theme={theme}>

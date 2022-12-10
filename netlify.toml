@@ -1,3 +1,7 @@
 [build]
   command = "npm run netlify"
   publish = "out"
+
+[build.environment]
+  NPM_FLAGS = "--legacy-peer-deps"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
